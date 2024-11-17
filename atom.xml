@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>烟雨江南频道</title>
+  <title>江湖笔者玩电脑</title>
   
   <subtitle>简单的频道</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://example.com/</id>
   
   <author>
-    <name>烟雨江南</name>
+    <name>江湖笔者</name>
     
   </author>
   
