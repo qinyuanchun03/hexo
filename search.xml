@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>大学生的好帮手：OCS</title>
+    <url>/2024/11/17/ocs%EF%BC%81%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%9A%84%E5%A5%BD%E5%B8%AE%E6%89%8B/</url>
+    <content><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p>
+<p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p>
+<h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p>
+<p><a href="https://docs.ocsjs.com/docs/about">官方文档</a></p>
+<p>点击 <strong>官方文档 ，</strong> 开始你的批量化刷课之路吧！</p>
+<h2 id="OCS官网"><a href="#OCS官网" class="headerlink" title="OCS官网"></a>OCS官网</h2><p>首先，你了解一款工具或软件，要知道他的官网或者官方渠道，这里给大家提供了OCS的官网界面，供大家识别正版！！</p>
+<p><img src="/imgs/ocs/ocs%E5%AE%98%E7%BD%91.png"></p>
+<h2 id="开始阅读文档"><a href="#开始阅读文档" class="headerlink" title="开始阅读文档"></a>开始阅读文档</h2><p>点击<strong>点击查看使用教程</strong>，开始阅读他的文档<br>随后来到这个页面</p>
+<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B.png"></p>
+<p><strong>这里已经写好了左右资料的链接，供你点击</strong><br>我们需要下载他的软件，那么需要点击<strong>左侧的软件教程</strong><br><strong>如图所示，软件教程界面提供了快速链接：如下载，教程等</strong></p>
+<p>根据目录选择你需要的操作，如下载安装程序</p>
+<p>这里是下载列表<strong>根据你自己的系统选择</strong></p>
+<p><img src="/imgs/ocs/xiazai.png"></p>
+<p>这里列出win系统的链接<strong>点击即可下载</strong><br><strong>点击这里→<a href="https://cdn.ocsjs.com/app/download/ocs-2.6.7-setup-win-x64.exe">下载</a></strong></p>
+<h2 id="补充运行库"><a href="#补充运行库" class="headerlink" title="补充运行库"></a>补充运行库</h2><p><strong>这一步为了防止安装过程出现报错</strong>，需要下载<strong>微软运行库合集</strong><br>如果不知道去哪里下载，可以通过本文推荐的系统之家下载安装包<br><strong>系统之家下载地址：<a href="https://www.xitongzhijia.net/soft/289196.html">点击前往</a></strong><br><strong>安装程序界面如下</strong></p>
+<p><img src="/imgs/ocs/%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85.png"></p>
+<p>一路下一步安装即可</p>
+<h2 id="下载OCS助手"><a href="#下载OCS助手" class="headerlink" title="下载OCS助手"></a>下载OCS助手</h2><p>上面已经给出了下载链接，和运行库链接，做好准备步骤，即可开始安装ocs助手<br>下载好安装程序，双击运行即可</p>
+<p><img src="/imgs/ocs/ocs%E5%AE%89%E8%A3%85.png"></p>
+<p><strong>注意：路径可以修改，如我把默认的C盘路径改成了D盘</strong><br>随后安装即可<br>安装完直接运行即可</p>
+<h2 id="初次运行OCS"><a href="#初次运行OCS" class="headerlink" title="初次运行OCS"></a>初次运行OCS</h2><p><strong>第一次使用软件，需要进行初始化配置，按照图中默认的设置即可</strong></p>
+<p><strong>点击一键初始化</strong></p>
+<p><img src="/imgs/ocs/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE.png"></p>
+<p><strong>注意，初始化完成后，需要重启软件！！！（会有提示，点击立即重启即可)</strong></p>
+<h2 id="配置题库"><a href="#配置题库" class="headerlink" title="配置题库"></a>配置题库</h2><p><strong>OCS内置了作者的enncy题库，地址：<a href="https://tk.enncy.cn/">enncy题库</a></strong><br>这里给大家列出价格，<strong>（题库需要付费购买）</strong></p>
+<table>
+<thead>
+<tr>
+<th>价格</th>
+<th>次数</th>
+<th>购买建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1米</td>
+<td>100</td>
+<td>尝鲜，测试OCS</td>
+</tr>
+<tr>
+<td>5米</td>
+<td>2000</td>
+<td>有较多课程：如选修课，需要一直答题</td>
+</tr>
+<tr>
+<td>20米</td>
+<td>10000</td>
+<td>课程很多，或组团购买，批量刷课</td>
+</tr>
+</tbody></table>
+<p><strong>根据你个人的需要，合理选择购买方案</strong></p>
+<h3 id="注册题库需要准备的：一个可用的邮箱"><a href="#注册题库需要准备的：一个可用的邮箱" class="headerlink" title="注册题库需要准备的：一个可用的邮箱"></a>注册题库需要准备的：一个可用的邮箱</h3><p>没有账号可以用邮箱注册一个，然后去购买</p>
+<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在如图所示的界面，复制你的题库配置<br>上方胡显示<strong>你的做题次数，，已使用次数，成功次数，成功率</strong>等信息，下方的内容中需要选择你的题库配置<strong>复制第二个</strong><br><img src="/imgs/ocs/tiku.png"></p>
+<h3 id="回到软件"><a href="#回到软件" class="headerlink" title="回到软件"></a>回到软件</h3><p>回到软件，点击<strong>软件设置→OCS配置，点击通用，即可找到配置页面</strong><br>配置页面下，找到题库配置（旁边的开关是把这些设置应用到所有的任务）</p>
+<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE.png"></p>
+<p>点一下<strong>点击配置</strong><br>把你在题库网页复制的<strong>题库配置</strong>，粘贴进去，保存配置即可<br><strong>保存后，出现这个界面即配置成功！！</strong></p>
+<p><img src="/imgs/ocs/%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png"></p>
+<h2 id="关于脚本不能正常显示的问题"><a href="#关于脚本不能正常显示的问题" class="headerlink" title="关于脚本不能正常显示的问题"></a>关于脚本不能正常显示的问题</h2><p>根据作者的说法：是因为浏览器的api更新导致的冲突导致脚本不运行，<strong>解决办法是：把篡改猴换成脚本猫</strong></p>
+<h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p><strong>视频引用自ocs官网</strong></p>
+<iframe height="350" width="450" src="https://cdn.ocsjs.com/app/resources/video/app-use-guide.mp4" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-bottom: 20px; color: rgb(85, 85, 85); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+<p>如果本期内容对你有所帮助，可以在评论区留下你的痕迹！！<br><strong>作者邮箱：<a href="mailto:crazy2403@outlook.com">crazy2403@outlook.com</a></strong><br><strong>vx公众号：烟雨江南的小窝</strong></p>
+]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十分钟速成个人节点：支持ChatGPT</title>
     <url>/2024/11/17/%E5%8D%81%E5%88%86%E9%92%9F%E9%80%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E8%8A%82%E7%82%B9%EF%BC%9A%E6%94%AF%E6%8C%81ChatGPT/</url>
     <content><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
@@ -100,7 +169,7 @@
 </blockquote>
 ]]></content>
       <tags>
-        <tag>ChatGPT 免费域名 教学</tag>
+        <tag>ChatGPT</tag>
       </tags>
   </entry>
 </search>
