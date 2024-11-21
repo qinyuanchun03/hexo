@@ -79,7 +79,7 @@
 <p>注册教程参考<strong>以下文章</strong>：<a href="https://blog.ioacx.com/us-kg-free-doamin/">点击前往</a></p>
 <p>邮箱推荐：<strong>outlook，gmail</strong></p>
 <p>注册方法不过多缀述</p>
-<h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：**<a href="https://dash.cloudflare.com/sign-up">点击前往</a>**</p>
+<h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></p>
 <p>登录之后，来到dash页面，<strong>点击workers and pages</strong></p>
 <h3 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h3><p><strong>github项目地址</strong>：<a href="https://github.com/cmliu/edgetunnel">点击前往</a></p>
 <p><strong>项目已经为大家配置了教学，大家只需要观看文档说明即可！</strong></p>
@@ -176,13 +176,11 @@
     <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
     <url>/2024/11/20/</url>
     <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
-<p><strong>想了解域名如何申请，请观看往期内容：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/%E5%8D%81%E5%88%86%E9%92%9F%E9%80%9F%E6%88%90%E4%B8%AA%E4%BA%BA%E8%8A%82%E7%82%B9%EF%BC%9A%E6%94%AF%E6%8C%81ChatGPT/">怎么申请域名？</a></strong></p>
-<h2 id="直接上视频-b站和油管"><a href="#直接上视频-b站和油管" class="headerlink" title="直接上视频(b站和油管)"></a>直接上视频(b站和油管)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
+<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
+<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mWYvriPNJ8E?si=1tjbJMutKzb_Oo6e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-<h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
+<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
 <thead>
 <tr>
 <th align="center">站点</th>
@@ -216,8 +214,8 @@
       </tags>
   </entry>
   <entry>
-    <title>还在用盗版免费加速器？这一篇内容解决你的难题</title>
-    <url>/2024/11/19/</url>
+    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
+    <url>/2024/11/20/</url>
     <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
 <p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
 <ol>
