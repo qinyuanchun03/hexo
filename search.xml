@@ -1,8 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>本站说明:迅速熟悉本站的用法</title>
+    <url>//index/</url>
+    <content><![CDATA[<h1 id="认识主页面"><a href="#认识主页面" class="headerlink" title="认识主页面"></a>认识主页面</h1><h2 id="打开本站后，你会看到这样的页面"><a href="#打开本站后，你会看到这样的页面" class="headerlink" title="打开本站后，你会看到这样的页面"></a>打开本站后，你会看到这样的页面</h2><p>只需要记住这两个必要的按钮的作用即可！</p>
+<p>其余部分还在完善当中！</p>
+<p><strong>本站如何阅览，在这一部分用图例的方法给大家讲述</strong></p>
+<h3 id="图一：主页面"><a href="#图一：主页面" class="headerlink" title="图一：主页面"></a>图一：主页面</h3><p><img src="/imgs/notions/zhuye.png"></p>
+<h3 id="图二：文章页面（下拉即可看到）"><a href="#图二：文章页面（下拉即可看到）" class="headerlink" title="图二：文章页面（下拉即可看到）"></a>图二：文章页面（下拉即可看到）</h3><p><img src="/imgs/notions/wenz.png"></p>
+<h3 id="图三：阅读界面（点击主页面标题即可进入）"><a href="#图三：阅读界面（点击主页面标题即可进入）" class="headerlink" title="图三：阅读界面（点击主页面标题即可进入）"></a>图三：阅读界面（点击主页面标题即可进入）</h3><p><img src="/imgs/notions/readd.png"></p>
+<h3 id="图四：评论功能"><a href="#图四：评论功能" class="headerlink" title="图四：评论功能"></a>图四：评论功能</h3><p><img src="/imgs/notions/pinglun.png"></p>
+<h2 id="我有疑问？"><a href="#我有疑问？" class="headerlink" title="我有疑问？"></a>我有疑问？</h2><h3 id="作者的小红书"><a href="#作者的小红书" class="headerlink" title="作者的小红书"></a>作者的小红书</h3><p><img src="/imgs/notions/xhs.jpg"></p>
+<h3 id="qq交流频道"><a href="#qq交流频道" class="headerlink" title="qq交流频道"></a>qq交流频道</h3><p><img src="/imgs/notions/qqpd.jpg"></p>
+<h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p><img src="/imgs/notions/vxt.jpg"></p>
+]]></content>
+      <tags>
+        <tag>说明</tag>
+        <tag>站点使用方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
+    <url>//email-to-chatgpt/</url>
+    <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
+<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
+<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
+<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
+<thead>
+<tr>
+<th align="center">站点</th>
+<th align="center">链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CloudFllare注册</td>
+<td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td>
+</tr>
+<tr>
+<td align="center">ChatGPT注册</td>
+<td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td>
+</tr>
+<tr>
+<td align="center">outlook邮箱申请</td>
+<td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td>
+</tr>
+</tbody></table>
+<h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p>
+<h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p>
+<h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p>
+<h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p>
+<h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p>
+<p><strong>点击“电子邮件”开始设置</strong></p>
+<h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p>
+<h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>还在用盗版免费加速器？快来这里看看吧！</title>
+    <url>//free-personal-node/</url>
+    <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
+<p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
+<ol>
+<li>连通性，是否适合三大运营商</li>
+<li>节点的流媒体解锁：是否支持GPT</li>
+<li>价格不高，且达到1，2两点</li>
+<li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li>
+</ol>
+<h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p>
+<h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p>
+<h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p>
+<p>推荐列表放在最后</p>
+<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table>
+<thead>
+<tr>
+<th align="center">节点推荐</th>
+<th align="center">价格</th>
+<th align="center">类型</th>
+<th align="center">是否支持GPT</th>
+<th align="center">购买链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">一分机场</td>
+<td align="center">2&#x2F;月</td>
+<td align="center">直连</td>
+<td align="center">支持</td>
+<td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td>
+</tr>
+<tr>
+<td align="center">69云</td>
+<td align="center">6.9&#x2F;月</td>
+<td align="center">中转</td>
+<td align="center">支持</td>
+<td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十分钟速成个人节点：支持ChatGPT</title>
-    <url>/2024/11/17/10mins-node/</url>
+    <url>//vpn1/</url>
     <content><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 <p><a href="https://halos.xtstudy.site/archives/uskg">注册视频教学</a></p>
@@ -105,7 +210,7 @@
   </entry>
   <entry>
     <title>大学生的好帮手：OCS</title>
-    <url>/2024/11/16/ocs/</url>
+    <url>//ocs/</url>
     <content><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p>
 <p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p>
 <h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p>
@@ -170,92 +275,6 @@
 ]]></content>
       <tags>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
-    <url>/2024/11/20/email-to-chatgpt/</url>
-    <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
-<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
-<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
-<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
-<thead>
-<tr>
-<th align="center">站点</th>
-<th align="center">链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CloudFllare注册</td>
-<td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">ChatGPT注册</td>
-<td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">outlook邮箱申请</td>
-<td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p>
-<h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p>
-<h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p>
-<h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p>
-<h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p>
-<p><strong>点击“电子邮件”开始设置</strong></p>
-<h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p>
-<h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还在用盗版免费加速器？快来这里看看吧！</title>
-    <url>/2024/11/19/personal-node/</url>
-    <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
-<p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
-<ol>
-<li>连通性，是否适合三大运营商</li>
-<li>节点的流媒体解锁：是否支持GPT</li>
-<li>价格不高，且达到1，2两点</li>
-<li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li>
-</ol>
-<h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p>
-<h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p>
-<h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p>
-<p>推荐列表放在最后</p>
-<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table>
-<thead>
-<tr>
-<th align="center">节点推荐</th>
-<th align="center">价格</th>
-<th align="center">类型</th>
-<th align="center">是否支持GPT</th>
-<th align="center">购买链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">一分机场</td>
-<td align="center">2&#x2F;月</td>
-<td align="center">直连</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">69云</td>
-<td align="center">6.9&#x2F;月</td>
-<td align="center">中转</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
       </tags>
   </entry>
 </search>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog1.moshangyanyu.us.kg/2024/11/19/personal-node/</loc>
+    <loc>https://blog1.moshangyanyu.us.kg/free-personal-node/</loc>
     
     <lastmod>2024-11-21</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://blog1.moshangyanyu.us.kg/2024/11/17/10mins-node/</loc>
+    <loc>https://blog1.moshangyanyu.us.kg/ocs/</loc>
     
     <lastmod>2024-11-21</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://blog1.moshangyanyu.us.kg/2024/11/20/email-to-chatgpt/</loc>
+    <loc>https://blog1.moshangyanyu.us.kg/email-to-chatgpt/</loc>
     
     <lastmod>2024-11-21</lastmod>
     
@@ -29,9 +29,18 @@
   </url>
   
   <url>
-    <loc>https://blog1.moshangyanyu.us.kg/2024/11/16/ocs/</loc>
+    <loc>https://blog1.moshangyanyu.us.kg/vpn1/</loc>
     
-    <lastmod>2024-11-17</lastmod>
+    <lastmod>2024-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.moshangyanyu.us.kg/index/</loc>
+    
+    <lastmod>2024-11-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -55,6 +64,20 @@
   
   <url>
     <loc>https://blog1.moshangyanyu.us.kg/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.moshangyanyu.us.kg/tags/%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2024-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.moshangyanyu.us.kg/tags/%E7%AB%99%E7%82%B9%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2024-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
