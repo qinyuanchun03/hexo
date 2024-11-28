@@ -6,7 +6,7 @@
   <link href="https://blog1.moshangyanyu.us.kg/atom.xml" rel="self"/>
   
   <link href="https://blog1.moshangyanyu.us.kg/"/>
-  <updated>2024-11-21T12:54:28.981Z</updated>
+  <updated>2024-11-28T05:58:52.915Z</updated>
   <id>https://blog1.moshangyanyu.us.kg/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
+    <link href="https://blog1.moshangyanyu.us.kg/kimiai/"/>
+    <id>https://blog1.moshangyanyu.us.kg/kimiai/</id>
+    <published>2024-11-23T05:25:27.000Z</published>
+    <updated>2024-11-28T05:58:52.915Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><ul><li><h1 id="什么，你还不会用AiPPT吗？让Kimi教教你"><a href="#什么，你还不会用AiPPT吗？让Kimi教教你" class="headerlink" title="什么，你还不会用AiPPT吗？让Kimi教教你"></a>什么，你还不会用AiPPT吗？让Kimi教教你</h1><h2 id="第一部分：Kimi介绍"><a href="#第一部分：Kimi介绍" class="headerlink" title="第一部分：Kimi介绍"></a>第一部分：Kimi介绍</h2><p>Kimi是由月之暗面科技有限公司开发的智能助手，它支持长达20万汉字的输入，成为全球市场中可产品化使用的大模型服务里所能支持的最长上下文输入。在2024年3月18日，Kimi宣布支持200万字的超长无损上下文，并开启了产品内测。Kimi的官网是<a href="https://kimi.moonshot.cn/">kimi.moonshot.cn</a>，用户可以在这里注册登录账号并使用Kimi的各项功能。Kimi的最新支持功能包括：</p><ul><li><strong>智能搜索</strong>：能够搜索实时信息，迅速整合并给出详尽答复，同时提供信息来源，使对话既丰富又准确。</li><li><strong>高效阅读</strong>：能够迅速进行摘要，助您精准理解文献书籍、长篇报告、复杂合同、网页长文，并提供深刻的洞察与分析。</li><li><strong>专业解读文件</strong>：支持上传PDF、Word、Excel、PPT、TXT文件和图片，进行快速摘要、翻译、答疑。</li><li><strong>整理资料</strong>：智能识别并整理资料，自动提取关键要点，让资料整理不再繁杂。</li><li><strong>辅助创作</strong>：协助用户梳理大纲、续写文章、创作文案、撰写周报、制定方案。</li><li><strong>编程助手</strong>：帮助用户阅读API文档，定位所需信息，生成代码、快速Debug，涵盖Python、C++、Java等多种编程语言。</li></ul><h2 id="第二部分：用AI生成PPT的步骤"><a href="#第二部分：用AI生成PPT的步骤" class="headerlink" title="第二部分：用AI生成PPT的步骤"></a>第二部分：用AI生成PPT的步骤</h2><h3 id="1-列出提纲或简述文档"><a href="#1-列出提纲或简述文档" class="headerlink" title="1. 列出提纲或简述文档"></a>1. 列出提纲或简述文档</h3><p>在制作PPT之前，一个清晰的提纲可以帮助你组织思路和内容。以下是如何创建提纲的步骤，以及一个具体的示例。</p><h4 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h4><ol><li><strong>确定主题</strong>：明确你的PPT要传达的核心信息或主题。</li><li><strong>列出关键点</strong>：围绕主题，列出你想要在PPT中展示的关键点。</li><li><strong>组织结构</strong>：将关键点按照逻辑顺序排列，形成一个清晰的结构。</li><li><strong>分配内容</strong>：为每个关键点分配具体的内容或数据支持。</li></ol><h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>假设你要制作一个关于“如何提高工作效率”的PPT，你的提纲可能如下：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">标题：如何提高工作效率</span><br><span class="line"></span><br><span class="line">1. 引言</span><br><span class="line">   - 工作效率的重要性</span><br><span class="line">   - 当前面临的挑战</span><br><span class="line"></span><br><span class="line">2. 时间管理</span><br><span class="line">   - 制定工作计划</span><br><span class="line">   - 优先级排序</span><br><span class="line">   - 避免拖延的策略</span><br><span class="line"></span><br><span class="line">3. 技术工具的使用</span><br><span class="line">   - 项目管理软件</span><br><span class="line">   - 协作工具</span><br><span class="line">   - 自动化工具</span><br><span class="line"></span><br><span class="line">4. 团队协作</span><br><span class="line">   - 沟通技巧</span><br><span class="line">   - 团队建设活动</span><br><span class="line">   - 分工与合作</span><br><span class="line"></span><br><span class="line">5. 个人发展</span><br><span class="line">   - 持续学习</span><br><span class="line">   - 技能提升</span><br><span class="line">   - 健康管理</span><br><span class="line"></span><br><span class="line">6. 结论</span><br><span class="line">   - 总结提高工作效率的关键点</span><br><span class="line">   - 鼓励采取行动</span><br></pre></td></tr></table></figure><p>就像这样的模板，交给AI之后，会自动根据部分和主题对应内容分配给你的ppt的每一页</p><h3 id="2-交给Kimi的PPT助手"><a href="#2-交给Kimi的PPT助手" class="headerlink" title="2. 交给Kimi的PPT助手"></a>2. 交给Kimi的PPT助手</h3><p>接下来，你可以通过在Kimi的对话框中@PPT助手来唤起PPT助手，或者在Kimi+中找到PPT助手。</p><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ol><li>登录Kimi官网（<a href="https://kimi.moonshot.cn/">点击这里</a>）</li><li>在聊天界面点击图示位置</li><li><img src="/imgs/kimi/1.png"></li><li>随后点击PPT助手</li><li><img src="/imgs/kimi/2.png"></li><li>按照你写好的提纲或者内容如图所示进行操作</li><li><img src="/imgs/kimi/3.png"></li></ol><h3 id="3-等待Kimi的PPT助手生成预览"><a href="#3-等待Kimi的PPT助手生成预览" class="headerlink" title="3. 等待Kimi的PPT助手生成预览"></a>3. 等待Kimi的PPT助手生成预览</h3><p>输入你想要的PPT内容后，Kimi会自动帮你构思整理好PPT大纲，并生成预览。</p><ol><li>在这里查看结果，和编辑ppt</li><li><img src="/imgs/kimi/4.png"></li></ol><h3 id="4-在KIMI网页的PPT助手可进行修改"><a href="#4-在KIMI网页的PPT助手可进行修改" class="headerlink" title="4. 在KIMI网页的PPT助手可进行修改"></a>4. 在KIMI网页的PPT助手可进行修改</h3><p>生成预览后，你可以在Kimi网页的PPT助手中对PPT进行修改，优化演示内容。</p><ol><li>下拉点击编辑，即可下载或者编辑</li><li><img src="/imgs/kimi/5.png"></li></ol><h3 id="5-点击下载按钮即可得到你的成品"><a href="#5-点击下载按钮即可得到你的成品" class="headerlink" title="5. 点击下载按钮即可得到你的成品"></a>5. 点击下载按钮即可得到你的成品</h3><p>最后，当你对PPT满意后，点击下载按钮即可得到你的成品PPT。</p><ol><li>编辑界面，也可以直接下载或保存你编辑的内容</li><li><img src="/imgs/kimi/6.png"></li></ol><h2 id="第三部分：点缀，让你的PPT更完善"><a href="#第三部分：点缀，让你的PPT更完善" class="headerlink" title="第三部分：点缀，让你的PPT更完善"></a>第三部分：点缀，让你的PPT更完善</h2><p>下载后的PPT文件支持WPS或者Office打开，你可以进行自定义的二次修改，这样，你的PPT就更加完善了。</p><ol><li>如图，点击了下载，可以在浏览器的下载记录找到</li><li><img src="/imgs/kimi/7.png"></li><li>同样的，本地如果用wps和office，还可以再次精修保证最符合你的想要</li><li><img src="/imgs/kimi/8.png"></li></ol><h2 id="第四部分：总结"><a href="#第四部分：总结" class="headerlink" title="第四部分：总结"></a>第四部分：总结</h2><p>使用Kimi的PPT助手制作PPT的优势在于：</p><ul><li><strong>节省时间</strong>：用户可以快速创建和设计PPT，节省大量时间。</li><li><strong>提高专业度</strong>：Kimi的PPT助手提供布局和色彩搭配建议，帮助用户制作出既专业又个性化的PPT。</li><li><strong>多轮对话优化</strong>：Kimi还能根据用户反馈进行多轮对话，优化演示内容。</li></ul><p>通过充分利用Kimi这样的工具，用户可以提升工作效率，将更多的精力投入到内容的创意和演讲的准备上。</p></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h1 id=&quot;什么，你还不会用AiPPT吗？让Kimi教教你&quot;&gt;&lt;a href=&quot;#什么，你还不会用AiPPT吗？让Kimi教教你&quot; class=&quot;headerlink&quot; title=&quot;什么，你还不会用AiPPT吗？让Kimi教教你&quot;&gt;&lt;/a</summary>
+      
+    
+    
+    
+    
+    <category term="ppt AI" scheme="https://blog1.moshangyanyu.us.kg/tags/ppt-AI/"/>
+    
+  </entry>
   
   <entry>
     <title>本站说明:迅速熟悉本站的用法</title>
