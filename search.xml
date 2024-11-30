@@ -20,6 +20,69 @@
       </tags>
   </entry>
   <entry>
+    <title>via如何下载，以及拦截广告？一篇文章教会你</title>
+    <url>//via/</url>
+    <content><![CDATA[<ul>
+<li><h1 id="Via浏览器，小而美"><a href="#Via浏览器，小而美" class="headerlink" title="Via浏览器，小而美"></a>Via浏览器，小而美</h1></li>
+</ul>
+<h2 id="首先，下载via浏览器！"><a href="#首先，下载via浏览器！" class="headerlink" title="首先，下载via浏览器！"></a>首先，下载via浏览器！</h2><p><strong>点击这里就可以下载了→：<a href="https://res.viayoo.com/v1/via-release-cn.apk">下载地址</a></strong></p>
+<p><strong>Via官网：<a href="https://viayoo.com/zh-cn/">这里！！</a></strong></p>
+<h2 id="其次，保存这些规则"><a href="#其次，保存这些规则" class="headerlink" title="其次，保存这些规则"></a>其次，保存这些规则</h2><p><strong>左侧为名称，右侧为链接</strong></p>
+<p>复制链接到浏览器的广告屏蔽部分即可导入，然后点击更新即可</p>
+<table>
+<thead>
+<tr>
+<th align="center">AdRules AdBlock List 精简版</th>
+<th align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AdRules AdBlock List</td>
+<td align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt</a></td>
+</tr>
+<tr>
+<td align="center">乘风 广告规则</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt</a></td>
+</tr>
+<tr>
+<td align="center">乘风 视频规则</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt</a></td>
+</tr>
+<tr>
+<td align="center">ABP Merge Rules</td>
+<td align="center"><a href="https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt">https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt</a></td>
+</tr>
+<tr>
+<td align="center">去除 APP 下载提示</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt">https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt</a></td>
+</tr>
+<tr>
+<td align="center">Ad-J</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt">https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt</a></td>
+</tr>
+</tbody></table>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><p><strong>点击右下角三条杠</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/1aa723d2368424d38.jpeg" alt="1"></p>
+<p><strong>找到设置</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/27b7bbcb3bd5bdb26.jpeg" alt="2"></p>
+<p><strong>接下来点击通用</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/3ec7ac818d1792f1f.jpeg" alt="3"></p>
+<p><strong>点击广告拦截</strong><img src="https://img.picgo.net/2024/11/30/4ff704c230b0f8f4f.jpeg" alt="4"></p>
+<p><strong>随后点击规则订阅</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/573f59f67373446c9.jpeg" alt="5"></p>
+<p><strong>点击加号，在上面的表格复制广告拦截规则的链接</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/641f621f579914905.jpeg" alt="6"></p>
+<p><strong>在这里粘贴，保存，然后点击右上角的更新，即可应用这些规则</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/8152d5cc5ae2dd697.jpeg" alt="8"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，你的Via已经具备了一定的广告拦截能力，开始享受纯净的冲浪时光吧！</p>
+]]></content>
+      <tags>
+        <tag>via浏览器</tag>
+        <tag>小而美</tag>
+        <tag>广告屏蔽</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
     <url>//kimiai/</url>
     <content><![CDATA[<ul>
