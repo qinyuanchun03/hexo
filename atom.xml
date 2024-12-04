@@ -6,7 +6,7 @@
   <link href="https://blog1.moshangyanyu.us.kg/atom.xml" rel="self"/>
   
   <link href="https://blog1.moshangyanyu.us.kg/"/>
-  <updated>2024-11-30T05:48:36.000Z</updated>
+  <updated>2024-12-04T13:03:18.759Z</updated>
   <id>https://blog1.moshangyanyu.us.kg/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>还在用盗版免费加速器？快来这里看看吧！</title>
+    <link href="https://blog1.moshangyanyu.us.kg/free-personal-node/"/>
+    <id>https://blog1.moshangyanyu.us.kg/free-personal-node/</id>
+    <published>2024-12-04T08:12:47.000Z</published>
+    <updated>2024-12-04T13:03:18.759Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p><p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p><ol><li>连通性，是否适合三大运营商</li><li>节点的流媒体解锁：是否支持GPT</li><li>价格不高，且达到1，2两点</li><li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li></ol><h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p><h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p><h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p><p>推荐列表放在最后</p><h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table><thead><tr><th align="center">节点推荐</th><th align="center">价格</th><th align="center">类型</th><th align="center">是否支持GPT</th><th align="center">套餐量</th><th align="center">购买链接</th></tr></thead><tbody><tr><td align="center">一分机场</td><td align="center">2&#x2F;月</td><td align="center">直连</td><td align="center">支持</td><td align="center">100G</td><td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td></tr><tr><td align="center">69云</td><td align="center">6.9&#x2F;月</td><td align="center">中转</td><td align="center">支持</td><td align="center">100G</td><td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td></tr><tr><td align="center">三分机场</td><td align="center">9.5&#x2F;年</td><td align="center">直连</td><td align="center">支持</td><td align="center">200G&#x2F;月</td><td align="center"><a href="https://shop.sanfen.co/register?code=eXgbn5jO">点击即可跳转</a></td></tr><tr><td align="center">三分机场（中转）</td><td align="center">9.9&#x2F;月</td><td align="center">中转</td><td align="center">支持</td><td align="center">80G</td><td align="center"><a href="https://shop.sanfen.co/register?code=eXgbn5jO">点击即可跳转</a></td></tr><tr><td align="center">三分机场（中转）</td><td align="center">23.5&#x2F;月</td><td align="center">中转</td><td align="center">支持</td><td align="center">300G</td><td align="center"><a href="https://shop.sanfen.co/register?code=eXgbn5jO">点击即可跳转</a></td></tr></tbody></table><h2 id="自建节点推荐的VPS服务器"><a href="#自建节点推荐的VPS服务器" class="headerlink" title="自建节点推荐的VPS服务器"></a>自建节点推荐的VPS服务器</h2><table><thead><tr><th align="center">服务器提供商</th><th align="center">配置（核心&#x2F;运存&#x2F;带宽）</th><th align="center">购买地址</th><th align="center">推荐购买项目</th><th align="center">价格（换算前）</th><th align="center">价格（换算后）</th></tr></thead><tbody><tr><td align="center">RN（适合初学者）</td><td align="center">1H&#x2F;1G&#x2F;1Gbps</td><td align="center"><a href="https://my.racknerd.com/aff.php?aff=11799">点击注册购买</a></td><td align="center">2024黑五活动款</td><td align="center">10.99美元&#x2F;年</td><td align="center">80左右</td></tr><tr><td align="center">艾云（适合初学者）</td><td align="center">1H&#x2F;1G&#x2F;200M</td><td align="center"><a href="https://iaclouds.com/aff.php?aff=1878">点击注册购买</a></td><td align="center">常规应用款Standard-V1</td><td align="center">19.9HKD&#x2F;月</td><td align="center">21左右</td></tr><tr><td align="center">更多正在更新。。</td><td align="center">更多正在更新。。</td><td align="center">更多正在更新。。</td><td align="center">更多正在更新。。</td><td align="center">更多正在更新。。</td><td align="center">更多正在更新。。</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;好用节点推荐：支持GPT，低价好用&quot;&gt;&lt;a href=&quot;#好用节点推荐：支持GPT，低价好用&quot; class=&quot;headerlink&quot; title=&quot;好用节点推荐：支持GPT，低价好用&quot;&gt;&lt;/a&gt;好用节点推荐：支持GPT，低价好用&lt;/h1&gt;&lt;h2 id=&quot;自述&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    
+  </entry>
   
   <entry>
     <title>via如何下载，以及拦截广告？一篇文章教会你</title>
@@ -106,28 +128,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;本期内容：&quot;&gt;&lt;a href=&quot;#本期内容：&quot; class=&quot;headerlink&quot; title=&quot;本期内容：&quot;&gt;&lt;/a&gt;本期内容：&lt;/h1&gt;&lt;p&gt;主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat </summary>
-      
-    
-    
-    
-    
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>还在用盗版免费加速器？快来这里看看吧！</title>
-    <link href="https://blog1.moshangyanyu.us.kg/free-personal-node/"/>
-    <id>https://blog1.moshangyanyu.us.kg/free-personal-node/</id>
-    <published>2024-11-19T08:12:47.000Z</published>
-    <updated>2024-11-21T12:57:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p><p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p><ol><li>连通性，是否适合三大运营商</li><li>节点的流媒体解锁：是否支持GPT</li><li>价格不高，且达到1，2两点</li><li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li></ol><h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p><h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p><h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p><p>推荐列表放在最后</p><h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table><thead><tr><th align="center">节点推荐</th><th align="center">价格</th><th align="center">类型</th><th align="center">是否支持GPT</th><th align="center">购买链接</th></tr></thead><tbody><tr><td align="center">一分机场</td><td align="center">2&#x2F;月</td><td align="center">直连</td><td align="center">支持</td><td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td></tr><tr><td align="center">69云</td><td align="center">6.9&#x2F;月</td><td align="center">中转</td><td align="center">支持</td><td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;好用节点推荐：支持GPT，低价好用&quot;&gt;&lt;a href=&quot;#好用节点推荐：支持GPT，低价好用&quot; class=&quot;headerlink&quot; title=&quot;好用节点推荐：支持GPT，低价好用&quot;&gt;&lt;/a&gt;好用节点推荐：支持GPT，低价好用&lt;/h1&gt;&lt;h2 id=&quot;自述&quot;&gt;&lt;</summary>
       
     
     
