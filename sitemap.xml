@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog1.moshangyanyu.us.kg/zhenghe/</loc>
+    
+    <lastmod>2024-12-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog1.moshangyanyu.us.kg/CFnodes/</loc>
     
     <lastmod>2024-12-13</lastmod>
@@ -128,6 +137,20 @@
   
   <url>
     <loc>https://blog1.moshangyanyu.us.kg/tags/%E7%AB%99%E7%82%B9%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.moshangyanyu.us.kg/tags/%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2024-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.moshangyanyu.us.kg/tags/%E6%95%B4%E5%90%88/</loc>
     <lastmod>2024-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
