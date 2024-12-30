@@ -135,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog1.jianghu.cfd/tags/%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -149,14 +156,35 @@
   </url>
   
   <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
+    <loc>https://blog1.jianghu.cfd/tags/%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E4%BA%A4%E6%B5%81/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/vps/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -192,34 +220,6 @@
   
   <url>
     <loc>https://blog1.jianghu.cfd/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E4%BA%A4%E6%B5%81/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/vps/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
