@@ -10,5 +10,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://xxx.github.io/sitemap.xml
-Sitemap: https://xxx.github.io/baidusitemap.xml
+Sitemap: https://blog1.jianghu.cfd/sitemap.xml
