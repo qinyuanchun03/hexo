@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog1.jianghu.cfd/googlecf51a5ba19b8d063.html</loc>
+    
+    <lastmod>2024-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog1.jianghu.cfd/newnode/</loc>
     
     <lastmod>2024-12-26</lastmod>
@@ -133,20 +142,6 @@
   </url>
   
   <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E6%95%B4%E5%90%88/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog1.jianghu.cfd/tags/%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -161,6 +156,34 @@
   </url>
   
   <url>
+    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/via%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E5%B0%8F%E8%80%8C%E7%BE%8E/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,6 +192,20 @@
   
   <url>
     <loc>https://blog1.jianghu.cfd/tags/%E8%87%AA%E6%88%91%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2024-12-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/%E6%95%B4%E5%90%88/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -204,34 +241,6 @@
   
   <url>
     <loc>https://blog1.jianghu.cfd/tags/%E4%BA%A4%E6%B5%81/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/via%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E5%B0%8F%E8%80%8C%E7%BE%8E/</loc>
-    <lastmod>2024-12-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog1.jianghu.cfd/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/</loc>
     <lastmod>2024-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
