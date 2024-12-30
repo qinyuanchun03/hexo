@@ -3,11 +3,11 @@
   <title>江湖笔者玩电脑</title>
   
   <subtitle>简单的频道</subtitle>
-  <link href="https://blog1.moshangyanyu.us.kg/atom.xml" rel="self"/>
+  <link href="https://blog1.jianghu.cfd/atom.xml" rel="self"/>
   
-  <link href="https://blog1.moshangyanyu.us.kg/"/>
+  <link href="https://blog1.jianghu.cfd/"/>
   <updated>2024-12-26T08:37:08.871Z</updated>
-  <id>https://blog1.moshangyanyu.us.kg/</id>
+  <id>https://blog1.jianghu.cfd/</id>
   
   <author>
     <name>江湖笔者</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>月付4.4，解锁流媒体，畅玩油管奈飞</title>
-    <link href="https://blog1.moshangyanyu.us.kg/newnode/"/>
-    <id>https://blog1.moshangyanyu.us.kg/newnode/</id>
+    <link href="https://blog1.jianghu.cfd/newnode/"/>
+    <id>https://blog1.jianghu.cfd/newnode/</id>
     <published>2024-12-26T08:24:41.000Z</published>
     <updated>2024-12-26T08:37:08.871Z</updated>
     
@@ -34,16 +34,16 @@
     
     
     
-    <category term="节点推荐" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%8A%82%E7%82%B9%E6%8E%A8%E8%8D%90/"/>
+    <category term="节点推荐" scheme="https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9%E6%8E%A8%E8%8D%90/"/>
     
-    <category term="Chat GPT" scheme="https://blog1.moshangyanyu.us.kg/tags/Chat-GPT/"/>
+    <category term="Chat GPT" scheme="https://blog1.jianghu.cfd/tags/Chat-GPT/"/>
     
   </entry>
   
   <entry>
     <title>问题反馈和提交</title>
-    <link href="https://blog1.moshangyanyu.us.kg/talkback/"/>
-    <id>https://blog1.moshangyanyu.us.kg/talkback/</id>
+    <link href="https://blog1.jianghu.cfd/talkback/"/>
+    <id>https://blog1.jianghu.cfd/talkback/</id>
     <published>2024-12-26T03:54:58.000Z</published>
     <updated>2024-12-26T04:07:31.213Z</updated>
     
@@ -58,16 +58,16 @@
     
     
     
-    <category term="问题反馈" scheme="https://blog1.moshangyanyu.us.kg/tags/%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88/"/>
+    <category term="问题反馈" scheme="https://blog1.jianghu.cfd/tags/%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88/"/>
     
-    <category term="交流" scheme="https://blog1.moshangyanyu.us.kg/tags/%E4%BA%A4%E6%B5%81/"/>
+    <category term="交流" scheme="https://blog1.jianghu.cfd/tags/%E4%BA%A4%E6%B5%81/"/>
     
   </entry>
   
   <entry>
     <title>博客资源整合：从好用的网站到工具网站，一期总结到位</title>
-    <link href="https://blog1.moshangyanyu.us.kg/zhenghe/"/>
-    <id>https://blog1.moshangyanyu.us.kg/zhenghe/</id>
+    <link href="https://blog1.jianghu.cfd/zhenghe/"/>
+    <id>https://blog1.jianghu.cfd/zhenghe/</id>
     <published>2024-12-13T10:04:14.000Z</published>
     <updated>2024-12-13T10:05:23.419Z</updated>
     
@@ -82,16 +82,16 @@
     
     
     
-    <category term="资源" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="资源" scheme="https://blog1.jianghu.cfd/tags/%E8%B5%84%E6%BA%90/"/>
     
-    <category term="整合" scheme="https://blog1.moshangyanyu.us.kg/tags/%E6%95%B4%E5%90%88/"/>
+    <category term="整合" scheme="https://blog1.jianghu.cfd/tags/%E6%95%B4%E5%90%88/"/>
     
   </entry>
   
   <entry>
     <title>CFworkers节点工具和教程合集</title>
-    <link href="https://blog1.moshangyanyu.us.kg/CFnodes/"/>
-    <id>https://blog1.moshangyanyu.us.kg/CFnodes/</id>
+    <link href="https://blog1.jianghu.cfd/CFnodes/"/>
+    <id>https://blog1.jianghu.cfd/CFnodes/</id>
     <published>2024-12-13T05:18:33.000Z</published>
     <updated>2024-12-15T11:42:13.312Z</updated>
     
@@ -106,18 +106,18 @@
     
     
     
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
     
-    <category term="节点" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%8A%82%E7%82%B9/"/>
+    <category term="节点" scheme="https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/"/>
     
-    <category term="自我搭建" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%87%AA%E6%88%91%E6%90%AD%E5%BB%BA/"/>
+    <category term="自我搭建" scheme="https://blog1.jianghu.cfd/tags/%E8%87%AA%E6%88%91%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>八块钱一年的服务器，要什么自行车？</title>
-    <link href="https://blog1.moshangyanyu.us.kg/VPS/"/>
-    <id>https://blog1.moshangyanyu.us.kg/VPS/</id>
+    <link href="https://blog1.jianghu.cfd/VPS/"/>
+    <id>https://blog1.jianghu.cfd/VPS/</id>
     <published>2024-12-11T07:47:22.000Z</published>
     <updated>2024-12-12T11:07:33.253Z</updated>
     
@@ -132,18 +132,18 @@
     
     
     
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
     
-    <category term="节点" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%8A%82%E7%82%B9/"/>
+    <category term="节点" scheme="https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/"/>
     
-    <category term="vps" scheme="https://blog1.moshangyanyu.us.kg/tags/vps/"/>
+    <category term="vps" scheme="https://blog1.jianghu.cfd/tags/vps/"/>
     
   </entry>
   
   <entry>
     <title>还在用盗版免费加速器？快来这里看看吧！</title>
-    <link href="https://blog1.moshangyanyu.us.kg/free-personal-node/"/>
-    <id>https://blog1.moshangyanyu.us.kg/free-personal-node/</id>
+    <link href="https://blog1.jianghu.cfd/free-personal-node/"/>
+    <id>https://blog1.jianghu.cfd/free-personal-node/</id>
     <published>2024-12-04T08:12:47.000Z</published>
     <updated>2024-12-04T13:03:18.759Z</updated>
     
@@ -158,14 +158,14 @@
     
     
     
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
     
   </entry>
   
   <entry>
     <title>via如何下载，以及拦截广告？一篇文章教会你</title>
-    <link href="https://blog1.moshangyanyu.us.kg/via/"/>
-    <id>https://blog1.moshangyanyu.us.kg/via/</id>
+    <link href="https://blog1.jianghu.cfd/via/"/>
+    <id>https://blog1.jianghu.cfd/via/</id>
     <published>2024-11-30T04:59:21.000Z</published>
     <updated>2024-11-30T05:48:36.000Z</updated>
     
@@ -183,18 +183,18 @@
     
     
     
-    <category term="via浏览器" scheme="https://blog1.moshangyanyu.us.kg/tags/via%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    <category term="via浏览器" scheme="https://blog1.jianghu.cfd/tags/via%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
-    <category term="小而美" scheme="https://blog1.moshangyanyu.us.kg/tags/%E5%B0%8F%E8%80%8C%E7%BE%8E/"/>
+    <category term="小而美" scheme="https://blog1.jianghu.cfd/tags/%E5%B0%8F%E8%80%8C%E7%BE%8E/"/>
     
-    <category term="广告屏蔽" scheme="https://blog1.moshangyanyu.us.kg/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/"/>
+    <category term="广告屏蔽" scheme="https://blog1.jianghu.cfd/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/"/>
     
   </entry>
   
   <entry>
     <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
-    <link href="https://blog1.moshangyanyu.us.kg/kimiai/"/>
-    <id>https://blog1.moshangyanyu.us.kg/kimiai/</id>
+    <link href="https://blog1.jianghu.cfd/kimiai/"/>
+    <id>https://blog1.jianghu.cfd/kimiai/</id>
     <published>2024-11-23T05:25:27.000Z</published>
     <updated>2024-11-30T04:59:40.000Z</updated>
     
@@ -211,14 +211,14 @@
     
     
     
-    <category term="ppt AI" scheme="https://blog1.moshangyanyu.us.kg/tags/ppt-AI/"/>
+    <category term="ppt AI" scheme="https://blog1.jianghu.cfd/tags/ppt-AI/"/>
     
   </entry>
   
   <entry>
     <title>本站说明:迅速熟悉本站的用法</title>
-    <link href="https://blog1.moshangyanyu.us.kg/index/"/>
-    <id>https://blog1.moshangyanyu.us.kg/index/</id>
+    <link href="https://blog1.jianghu.cfd/index/"/>
+    <id>https://blog1.jianghu.cfd/index/</id>
     <published>2024-11-21T12:15:47.000Z</published>
     <updated>2024-11-21T12:54:30.000Z</updated>
     
@@ -233,16 +233,16 @@
     
     
     
-    <category term="说明" scheme="https://blog1.moshangyanyu.us.kg/tags/%E8%AF%B4%E6%98%8E/"/>
+    <category term="说明" scheme="https://blog1.jianghu.cfd/tags/%E8%AF%B4%E6%98%8E/"/>
     
-    <category term="站点使用方法" scheme="https://blog1.moshangyanyu.us.kg/tags/%E7%AB%99%E7%82%B9%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <category term="站点使用方法" scheme="https://blog1.jianghu.cfd/tags/%E7%AB%99%E7%82%B9%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
-    <link href="https://blog1.moshangyanyu.us.kg/email-to-chatgpt/"/>
-    <id>https://blog1.moshangyanyu.us.kg/email-to-chatgpt/</id>
+    <link href="https://blog1.jianghu.cfd/email-to-chatgpt/"/>
+    <id>https://blog1.jianghu.cfd/email-to-chatgpt/</id>
     <published>2024-11-20T08:12:47.000Z</published>
     <updated>2024-11-21T12:56:10.000Z</updated>
     
@@ -257,14 +257,14 @@
     
     
     
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
     
   </entry>
   
   <entry>
     <title>十分钟速成个人节点：支持ChatGPT</title>
-    <link href="https://blog1.moshangyanyu.us.kg/vpn1/"/>
-    <id>https://blog1.moshangyanyu.us.kg/vpn1/</id>
+    <link href="https://blog1.jianghu.cfd/vpn1/"/>
+    <id>https://blog1.jianghu.cfd/vpn1/</id>
     <published>2024-11-17T08:29:47.000Z</published>
     <updated>2024-11-21T12:55:32.000Z</updated>
     
@@ -279,14 +279,14 @@
     
     
     
-    <category term="ChatGPT" scheme="https://blog1.moshangyanyu.us.kg/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
     
   </entry>
   
   <entry>
     <title>大学生的好帮手：OCS</title>
-    <link href="https://blog1.moshangyanyu.us.kg/ocs/"/>
-    <id>https://blog1.moshangyanyu.us.kg/ocs/</id>
+    <link href="https://blog1.jianghu.cfd/ocs/"/>
+    <id>https://blog1.jianghu.cfd/ocs/</id>
     <published>2024-11-16T08:17:47.000Z</published>
     <updated>2024-11-21T12:56:22.000Z</updated>
     
@@ -301,7 +301,7 @@
     
     
     
-    <category term="工具" scheme="https://blog1.moshangyanyu.us.kg/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://blog1.jianghu.cfd/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
