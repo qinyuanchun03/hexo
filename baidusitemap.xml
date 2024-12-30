@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog1.jianghu.cfd//via/</loc>
+    <loc>https://blog1.jianghu.cfd//kimiai/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -9,11 +9,11 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd//talkback/</loc>
+    <loc>https://blog1.jianghu.cfd//via/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd//kimiai/</loc>
+    <loc>https://blog1.jianghu.cfd//talkback/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -25,7 +25,7 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd//vpn1/</loc>
+    <loc>https://blog1.jianghu.cfd//ocs/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -33,19 +33,19 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd//ocs/</loc>
-    <lastmod>2024-12-30</lastmod>
-  </url>
-  <url>
     <loc>https://blog1.jianghu.cfd//email-to-chatgpt/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd//CFnodes/</loc>
+    <loc>https://blog1.jianghu.cfd//vpn1/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
     <loc>https://blog1.jianghu.cfd//VPS/</loc>
+    <lastmod>2024-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd//CFnodes/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
 </urlset> 
