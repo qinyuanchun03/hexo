@@ -1,5 +1,9 @@
 # hexo robots.txt
 User-agent: *
 Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
 
 Sitemap: https://blog1.jianghu.cfd/sitemap.xml
