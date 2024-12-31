@@ -115,6 +115,32 @@
   </entry>
   
   <entry>
+    <title>CFworkers节点工具和教程合集</title>
+    <link href="https://blog1.jianghu.cfd/posts/cfnode.html"/>
+    <id>https://blog1.jianghu.cfd/posts/cfnode.html</id>
+    <published>2024-12-13T05:18:33.000Z</published>
+    <updated>2024-12-31T09:36:41.671Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="解锁GPT，无限流量的节点，获取超简单"><a href="#解锁GPT，无限流量的节点，获取超简单" class="headerlink" title="解锁GPT，无限流量的节点，获取超简单"></a>解锁GPT，无限流量的节点，获取超简单</h1><h2 id="需要用到的软件："><a href="#需要用到的软件：" class="headerlink" title="需要用到的软件："></a>需要用到的软件：</h2><p><strong>安卓端：nekobox，v2rayNG</strong></p><p><strong>iOS：shadowrocket</strong></p><p><strong>win端：NekoRay，V2rayN</strong></p><p><strong>nekoray&#x2F;box下载地址：<a href="https://getnekobox.com/">点击查看</a></strong></p><h2 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h2><ul><li>重点：<strong>注册一个CF账号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></strong></li><li>复制代码(下载脚本文件即可)</li><li><strong><a href="http://1.92.83.158:5244/d/%E5%BC%80%E5%8F%91%E8%80%854/_worker.js?sign=E0FTPmKGaP3jPIh6F6YTuXHe5W7Qp7ZskYMj48VdBYI=:0">下载脚本</a></strong></li></ul><h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><h3 id="进入cf，点击workers-pages"><a href="#进入cf，点击workers-pages" class="headerlink" title="进入cf，点击workers &amp; pages"></a>进入cf，点击workers &amp; pages</h3><p><img src="https://img.picgo.net/2024/12/13/1ea6f93b42b666f38.png" alt="1"></p><p>点击创建，进入workers创建页面</p><p><img src="https://img.picgo.net/2024/12/13/24525b26b7b6db064.png" alt="2"></p><h3 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h3><p>注意图中说明，名字保持默认也可以（我懒的那种）</p><p>确认无误，部署</p><p><img src="https://img.picgo.net/2024/12/13/3c1eed520b2244102.png" alt="3"></p><h3 id="点击编辑代码"><a href="#点击编辑代码" class="headerlink" title="点击编辑代码"></a>点击编辑代码</h3><p><img src="https://img.picgo.net/2024/12/13/42fcefa0e22cc0168.png" alt="4"></p><h3 id="粘贴你复制的代码"><a href="#粘贴你复制的代码" class="headerlink" title="粘贴你复制的代码"></a>粘贴你复制的代码</h3><p><img src="https://img.picgo.net/2024/12/13/5f8e122a796527091.png" alt="5"></p><p>粘贴以后是这样的</p><p>随后点击部署</p><p>部署完成，点左上角向左的箭头返回</p><p><img src="https://img.picgo.net/2024/12/13/61dc01924a5335800.png" alt="6"></p><h3 id="设置你的workers"><a href="#设置你的workers" class="headerlink" title="设置你的workers"></a>设置你的workers</h3><p>返回之后点击设置</p><p><img src="https://img.picgo.net/2024/12/13/73d36a0a2b78633af.png" alt="7"></p><h3 id="根据图片说明添加需要的内容"><a href="#根据图片说明添加需要的内容" class="headerlink" title="根据图片说明添加需要的内容"></a>根据图片说明添加需要的内容</h3><p>你需要准备以下三个内容：</p><p><strong><a href="https://blog1.moshangyanyu.us.kg/vpn1/">免费域名申请</a></strong></p><p><strong><a href="https://1024tools.com/uuid">uuid在线生成</a></strong></p><p><strong><a href="https://blog1.moshangyanyu.us.kg/vpn1/">ProxyIP参考表：</a></strong></p><p><img src="https://img.picgo.net/2024/12/13/8ce76b6a8b3a05a63.png" alt="8"></p><h3 id="设置变量部分"><a href="#设置变量部分" class="headerlink" title="设置变量部分"></a>设置变量部分</h3><p>按图片的实例写好每一个变量</p><p><img src="https://img.picgo.net/2024/12/13/93ebfbd72578be890.png" alt="9"></p><p><img src="https://img.picgo.net/2024/12/13/10b289d57ca377eb31.png" alt="10"></p><p>添加域名，在最上面的域和路由旁边的加号操作</p><p><img src="https://img.picgo.net/2024/12/13/11bae13cb21765c62f.png" alt="11"></p><p><img src="https://img.picgo.net/2024/12/13/1294a8b750e0f05be3.png" alt="12"></p><p>域名格式：图片已经说明</p><p>案例：因为申请的免费域名为*.us.kg</p><p><strong>你自己写出来的域名就是abc.us.kg</strong>，<strong>abc是你自己申请的域名部分，后缀都是us.kg</strong></p><h3 id="访问你的链接"><a href="#访问你的链接" class="headerlink" title="访问你的链接"></a>访问你的链接</h3><p>上面已经说过，<strong>如果你添加的域名是abc.us.kg，uuid为1234。</strong></p><p><strong>那么，你的链接就是abc.us.kg&#x2F;1234</strong></p><p><strong>实际的链接以你的域名和uuid为准</strong></p><p><img src="https://img.picgo.net/2024/12/13/1373d20814eb46fb95.png" alt="13"></p><h3 id="复制你的订阅"><a href="#复制你的订阅" class="headerlink" title="复制你的订阅"></a>复制你的订阅</h3><p><img src="https://img.picgo.net/2024/12/13/14c6bdb9d2ae59a226.png" alt="14"></p><p>手机端方法为长按这个按钮，复制链接地址</p><h3 id="导入订阅"><a href="#导入订阅" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>按图片操作即可</p><p><img src="https://img.picgo.net/2024/12/13/15db0e8b3ab495e45e.png" alt="15"></p><p>点击加号以后，是这个分组定义界面，按图片说明写</p><p><strong>别名：随意</strong></p><p><strong>链接：上一步复制的链接</strong></p><p>随后点击保存</p><p><img src="https://img.picgo.net/2024/12/13/16dc3ffd827beeff11.png" alt="16"></p><h3 id="获取节点"><a href="#获取节点" class="headerlink" title="获取节点"></a>获取节点</h3><p>点击软件的订阅分组，更新以下订阅就能看到节点了</p><p><img src="https://img.picgo.net/2024/12/13/17b879b31e31bd6437.png" alt="17"></p><p>如以下几张图，更新完以后多了很多节点</p><p><img src="https://img.picgo.net/2024/12/13/180a8e2bebe0d748c1.png" alt="18"></p><h3 id="区分可用与否"><a href="#区分可用与否" class="headerlink" title="区分可用与否"></a>区分可用与否</h3><p><strong>节点一般有两种状态，在节点区域，点击任意一个</strong></p><p><strong>随后按ctrl+a全选，ctrl+r测试真链接</strong></p><p><strong>状态1：-1状态，不可用</strong></p><p><strong>状态2：有数字，可用</strong></p><p><img src="https://img.picgo.net/2024/12/13/19ae77767331685b7b.png" alt="19"></p><p>打开代理</p><p>点击如上图所示，绿色或者有数字的节点，按回车，或右键-设为活动服务器，即代表你选择了这个节点</p><p>随后按图片所示的方法点击，即可开启代理了</p><p>体验你自己的节点，域名到搭建全部免费，真香！</p><p><img src="https://img.picgo.net/2024/12/13/20d8bc2803c1b59e9a.png" alt="20"></p><p>经过电脑端实测，油管4k，chatgpt都是可以打开的！！</p><p>至此，教程结束，快去试试吧！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;解锁GPT，无限流量的节点，获取超简单&quot;&gt;&lt;a href=&quot;#解锁GPT，无限流量的节点，获取超简单&quot; class=&quot;headerlink&quot; title=&quot;解锁GPT，无限流量的节点，获取超简单&quot;&gt;&lt;/a&gt;解锁GPT，无限流量的节点，获取超简单&lt;/h1&gt;&lt;h2 i</summary>
+      
+    
+    
+    
+    
+    <category term="ChatGPT" scheme="https://blog1.jianghu.cfd/tags/ChatGPT/"/>
+    
+    <category term="节点" scheme="https://blog1.jianghu.cfd/tags/%E8%8A%82%E7%82%B9/"/>
+    
+    <category term="自我搭建" scheme="https://blog1.jianghu.cfd/tags/%E8%87%AA%E6%88%91%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>八块钱一年的服务器，要什么自行车？</title>
     <link href="https://blog1.jianghu.cfd/posts/xui.html"/>
     <id>https://blog1.jianghu.cfd/posts/xui.html</id>
@@ -217,10 +243,10 @@
   
   <entry>
     <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
-    <link href="https://blog1.jianghu.cfd/posts/undefined.html"/>
-    <id>https://blog1.jianghu.cfd/posts/undefined.html</id>
+    <link href="https://blog1.jianghu.cfd/posts/gpt.html"/>
+    <id>https://blog1.jianghu.cfd/posts/gpt.html</id>
     <published>2024-11-20T08:12:47.000Z</published>
-    <updated>2024-12-31T09:27:18.827Z</updated>
+    <updated>2024-12-31T09:37:03.210Z</updated>
     
     <content type="html"><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p><p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p><p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p><h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table><thead><tr><th align="center">站点</th><th align="center">链接</th></tr></thead><tbody><tr><td align="center">CloudFllare注册</td><td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td></tr><tr><td align="center">ChatGPT注册</td><td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td></tr><tr><td align="center">outlook邮箱申请</td><td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td></tr></tbody></table><h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p><h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p><h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p><h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p><h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p><p><strong>点击“电子邮件”开始设置</strong></p><h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p><h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
     
