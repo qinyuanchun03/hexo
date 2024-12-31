@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>好消息，再也不用担心加速器的问题了！ | 江湖笔者玩电脑</title><meta name="author" content="江湖笔者"><meta name="copyright" content="江湖笔者"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="你还在为了INS发愁？何不看看本文，帮你解决一半的问题！ 本次针对INS安卓和win用户专门整合了一些资源，帮助你解决使用INS的问题 本内容适合有一定折腾经验的用户，小白请仔细阅读后续的说明，多问些问题，会有有经验的人帮你，千万不要闭嘴不说话还乱折腾！ 本资源合集包含安卓端和WIN端所需的版本，仅包含软件本体，不包含订阅，白嫖的请自觉划走 接下来我会列出资源链接，供需要的用户下载  资源部分 请">
+<meta property="og:type" content="article">
+<meta property="og:title" content="好消息，再也不用担心加速器的问题了！">
+<meta property="og:url" content="https://blog1.jianghu.cfd/posts/INS-TOOLS/index.html">
+<meta property="og:site_name" content="江湖笔者玩电脑">
+<meta property="og:description" content="你还在为了INS发愁？何不看看本文，帮你解决一半的问题！ 本次针对INS安卓和win用户专门整合了一些资源，帮助你解决使用INS的问题 本内容适合有一定折腾经验的用户，小白请仔细阅读后续的说明，多问些问题，会有有经验的人帮你，千万不要闭嘴不说话还乱折腾！ 本资源合集包含安卓端和WIN端所需的版本，仅包含软件本体，不包含订阅，白嫖的请自觉划走 接下来我会列出资源链接，供需要的用户下载  资源部分 请">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog1.jianghu.cfd/img/ico.png">
+<meta property="article:published_time" content="2024-12-31T02:48:12.000Z">
+<meta property="article:modified_time" content="2024-12-31T02:58:39.194Z">
+<meta property="article:author" content="江湖笔者">
+<meta property="article:tag" content="INS">
+<meta property="article:tag" content="工具箱">
+<meta property="article:tag" content="资源分享">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog1.jianghu.cfd/img/ico.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog1.jianghu.cfd/posts/INS-TOOLS/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//static.cloudflareinsights.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;5240dcba55024bedb39bf312590633d8&quot;}"></script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '好消息，再也不用担心加速器的问题了！',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2024-12-31 10:58:39',
+  isShuoshuo: false
+}</script><meta name='description' content='江湖笔者，带给你一个简单丰富的世界。'><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="江湖笔者玩电脑" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/back.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/ico.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">江湖笔者玩电脑</span></a><a class="nav-page-title" href="/"><span class="site-name">好消息，再也不用担心加速器的问题了！</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">好消息，再也不用担心加速器的问题了！</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-31T02:48:12.000Z" title="发表于 2024-12-31 10:48:12">2024-12-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-12-31T02:58:39.194Z" title="更新于 2024-12-31 10:58:39">2024-12-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span class="waline-pageview-count" data-path="/posts/INS-TOOLS/"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="你还在为了INS发愁？何不看看本文，帮你解决一半的问题！"><a href="#你还在为了INS发愁？何不看看本文，帮你解决一半的问题！" class="headerlink" title="你还在为了INS发愁？何不看看本文，帮你解决一半的问题！"></a>你还在为了INS发愁？何不看看本文，帮你解决一半的问题！</h1><ul>
+<li>本次针对INS安卓和win用户专门整合了一些资源，帮助你解决使用INS的问题</li>
+<li><strong>本内容适合有一定折腾经验的用户，小白请仔细阅读后续的说明，多问些问题，会有有经验的人帮你，千万不要闭嘴不说话还乱折腾！</strong></li>
+<li><strong>本资源合集包含安卓端和WIN端所需的版本，仅包含软件本体，不包含订阅，白嫖的请自觉划走</strong></li>
+<li>接下来我会列出资源链接，供需要的用户下载</li>
+</ul>
+<h2 id="资源部分"><a href="#资源部分" class="headerlink" title="资源部分"></a>资源部分</h2><ul>
+<li><strong>请一定阅读上述说明再来下载，提交评论请按照帖子的格式回复，评论区已有案例，否则一律不回</strong></li>
+<li>下载设备要求：一台安卓手机，一台电脑（<strong>非国产系统</strong>）</li>
+<li>接下来列出资源链接</li>
+<li>首先准备好你的浏览器，<strong>不要图方便就在微信或者qq点，否则进不去！</strong></li>
+<li>点击以下链接前往地址<a target="_blank" rel="noopener" href="https://webdav.jianghu.cfd/">主页 | AList</a></li>
+<li><strong>本站需要登陆，用户名vpn，密码xiaohongshu，仔细看好再去登录</strong></li>
+<li><strong>下载之前请看好你的设备是什么，不要把apk下到电脑问为什么打不开！或者不看文件夹名字就下载，文件夹已经写明了win版和安卓的名字，擦亮你的眼睛</strong></li>
+<li><strong>登陆后，根据你的需要选择合适的软件，手机端（安卓）建议使用singbox或者v2rayng，比较容易入门</strong></li>
+<li><strong>电脑端建议v2rayn-core的版本，比较容易调教</strong></li>
+<li><strong>最后再次重申一点，看说明，看说明，看说明！重要的事情说三次</strong></li>
+</ul>
+<h2 id="我没有订阅怎么办？"><a href="#我没有订阅怎么办？" class="headerlink" title="我没有订阅怎么办？"></a>我没有订阅怎么办？</h2><p><strong>订阅购买请到 <a href="https://blog1.jianghu.cfd/talkback/">问题反馈和提交</a> 提交你的需要</strong><br><strong>或者来到<a target="_blank" rel="noopener" href="https://nav.jianghu.cfd/">江湖笔者导航站</a>这里，根据VPS专区的内容进行选择，切记不要自己乱点</strong></p>
+<h2 id="如何反馈我的需求？"><a href="#如何反馈我的需求？" class="headerlink" title="如何反馈我的需求？"></a>如何反馈我的需求？</h2><p><strong>首先看图</strong>，<strong>格式已经写明，请不要乱填，可能收不到回复</strong></p>
+<p><img src="http://1.92.83.158:4121/i/2024/12/31/hgh3tg.png" alt="{5A1AE6B0-87D3-4B8D-AC69-8B33BFE5109E}"></p>
+<h3 id="网站的评论回馈"><a href="#网站的评论回馈" class="headerlink" title="网站的评论回馈"></a>网站的评论回馈</h3><p><strong>网站根据你留下的邮箱进行回复，评论会伴随一封邮件发到你的邮箱里面，所以请保证你的邮箱是真的，至少可以发到您那里！！！</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd">江湖笔者</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd/posts/INS-TOOLS/">https://blog1.jianghu.cfd/posts/INS-TOOLS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog1.jianghu.cfd" target="_blank">江湖笔者玩电脑</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/INS/">INS</a><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a><a class="post-meta__tags" href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/">资源分享</a></div><div class="post-share"><div class="social-share" data-image="/img/ico.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/newnode/" title="月付4.4，解锁流媒体，畅玩油管奈飞"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">月付4.4，解锁流媒体，畅玩油管奈飞</div></div><div class="info-2"><div class="info-item-1">废话不多说，直接上链接首先是流媒体测试环节，测试节点为：hy2的SG节点，测试环境Windows，软件V2rayN SpeedTest测速 ChatGPT YouTube 4K 套餐价格入门款 支持流媒体解锁 100G流量 支持香港，日本，韩国，美国，新加坡等国家、 价格0.6美元  大杯款 支持流媒体解锁 500G流量 支持香港，日本，韩国，美国，新加坡等国家 价格1..2美元  超大杯 支持流媒体解锁 1000G流量 支持香港，日本，韩国，美国，新加坡等国家 价格2美元  不限量款 支持流媒体解锁 100G流量 支持香港，日本，韩国，美国，新加坡等国家 价格3美元  购买地址点击前往购买：官网地址 </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/ico.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">江湖笔者</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%A0%E8%BF%98%E5%9C%A8%E4%B8%BA%E4%BA%86INS%E5%8F%91%E6%84%81%EF%BC%9F%E4%BD%95%E4%B8%8D%E7%9C%8B%E7%9C%8B%E6%9C%AC%E6%96%87%EF%BC%8C%E5%B8%AE%E4%BD%A0%E8%A7%A3%E5%86%B3%E4%B8%80%E5%8D%8A%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">你还在为了INS发愁？何不看看本文，帮你解决一半的问题！</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E9%83%A8%E5%88%86"><span class="toc-number">1.1.</span> <span class="toc-text">资源部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%B2%A1%E6%9C%89%E8%AE%A2%E9%98%85%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">我没有订阅怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%8F%8D%E9%A6%88%E6%88%91%E7%9A%84%E9%9C%80%E6%B1%82%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">如何反馈我的需求？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E7%9A%84%E8%AF%84%E8%AE%BA%E5%9B%9E%E9%A6%88"><span class="toc-number">1.3.1.</span> <span class="toc-text">网站的评论回馈</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/INS-TOOLS/" title="好消息，再也不用担心加速器的问题了！">好消息，再也不用担心加速器的问题了！</a><time datetime="2024-12-31T02:48:12.000Z" title="发表于 2024-12-31 10:48:12">2024-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/newnode/" title="月付4.4，解锁流媒体，畅玩油管奈飞">月付4.4，解锁流媒体，畅玩油管奈飞</a><time datetime="2024-12-26T08:24:41.000Z" title="发表于 2024-12-26 16:24:41">2024-12-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/talkback/" title="问题反馈和提交">问题反馈和提交</a><time datetime="2024-12-26T03:54:58.000Z" title="发表于 2024-12-26 11:54:58">2024-12-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/zhenghe/" title="博客资源整合：从好用的网站到工具网站，一期总结到位">博客资源整合：从好用的网站到工具网站，一期总结到位</a><time datetime="2024-12-13T10:04:14.000Z" title="发表于 2024-12-13 18:04:14">2024-12-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/CFnodes/" title="CFworkers节点工具和教程合集">CFworkers节点工具和教程合集</a><time datetime="2024-12-13T05:18:33.000Z" title="发表于 2024-12-13 13:18:33">2024-12-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div id="footer-wrap"><div class="copyright">&copy;2024 By 江湖笔者</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一个简单的频道</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = {"requiredMeta":["nick","mail"],"locale":{"placeholder":"昵称和邮箱为必填项，为了您能及时收到相关回复的邮件通知，请确保邮箱的正确性"}}
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://freely-talk.jianghu.cfd/',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"defer></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="一个,简单的,频道" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
