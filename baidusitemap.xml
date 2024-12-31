@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog1.jianghu.cfd/xui.html/</loc>
+    <loc>https://blog1.jianghu.cfd/cdnode.html</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd/uskg.html/</loc>
+    <loc>https://blog1.jianghu.cfd/zhenghe.html</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd/nodes.html/</loc>
+    <loc>https://blog1.jianghu.cfd/nav.html</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd/ocs.html/</loc>
+    <loc>https://blog1.jianghu.cfd/via.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/instools.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/talkback.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/ocs.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/xui.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/uskg.html</loc>
+    <lastmod>2024-12-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog1.jianghu.cfd/nodes.html</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
   <url>
@@ -21,31 +45,7 @@
     <lastmod>2024-12-31</lastmod>
   </url>
   <url>
-    <loc>https://blog1.jianghu.cfd/nav.html/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://blog1.jianghu.cfd//via/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://blog1.jianghu.cfd/instools.html/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
     <loc>https://blog1.jianghu.cfd//newnode/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://blog1.jianghu.cfd//talkback/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://blog1.jianghu.cfd//CFnodes/</loc>
-    <lastmod>2024-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://blog1.jianghu.cfd//zhenghe/</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
 </urlset> 
