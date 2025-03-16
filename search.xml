@@ -1,946 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>本站说明:迅速熟悉本站的用法</title>
-    <url>//index/</url>
-    <content><![CDATA[<h1 id="认识主页面"><a href="#认识主页面" class="headerlink" title="认识主页面"></a>认识主页面</h1><h2 id="打开本站后，你会看到这样的页面"><a href="#打开本站后，你会看到这样的页面" class="headerlink" title="打开本站后，你会看到这样的页面"></a>打开本站后，你会看到这样的页面</h2><p>只需要记住这两个必要的按钮的作用即可！</p>
-<p>其余部分还在完善当中！</p>
-<p><strong>本站如何阅览，在这一部分用图例的方法给大家讲述</strong></p>
-<h3 id="图一：主页面"><a href="#图一：主页面" class="headerlink" title="图一：主页面"></a>图一：主页面</h3><p><img src="/imgs/notions/zhuye.png"></p>
-<h3 id="图二：文章页面（下拉即可看到）"><a href="#图二：文章页面（下拉即可看到）" class="headerlink" title="图二：文章页面（下拉即可看到）"></a>图二：文章页面（下拉即可看到）</h3><p><img src="/imgs/notions/wenz.png"></p>
-<h3 id="图三：阅读界面（点击主页面标题即可进入）"><a href="#图三：阅读界面（点击主页面标题即可进入）" class="headerlink" title="图三：阅读界面（点击主页面标题即可进入）"></a>图三：阅读界面（点击主页面标题即可进入）</h3><p><img src="/imgs/notions/readd.png"></p>
-<h3 id="图四：评论功能"><a href="#图四：评论功能" class="headerlink" title="图四：评论功能"></a>图四：评论功能</h3><p><img src="/imgs/notions/pinglun.png"></p>
-<h2 id="我有疑问？"><a href="#我有疑问？" class="headerlink" title="我有疑问？"></a>我有疑问？</h2><h3 id="作者的小红书"><a href="#作者的小红书" class="headerlink" title="作者的小红书"></a>作者的小红书</h3><p><img src="/imgs/notions/xhs.jpg"></p>
-<h3 id="qq交流频道"><a href="#qq交流频道" class="headerlink" title="qq交流频道"></a>qq交流频道</h3><p><img src="/imgs/notions/qqpd.jpg"></p>
-<h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p><img src="/imgs/notions/vxt.jpg"></p>
-]]></content>
-      <tags>
-        <tag>说明</tag>
-        <tag>站点使用方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AIGC降重和论文改进的策略思考</title>
-    <url>//AIGC-thinkings/</url>
-    <content><![CDATA[<p>好的，这是更侧重方法论，讲述 AIGC 检测方法、检测逻辑、检测语言和段落特征，以及针对不同情况和特征的处理方法的翻译版本：</p>
-<p><strong>降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略</strong></p>
-<p><strong>1. 学术论文中人工智能不断演变的情况：挑战与思考</strong></p>
-<ul>
-<li><p><strong>1.1 人工智能写作工具的普及及其影响</strong></p>
-<ul>
-<li>近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。</li>
-<li>这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。</li>
-<li>因此，传统上严重依赖书面论文的评估方法面临挑战。</li>
-<li>由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。</li>
-</ul>
-</li>
-<li><p><strong>1.2 人工智能使用的双刃剑效应</strong></p>
-<ul>
-<li>人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。</li>
-<li>人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。</li>
-<li>因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。</li>
-</ul>
-</li>
-<li><p><strong>1.3 区分人类写作与人工智能生成的文本的难度</strong></p>
-<ul>
-<li>区分人类撰写的文本和人工智能生成的文本变得越来越困难。</li>
-<li>由于人工智能模型模仿人类写作风格的能力不断提高，仅仅依靠手动检测变得越来越不可靠。</li>
-</ul>
-</li>
-</ul>
-<p><strong>2. 人工智能检测的剖析：这些工具如何识别人工智能生成的文本</strong></p>
-<ul>
-<li><p><strong>2.1 人工智能检测工具的工作原理：基于统计模式和语言特征的分析</strong></p>
-<ul>
-<li>人工智能检测工具基于与人工智能写作工具使用的类似的语言模型运行，分析文本中人工智能生成内容特有的统计模式和语言特征。</li>
-<li>这些模型本质上会检查输入，并询问“这会是我写的那种文章吗？”如果答案是“是”，则得出结论，该文本很可能是由人工智能生成的。</li>
-<li>这种相似性导致人工智能写作的进步需要人工智能检测的进步，从而形成持续的“猫捉老鼠”游戏。</li>
-</ul>
-</li>
-<li><p><strong>2.2 人工智能检测工具采用的主要分析方法：方法论与特征分析</strong></p>
-<ul>
-<li><strong>2.2.1 困惑度 (Perplexity)：衡量文本可预测性的指标</strong><ul>
-<li><strong>检测方法：</strong> 评估文本中单词序列的概率分布。困惑度越低，文本越可预测，越可能由人工智能生成。</li>
-<li><strong>检测逻辑：</strong> 人工智能倾向于生成流畅但缺乏创造性的文本，因此困惑度较低。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 文本中单词的出现频率和组合方式。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果困惑度过低：</strong> 检查文本是否过于流畅和缺乏变化。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用更复杂的句子结构，更不常见的词汇，以及更具创造性的表达方式。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.2 突发性 (Burstiness)：衡量句子结构和长度变化的指标</strong><ul>
-<li><strong>检测方法：</strong> 评估文本中句子长度和结构的差异程度。突发性越低，文本越单调，越可能由人工智能生成。</li>
-<li><strong>检测逻辑：</strong> 人工智能倾向于生成句子结构和长度相似的文本，缺乏人类写作的自然变化。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 句子长度的方差，句子结构的复杂程度。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果突发性过低：</strong> 检查文本是否过于单调和缺乏变化。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用不同长度和结构的句子，例如简单句、复合句和复杂句的组合。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.3 词频分析：识别过度使用的常见词汇</strong><ul>
-<li><strong>检测方法：</strong> 统计文本中每个单词的出现频率，并识别过度使用的常见词汇。</li>
-<li><strong>检测逻辑：</strong> 人工智能倾向于过度使用某些常见词汇，缺乏人类写作的多样性。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 文本中单词的频率分布。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果发现过度使用的常见词汇：</strong> 检查文本是否过于依赖某些词汇，缺乏多样性。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用更丰富的词汇，避免过度依赖常见词汇，并使用词库来寻找同义词。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.4 N-gram 分析：识别常见的语言模式</strong><ul>
-<li><strong>检测方法：</strong> 将文本分解为 N 个单词的序列 (N-gram)，并识别常见的语言模式。</li>
-<li><strong>检测逻辑：</strong> 人工智能倾向于使用常见的语言模式，缺乏人类写作的独特性。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 文本中 N-gram 的频率分布。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果发现常见的语言模式：</strong> 检查文本是否过于依赖某些短语和表达方式，缺乏独特性。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用更具创造性和非陈词滥调的措辞，避免使用常见的语言模式。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.5 句法分析：评估句子结构的复杂性</strong><ul>
-<li><strong>检测方法：</strong> 分析句子的语法结构，例如主语、谓语、宾语等，并评估其复杂性。</li>
-<li><strong>检测逻辑：</strong> 人工智能倾向于使用简单的句子结构，缺乏人类写作的复杂性。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 句子结构的复杂程度，例如从句的数量和类型。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果句子结构过于简单：</strong> 检查文本是否缺乏复杂性和细微差别。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用更复杂的句子结构，例如使用从句和插入语来表达更复杂的思想。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.6 语义分析：理解文本的含义和语境</strong><ul>
-<li><strong>检测方法：</strong> 分析单词和短语的含义，包括比喻和文化参考等细微差别，并评估文本的整体连贯性和一致性。</li>
-<li><strong>检测逻辑：</strong> 人工智能可能无法完全理解文本的含义和语境，导致语义错误或不一致。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 文本的整体连贯性和一致性，以及对语境的理解程度。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果发现语义错误或不一致：</strong> 检查文本是否缺乏理解和细微差别。</li>
-<li><strong>改进策略：</strong> 鼓励学生更深入地理解主题，并使用更准确和细致的语言来表达自己的思想。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.7 嵌入 (Embedding)：评估单词之间的语义关系</strong><ul>
-<li><strong>检测方法：</strong> 将单词表示为向量，并评估它们之间的语义关系，例如相似性、相关性和距离。</li>
-<li><strong>检测逻辑：</strong> 人工智能可能无法准确地捕捉单词之间的语义关系，导致不自然的表达方式。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 单词向量之间的距离和关系。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果发现不自然的表达方式：</strong> 检查文本是否缺乏流畅性和自然性。</li>
-<li><strong>改进策略：</strong> 鼓励学生使用更自然和流畅的语言，并注意单词之间的语义关系。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.8 分类器 (Classifier)：基于机器学习的文本分类</strong><ul>
-<li><strong>检测方法：</strong> 使用在标记数据（人类 vs. 人工智能）上训练的机器学习模型来对新文本进行分类。</li>
-<li><strong>检测逻辑：</strong> 分类器可以识别人工智能生成的文本中常见的模式和特征。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 基于机器学习模型的预测结果。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果分类器将文本标记为人工智能生成：</strong> 检查文本是否具有人工智能生成的文本中常见的特征，例如低困惑度、低突发性、过度使用的常见词汇等。</li>
-<li><strong>改进策略：</strong> 结合其他检测方法，并根据具体情况进行判断。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>2.2.9 水印 (Watermarking)：嵌入隐藏信息的未来方法</strong><ul>
-<li><strong>检测方法：</strong> 在人工智能生成的文本中嵌入隐藏的信息，例如特定的单词序列或字符编码。</li>
-<li><strong>检测逻辑：</strong> 只有知道水印信息的检测器才能识别人工智能生成的文本。</li>
-<li><strong>检测语言&#x2F;特征：</strong> 嵌入在文本中的隐藏信息。</li>
-<li><strong>处理方法：</strong><ul>
-<li><strong>如果检测到水印信息：</strong> 确认文本是由人工智能生成的。</li>
-<li><strong>改进策略：</strong> 目前该技术仍在开发中，尚未得到广泛应用。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>2.3 人工智能检测工具与抄袭检查器的区别：目标与方法</strong></p>
-<ul>
-<li>人工智能检测工具和抄袭检查器具有不同的目标和方法。</li>
-<li>人工智能检测工具寻找类似人工智能的特征，而抄袭检查器则将文本与现有来源的数据库进行比较。</li>
-<li>学生需要理解这些差异，并认识到人工智能生成的内容可能会因与现有在线文本的相似性而被抄袭检查器标记。</li>
-</ul>
-</li>
-<li><p><strong>2.4 手动检测的价值：识别语言和段落特征</strong></p>
-<ul>
-<li>手动检测涉及注意单调的写作、可预测的语言、缺乏句子结构变化以及过度使用对冲语言。</li>
-<li>培训教育工作者和学生识别这些模式是一种有价值的补充方法，尤其是在与人工智能检测工具和其他评估策略结合使用时。</li>
-<li><strong>2.4.1 单调的写作：</strong> 缺乏创造性和独特性，使用常见的短语和表达方式。<ul>
-<li><strong>处理方法：</strong> 鼓励学生使用更具创造性的语言，避免使用常见的短语和表达方式。</li>
-</ul>
-</li>
-<li><strong>2.4.2 可预测的语言：</strong> 使用简单的句子结构和常见的词汇，缺乏复杂性和细微差别。<ul>
-<li><strong>处理方法：</strong> 鼓励学生使用更复杂的句子结构和更丰富的词汇。</li>
-</ul>
-</li>
-<li><strong>2.4.3 缺乏句子结构变化：</strong> 使用句子长度和结构相似的文本，缺乏自然变化。<ul>
-<li><strong>处理方法：</strong> 鼓励学生使用不同长度和结构的句子。</li>
-</ul>
-</li>
-<li><strong>2.4.4 过度使用对冲语言：</strong> 使用模糊和不确定的语言，例如“可能”、“似乎”等。<ul>
-<li><strong>处理方法：</strong> 鼓励学生使用更自信和明确的语言。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>3. 尽量减少学术论文中人工智能生成利用的主动策略</strong></p>
-<ul>
-<li><p><strong>3.1 培养原创思维和想法</strong></p>
-<ul>
-<li>在可能利用人工智能之前，强调让学生产生自己想法的写作前活动。</li>
-<li>自由写作、头脑风暴、聚类和维护个人日志等技术可以培养原创思维。</li>
-<li>这些活动可以帮助学生利用自己的知识和观点，减少他们最初依赖人工智能生成内容的倾向。</li>
-<li>首先关注想法的产生可以使学生更深入地参与自己的想法。</li>
-<li>鼓励学生积极分析作业和课程材料，并发展自己独特的解释和问题。</li>
-<li>提出关于作业的目的、受众和所需任务的关键问题可以激发自主思考。</li>
-<li>通过深入理解作业的细微差别，人工智能更难在没有学生大量指导的情况下创建真正相关且富有洞察力的回答。</li>
-<li>促进“畅谈”或协作讨论，作为集思广益和完善自己观点的一种方式。</li>
-<li>同伴互动可以产生新的见解，并帮助学生阐明自己的想法。</li>
-<li>协作环境鼓励积极参与教材，并发展人工智能可能难以复制的独特观点。</li>
-<li>整合需要将课程概念与自己的经验、观察和信念联系起来的活动。</li>
-<li>鼓励反思性写作或个人联系的作业可以培养原创性。</li>
-<li>由于人工智能没有个人经验或主观观点，因此利用这些领域的作业更能抵抗人工智能驱动的内容。</li>
-<li>鼓励使用图表、列表和其他视觉方法来组织思想并识别思想之间的联系。</li>
-<li>这些技术可以帮助学生全面理解主题及其独特的处理方式。</li>
-<li>想法的视觉组织可以揭示纯粹基于文本的人工智能生成可能会遗漏的非线性联系和见解。</li>
-<li>在课堂上模拟发展想法的过程，展示如何从一般主题过渡到具体和原创的讨论。</li>
-<li>明确的指导和示例可以指导学生自己的想法生成。</li>
-<li>向学生展示想法发展的“幕后花絮”可以使该过程更加清晰，并减少他们依赖人工智能作为捷径的倾向。</li>
-</ul>
-</li>
-<li><p><strong>3.2 设计本质上引人入胜的作业</strong></p>
-<ul>
-<li>避免可以简单地通过事实回忆或一般总结来回答的作业。人工智能擅长生成这些内容。</li>
-<li>需要分析、综合、评估和创造性问题解决等高级思维技能的作业不太容易受到人工智能直接生成的影响。</li>
-<li>纳入需要学生分析特定的复杂数据集或案例研究并得出自己独特结论的任务。</li>
-<li>这些作业需要批判性思维和解释，这超出了人工智能目前的能力。</li>
-<li>人工智能可以处理数据，但以新颖的方式细致地解释和应用研究结果通常需要人类的智慧。</li>
-<li>设计专注于写作过程本身的作业，包括草稿、基于反馈的修改以及对写作体验的思考。</li>
-<li>这些面向过程的任务评估学生在整个写作过程中的参与度和理解力。</li>
-<li>人工智能可以生成最终成果，但它本质上无法复制人类写作过程中发生的学习和完善的迭代过程。</li>
-<li>实施需要学生口头展示研究和想法的作业，从而实现实时对话和提问。</li>
-<li>口头展示可以揭示学生对书面论文之外的理解深度。</li>
-<li>人工智能可以生成脚本，但在自发和互动环境中阐明和捍卫想法的能力是人类理解的关键区分因素。</li>
-<li>开发需要整合人工智能无法以有意义的方式轻松创建或合成的多媒体元素（视频、录音、交互式视觉效果等）的作业。</li>
-<li>这些类型的作业需要超越人工智能文本生成重点的多样化技能和创造性投入。</li>
-<li>考虑“无评分”或替代评估方法，重点关注学习和成长，而不是仅仅关注论文的最终成绩。</li>
-<li>这可以将重点从创建完美的 AI 生成论文转移到真正参与教材。</li>
-<li>重视学习而不是成绩可以减轻使用 AI 来获得高分的压力。</li>
-</ul>
-</li>
-<li><p><strong>3.3 将写作过程整合为学习活动的核心</strong></p>
-<ul>
-<li>明确教授写作过程的各个阶段（构思、起草、修改、编辑、发表），并强调每个阶段的重要性。</li>
-<li>通过将写作分解为易于管理的步骤，学生不太可能感到不知所措，并且减少了他们通过人工智能寻找捷径的诱惑。</li>
-<li>在整个课程中纳入低风险的写作作业和活动，以逐步建立学生的信心和技能。</li>
-<li>定期练习可以提高写作能力，并减少对主要作业中人工智能的依赖。</li>
-<li>在写作过程的多个阶段提供同伴评审和反馈的机会。</li>
-<li>来自同事的建设性批评可以帮助学生识别需要改进的领域并发展自己的声音。</li>
-<li>提供关于草稿的详细指导反馈，重点关注想法的发展、分析和讨论，而不仅仅是语法和机制。</li>
-<li>引导学生进行更深入的思考和原创见解的反馈可以抵消他们依赖人工智能进行表面内容创作的倾向。</li>
-<li>整合研究技能指导，强调通过适当的引用和释义来道德地使用来源。</li>
-<li>对学术诚信和来源使用的强烈理解可以减少学生不当使用人工智能的可能性。</li>
-<li>鼓励学生将写作视为学习和探索想法的工具，而不仅仅是需要完成的任务。</li>
-<li>将写作视为智力发现的手段可以提高学生的参与度和原创性。</li>
-</ul>
-</li>
-</ul>
-<p><strong>4. 赋予学生权力，超越人工智能依赖，完善和提高草稿质量</strong></p>
-<ul>
-<li><p><strong>4.1 培养强大的分析和批判性思维能力</strong></p>
-<ul>
-<li>教导学生如何评估信息来源的偏见、可靠性和相关性。</li>
-<li>批判性评估技能对于做出自己的判断和超越人工智能生成的摘要至关重要。</li>
-<li>能够批判性地评估信息来源的学生更有能力发展自己的论点，而不是依赖人工智能的解释。</li>
-<li>鼓励学生对研究主题提出深入的问题，挑战假设并探索不同的观点。</li>
-<li>探索式学习可以培养更深入的理解和原创见解。</li>
-<li>提出问题并探索多个观点可以带来比人工智能通常提供的更细致的分析。</li>
-<li>模拟分析复杂信息并将多个信息来源的研究结果整合到连贯论证中的过程。</li>
-<li>关于分析和整合技能的明确指导对于超越人工智能生成的内容至关重要。</li>
-<li>通过展示如何将不同的信息联系起来以形成自己的论证，学生可以获得力量。</li>
-<li>纳入需要学生识别和评估证据的不同解释的活动。</li>
-<li>理解多个观点是批判性思维的重要方面。</li>
-<li>认识和分析不同的观点可以带来更完善和更不像人工智能的写作。</li>
-<li>鼓励学生在分析信息时反思自己的思维过程和偏见。</li>
-<li>自我意识可以提高分析的深度和原创性。</li>
-<li>认识到个人偏见可以实现更客观和细致的分析。</li>
-</ul>
-</li>
-<li><p><strong>4.2 掌握详细解释和展开的技巧</strong></p>
-<ul>
-<li>教导学生使用“5W1H”（谁、什么、哪里、何时、为什么、如何）来用具体的细节展开想法。</li>
-<li>详细的解释为学术写作增添了深度和清晰度。</li>
-<li>由于人工智能生成的内容可能含糊不清，因此强调详细的解释可以使学生超越表面写作。</li>
-<li>展示如何通过在后续句子中坚持该想法来使用放大来展开早期想法。</li>
-<li>展开对于彻底发展一个观点至关重要。</li>
-<li>通过鼓励学生用支持性细节和推理来展开想法，他们的写作将比典型的人工智能输出更实质。</li>
-<li>鼓励使用具体的例子、类比和生动的描述来解释和阐明抽象概念。</li>
-<li>这些技巧使写作更具吸引力和易于理解。</li>
-<li>人工智能可能会做出一般的解释，但使用例证性技巧可以增加人性和更深入的理解。</li>
-<li>教导学生如何限制主张、承认局限性并在写作中添加细微差别和智力诚实。</li>
-<li>承认复杂性表明对主题有更深入的理解。</li>
-<li>虽然人工智能经常将信息呈现为确定性的，但教导限制可以增加人类判断和批判性思维的层次。</li>
-<li>模拟如何在学术写作中适当地诉诸情感，以与读者建立联系并使论证更有效。</li>
-<li>战略性地使用情感诉求可以提高参与度。</li>
-<li>虽然学术写作是正式的，但微妙的人际联系可以使写作更具说服力，更不像是机器人。</li>
-</ul>
-</li>
-<li><p><strong>4.3 论证的逻辑和连贯组织</strong></p>
-<ul>
-<li>强调引导整个论文的清晰且重点突出的论文的重要性。</li>
-<li>强有力的论文为读者和作者都提供了路线图。</li>
-<li>明确定义的论文表明清晰的理解和论证，人工智能更难在没有特定指导的情况下生成真正连贯的论文。</li>
-<li>教导学生学术论文的各种结构（时间顺序、比较&#x2F;对比、原因&#x2F;结果、问题&#x2F;解决方案）以及如何选择对论证最有效的结构。</li>
-<li>逻辑结构可以提高清晰度和说服力。</li>
-<li>通过理解不同的结构，学生可以以比人工智能默认执行的更完善的方式组织思想。</li>
-<li>强调每个段落的主题句的重要性，明确陈述要点并将其与论文联系起来。</li>
-<li>清晰的主题句可以提高段落的连贯性。</li>
-<li>精心制作的主题句表明清晰的推理，这可能是纯粹的人工智能生成文本所缺乏的。</li>
-<li>展示段落和章节之间有效过渡的使用，以使想法的流动更加顺畅。</li>
-<li>过渡在论文的不同部分之间创建逻辑联系。</li>
-<li>人工智能生成的文本可能缺乏以人类思维发展为特征的微妙过渡。</li>
-<li>强调段落内逻辑内部结构的必要性，其中证据支持主张，而主张最终支持论文。</li>
-<li>结构良好的段落对于强有力的论证至关重要。</li>
-<li>通过教导学生在段落级别逻辑地构建论证，可以帮助他们发展更强大且不依赖人工智能的写作。</li>
-<li>指导学生如何撰写有效的引言和结论，以构建论证并总结要点。但是，不要仅仅重复。</li>
-<li>强有力的引言和结论给读者留下持久的印象。</li>
-<li>通过教导学生创建超越基本总结的引人入胜的引言和结论，可以将他们的作品与人工智能生成的文本区分开来。</li>
-</ul>
-</li>
-<li><p><strong>4.4 将人性化的声音、细微差别和洞察力注入写作</strong></p>
-<ul>
-<li>鼓励学生使用主动语态写作，以创建更清晰和更直接的句子。</li>
-<li>主动语态通常使写作更具吸引力。</li>
-<li>由于人工智能可能会根据语境默认使用被动语态，因此鼓励主动语态可以增加更人性化的感觉。</li>
-<li>指导学生避免过度正式或机械的语言，并发展自己独特的写作风格和语调。</li>
-<li>个人风格使写作更具特色。</li>
-<li>由于人工智能经常生成平庸或通用的语言，因此培养个人声音可以使学生的写作脱颖而出。</li>
-<li>鼓励使用各种句子结构和句子长度，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然和引人入胜的节奏。</li>
-<li>句子的多样性可以提高可读性和流畅性。</li>
-<li>由于人工智能可能会始终如一地生成类似的句子结构，因此教导多样性可以使写作更人性化。</li>
-<li>鼓励学生在整个写作过程中融入自己的观点、见解和批判性分析，而不仅仅是总结或报告信息。</li>
-<li>原创见解是强大学术研究的证明。</li>
-<li>强调将自己对教材的“看法”添加到其中的重要性对于区分人类写作和人工智能的输出至关重要。</li>
-<li>鼓励使用适当的情感语言和个人轶事（如果相关且允许），以与读者建立联系并增加真实性。</li>
-<li>人际联系可以使写作更具影响力。</li>
-<li>由于人工智能通常缺乏真正的情感，因此融入适当的情感表达可以使写作更人性化。</li>
-<li>指导学生修改自己的作品，以消除人工智能生成的文本中常见的陈词滥调、术语（除非对读者来说是合适的）和过度通用的短语。</li>
-<li>准确和原创的语言可以增强写作。</li>
-<li>通过教导学生注意单词的选择并避免常见的人工智能模式，可以完善写作。</li>
-</ul>
-</li>
-<li><p><strong>4.5 提高学术严谨性的词汇和句子结构</strong></p>
-<ul>
-<li>鼓励学生通过广泛的阅读以及使用词库（谨慎且根据语境使用）、词汇日志等资源来增加词汇量。</li>
-<li>多样化的词汇可以提高准确性和精致度。</li>
-<li>虽然人工智能拥有庞大的词汇量，但教导学生深思熟虑地使用广泛的单词可以提高写作水平。</li>
-<li>教导学生有效地使用动词，而不是依赖名词化（由动词形成的名词），以使写作更主动和简洁。</li>
-<li>强有力的动词可以提高句子的清晰度。</li>
-<li>通过鼓励使用动词而不是名词，可以使写作更具活力，更不像人工智能。</li>
-<li>指导学生使用从属连词和关系代词来构建复杂的句子，以表达想法之间的细微关系。</li>
-<li>复杂的句子可以表达复杂的思想。</li>
-<li>由于人工智能可能会生成更简单的句子结构，因此教导复杂性可以提高学生的写作水平。</li>
-<li>强调正确使用准确且特定于领域的术语的重要性。</li>
-<li>准确的术语对于学术写作至关重要。</li>
-<li>虽然人工智能可以使用专业术语，但确保学生理解并正确应用它们可以表明真正的学习。</li>
-<li>提醒学生注意过度使用同义词，因为在科学写作中，为了清晰起见，首选一致的术语。</li>
-<li>术语的一致性可以避免混淆。</li>
-<li>虽然避免重复很重要，但在某些领域，一致地使用相同的术语比仅仅使词汇多样化更重要。</li>
-<li>教导学生通过释义、代词的使用和句子改写来有效地避免单词和短语的重复的技巧。</li>
-<li>避免不必要的重复可以提高可读性。</li>
-<li>人工智能可能会变得重复，但教导学生避免重复的有效技巧可以提高写作质量，而与人工智能检测无关。</li>
-</ul>
-</li>
-</ul>
-<p><strong>5. 导航人工智能检测：学生和教育工作者的最佳实践</strong></p>
-<ul>
-<li><p><strong>5.1 理解人工智能检测工具的局限性和潜在偏见</strong></p>
-<ul>
-<li>告知学生和教育工作者人工智能检测的根本机制（如第 2 节所述），并促进对人工智能检测的能力和局限性的现实理解。</li>
-<li>通过透明地了解这些工具的工作方式，可以管理期望并防止过度依赖其结果。</li>
-<li>强调人类撰写的文本（包括历史文献）被错误地标记为人工智能生成的假阳性案例。</li>
-<li>强调人工智能检测的结果应被视为指标，而不是人工智能使用的确凿证据。</li>
-<li>讨论基于训练数据的人工智能检测工具的潜在偏见。</li>
-<li>不同的 AI 模型和检测工具的准确性可能不同，并且更容易在特定类型的写作中产生假阳性。</li>
-<li>强调人工智能检测技术在不断发展，并且准确性可能因使用的 AI 写作模型和检测算法的精细程度而异。</li>
-<li>教育工作者需要随时了解 AI 写作和检测的最新发展。</li>
-<li>提醒不要将 AI 检测工具用作学术不端行为的唯一决定因素。</li>
-<li>相反，提倡一种全面的方法，评估作品的质量，评估学生对内容的理解，并考虑其他环境因素。</li>
-<li>多方面的评估方法比依赖单一技术工具更可靠。</li>
-</ul>
-</li>
-<li><p><strong>5.2 适当引用和释义的重要作用</strong></p>
-<ul>
-<li>重申学术诚信的基本原则，以及通过适当的引用来表彰信息来源的重要性。</li>
-<li>无论是否使用了 AI，适当的引用都至关重要，并且仍然是学术诚信的基础。</li>
-<li>提供关于有效释义技巧的明确指导，而不仅仅是更改几个单词。</li>
-<li>强调需要用自己的话重写原始文本，并准确地表达其含义。</li>
-<li>掌握有效释义的学生不太可能被标记为 AI，并且可以展示对信息来源的更深入理解。</li>
-<li>解释释义、引用和总结之间的区别，以及每种方法何时合适。</li>
-<li>清晰地理解这些区别对于学术写作至关重要。</li>
-<li>了解何时以及如何有效地使用每种技巧有助于强有力的学术写作，并避免抄袭（或无意的 AI 式写作）。</li>
-<li>强调以所需的引用样式进行准确和完整引用的重要性。</li>
-<li>适当的引用使读者能够找到原始信息来源并验证信息。</li>
-<li>不准确或缺失的引用可能会发出危险信号，无论是否使用了 AI。</li>
-<li>建议学生在研究过程中保持对信息来源的细致记录，以确保准确的引用，并避免无意的抄袭或对 AI 依赖的怀疑。</li>
-<li>有组织的笔记对于道德研究至关重要。</li>
-<li>良好的研究习惯有助于学术诚信，并帮助学生避免 AI 误用或错误分类的陷阱。</li>
-</ul>
-</li>
-<li><p><strong>5.3 加强写作中人性化特征以避免错误分类的策略</strong></p>
-<ul>
-<li>鼓励学生将个人见解、独特的观点和原创分析注入写作中，超越 AI 容易获得的信息。</li>
-<li>AI 很难产生真正新颖的想法或主观解释。</li>
-<li>建议学生发展反映自己个性的清晰写作声音和风格，而不是采用通用或过度正式的语调。</li>
-<li>AI 经常生成缺乏强烈个人声音的文本。</li>
-<li>建议采用各种句子结构，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然的节奏。</li>
-<li>AI 可能会生成更均匀的句子结构。</li>
-<li>鼓励学生使用具体和细致的语言，避免过度依赖 AI 生成的文本中常见的通用单词和短语。</li>
-<li>AI 可能会默认使用通用词汇。</li>
-<li>建议学生纳入例子、轶事和个人思考（如果合适），以使写作更具吸引力和共鸣。</li>
-<li>AI 没有个人经验，并且很难生成真实的轶事。</li>
-<li>建议学生仔细审查和编辑 AI 辅助的草稿，以确保自然的流程、想法之间的逻辑联系，并避免重复的措辞或语调的急剧变化。</li>
-<li>人工编辑可以消除 AI 生成的文本中可能存在的矛盾。</li>
-<li>鼓励学生通过添加（在语境中适当的范围内）轻微的不完美或文体上的变化来“人性化”写作，以使文本“完美”而不是更真实的人性化。</li>
-<li>过度精致且语法完美的文本可能是 AI 的迹象。</li>
-</ul>
-</li>
-</ul>
-<p><strong>6. 结论：在智能机器时代培养学术诚信文化</strong></p>
-<ul>
-<li>重申尽量减少 AI 使用、提高学生写作水平和导航 AI 检测的主要策略。</li>
-<li>强调发展批判性思维、写作技能和对学术诚信的理解的重要性，采取积极主动的教育方法。</li>
-<li>强调教育工作者、学生和教育机构之间持续对话和合作的必要性，以适应教育中 AI 不断演变的情况。</li>
-<li>以强调学术追求中真实的人类思维和表达的持久价值的信息结束。</li>
-</ul>
-<p>希望这个版本更符合您的要求，更侧重方法论和 AIGC 检测的细节！</p>
-]]></content>
-      <tags>
-        <tag>大模型</tag>
-        <tag>谷歌Gemini</tag>
-        <tag>DeepSeek</tag>
-        <tag>论文</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OpenRouter注册指南</title>
-    <url>//OpenRouter/</url>
-    <content><![CDATA[<hr>
-<h3 id="免费用AI：OpenRouter注册指南"><a href="#免费用AI：OpenRouter注册指南" class="headerlink" title="免费用AI：OpenRouter注册指南"></a><strong>免费用AI：OpenRouter注册指南</strong></h3><h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h4><p>OpenRouter.ai是一个聚合多种AI模型的平台，提供免费的API调用服务，包括Gemini 2.0和DeepSeek模型。本文将指导你如何注册OpenRouter.ai，获取免费API调用权限，并推荐实用的免费模型。</p>
-<hr>
-<h3 id="一、注册OpenRouter-ai"><a href="#一、注册OpenRouter-ai" class="headerlink" title="一、注册OpenRouter.ai"></a><strong>一、注册OpenRouter.ai</strong></h3><h2 id="注册前准备：一个邮箱，ChatBox软件"><a href="#注册前准备：一个邮箱，ChatBox软件" class="headerlink" title="注册前准备：一个邮箱，ChatBox软件"></a>注册前准备：一个邮箱，ChatBox软件</h2><ol>
-<li><p><strong>访问官网</strong><br>打开<a href="https://openrouter.ai/">OpenRouter.ai</a>。</p>
-</li>
-<li><p><strong>创建账户</strong>  </p>
-<ul>
-<li>点击“Sign Up”，使用邮箱或第三方账户（如Google、GitHub）注册。</li>
-<li>完成邮箱验证并登录。</li>
-</ul>
-</li>
-<li><p><strong>生成API Key</strong>  </p>
-<ul>
-<li>登录后，进入<a href="https://openrouter.ai/settings/keys">API Keys页面</a>。</li>
-<li>点击“Generate New Key”生成API密钥。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="二、获取免费API调用"><a href="#二、获取免费API调用" class="headerlink" title="二、获取免费API调用"></a><strong>二、获取免费API调用</strong></h3><ol>
-<li>在查找免费模型一步，点击任意一个免费模型，找到下图</li>
-<li><img src="/imgs/ai/0228.png" alt="示例界面"></li>
-<li>点击创建APIkey，保存好后开始第三步，点击链接查看免费模型，后续步骤已写好</li>
-</ol>
-<hr>
-<h3 id="三、查找免费模型"><a href="#三、查找免费模型" class="headerlink" title="三、查找免费模型"></a><strong>三、查找免费模型</strong></h3><ol>
-<li><p><strong>免费模型列表</strong></p>
-<ul>
-<li>访问<a href="https://openrouter.ai/models?q=free">OpenRouter免费模型列表</a>查看所有免费模型。</li>
-</ul>
-</li>
-<li><p><strong>选择模型</strong></p>
-<ul>
-<li>在列表中选择Gemini 2.0、DeepSeek等免费模型。</li>
-<li>点击“Use Model”即可调用。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="四、推荐免费模型：DeepSeek-V3"><a href="#四、推荐免费模型：DeepSeek-V3" class="headerlink" title="四、推荐免费模型：DeepSeek V3"></a><strong>四、推荐免费模型：DeepSeek V3</strong></h3><ol>
-<li><p><strong>优势</strong>  </p>
-<ul>
-<li>高质量的自然语言处理能力。</li>
-<li>支持多语言和多种任务（如翻译、问答、文本生成）。</li>
-<li>免费调用，适合个人开发者和小型项目。</li>
-</ul>
-</li>
-<li><p><strong>使用场景</strong>  </p>
-<ul>
-<li>沉浸式翻译：快速翻译多语言内容。</li>
-<li>CherryStudio：集成到开发环境中，提升效率。</li>
-<li>ChatBox：构建智能聊天机器人。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="五、API调用示例"><a href="#五、API调用示例" class="headerlink" title="五、API调用示例"></a><strong>五、API调用示例</strong></h3><ol>
-<li><p><strong>API地址</strong><br>使用<a href="https://openrouter.ai/api/v1/chat/completions">OpenRouter API</a>进行调用。</p>
-</li>
-<li><p><strong>代码示例</strong><br>以下是一个简单的API调用示例（Python）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">api_key = <span class="string">&quot;你的API密钥&quot;</span></span><br><span class="line">url = <span class="string">&quot;https://openrouter.ai/api/v1/chat/completions&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&quot;Authorization&quot;</span>: <span class="string">f&quot;Bearer <span class="subst">&#123;api_key&#125;</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&quot;model&quot;</span>: <span class="string">&quot;deepseek-v2-chat&quot;</span>, <span class="comment"># 选择模型</span></span><br><span class="line">    <span class="string">&quot;messages&quot;</span>: [&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;你好，今天天气怎么样？&quot;</span>&#125;]</span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url, headers=headers, json=data)</span><br><span class="line"><span class="built_in">print</span>(response.json())</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h3 id="六、ChatBox-引用示例"><a href="#六、ChatBox-引用示例" class="headerlink" title="六、ChatBox 引用示例"></a><strong>六、ChatBox 引用示例</strong></h3><ol>
-<li><p><strong>ChatBox 集成</strong></p>
-<ul>
-<li>ChatBox 是一款流行的聊天机器人客户端，支持自定义模型。</li>
-<li>在 ChatBox 中，你可以配置 OpenRouter API 密钥和选择 DeepSeek V3 模型。</li>
-</ul>
-</li>
-<li><p><strong>配置步骤</strong></p>
-<ul>
-<li>打开 ChatBox，进入设置。</li>
-<li>在“模型设置”中，选择“自定义模型”。</li>
-<li>填写 OpenRouter API 密钥。</li>
-<li>选择或输入模型名称（例如：<code>openrouter/deepseek-v2-chat</code>）。</li>
-<li>保存设置，即可在 ChatBox 中使用 DeepSeek V3 模型进行对话。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="七、其他付费选择"><a href="#七、其他付费选择" class="headerlink" title="七、其他付费选择"></a><strong>七、其他付费选择</strong></h3><ol>
-<li><p><strong>高级模型</strong>  </p>
-<ul>
-<li>OpenAI GPT-4、Anthropic Claude等高级模型，适合更复杂的需求。</li>
-<li>在“Models”页面查看价格和功能。</li>
-</ul>
-</li>
-<li><p><strong>付费计划</strong>  </p>
-<ul>
-<li>根据使用量选择合适的付费计划，享受更高额度和更快的响应速度。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h3><p>OpenRouter.ai是一个功能丰富的AI模型平台，无论是免费还是付费模型，都能满足多样化的需求。通过本文的指导，你可以快速注册并开始使用，推荐从免费的DeepSeek V3入手，体验AI的强大能力。</p>
-<hr>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a><strong>参考链接</strong></h3><ul>
-<li><a href="https://openrouter.ai/">OpenRouter.ai官网</a></li>
-<li><a href="https://openrouter.ai/api/v1/chat/completions">OpenRouter API</a></li>
-<li><a href="https://openrouter.ai/settings/keys">OpenRouter API Keys</a></li>
-<li><a href="https://openrouter.ai/models?q=free">OpenRouter免费模型列表</a></li>
-<li><a href="https://www.chatbox.com/">ChatBox</a> (请替换为ChatBox官方链接)</li>
-</ul>
-<hr>
-]]></content>
-      <tags>
-        <tag>大模型</tag>
-        <tag>谷歌Gemini</tag>
-        <tag>DeepSeek</tag>
-        <tag>AI</tag>
-        <tag>API</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>via如何下载，以及拦截广告？一篇文章教会你</title>
-    <url>//via/</url>
-    <content><![CDATA[<ul>
-<li><h1 id="Via浏览器，小而美"><a href="#Via浏览器，小而美" class="headerlink" title="Via浏览器，小而美"></a>Via浏览器，小而美</h1></li>
-</ul>
-<h2 id="首先，下载via浏览器！"><a href="#首先，下载via浏览器！" class="headerlink" title="首先，下载via浏览器！"></a>首先，下载via浏览器！</h2><p><strong>点击这里就可以下载了→：<a href="https://res.viayoo.com/v1/via-release-cn.apk">下载地址</a></strong></p>
-<p><strong>Via官网：<a href="https://viayoo.com/zh-cn/">这里！！</a></strong></p>
-<h2 id="其次，保存这些规则"><a href="#其次，保存这些规则" class="headerlink" title="其次，保存这些规则"></a>其次，保存这些规则</h2><p><strong>左侧为名称，右侧为链接</strong></p>
-<p>复制链接到浏览器的广告屏蔽部分即可导入，然后点击更新即可</p>
-<table>
-<thead>
-<tr>
-<th align="center">AdRules AdBlock List 精简版</th>
-<th align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt</a></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">AdRules AdBlock List</td>
-<td align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt</a></td>
-</tr>
-<tr>
-<td align="center">乘风 广告规则</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt</a></td>
-</tr>
-<tr>
-<td align="center">乘风 视频规则</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt</a></td>
-</tr>
-<tr>
-<td align="center">ABP Merge Rules</td>
-<td align="center"><a href="https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt">https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt</a></td>
-</tr>
-<tr>
-<td align="center">去除 APP 下载提示</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt">https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt</a></td>
-</tr>
-<tr>
-<td align="center">Ad-J</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt">https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt</a></td>
-</tr>
-</tbody></table>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="打开博客"><a href="#打开博客" class="headerlink" title="打开博客"></a>打开博客</h3><p><img src="https://img.picgo.net/2024/11/30/95b95b765259d5355.jpeg" alt="9"></p>
-<h3 id="复制链接"><a href="#复制链接" class="headerlink" title="复制链接"></a>复制链接</h3><p><img src="https://img.picgo.net/2024/11/30/911c9a7bd6fad9c4db.jpeg" alt="91"></p>
-<h3 id="点击右下角三条杠"><a href="#点击右下角三条杠" class="headerlink" title="点击右下角三条杠"></a><strong>点击右下角三条杠</strong></h3><p><img src="https://img.picgo.net/2024/11/30/1aa723d2368424d38.jpeg" alt="1"></p>
-<p><strong>找到设置</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/27b7bbcb3bd5bdb26.jpeg" alt="2"></p>
-<p><strong>接下来点击通用</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/3ec7ac818d1792f1f.jpeg" alt="3"></p>
-<p><strong>点击广告拦截</strong><img src="https://img.picgo.net/2024/11/30/4ff704c230b0f8f4f.jpeg" alt="4"></p>
-<p><strong>随后点击规则订阅</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/573f59f67373446c9.jpeg" alt="5"></p>
-<p><strong>点击加号，在上面的表格复制广告拦截规则的链接</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/641f621f579914905.jpeg" alt="6"></p>
-<p><strong>在这里粘贴，保存，然后点击右上角的更新，即可应用这些规则</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/8152d5cc5ae2dd697.jpeg" alt="8"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，你的Via已经具备了一定的广告拦截能力，开始享受纯净的冲浪时光吧！</p>
-]]></content>
-      <tags>
-        <tag>via浏览器</tag>
-        <tag>小而美</tag>
-        <tag>广告屏蔽</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
-    <url>//kimiai/</url>
-    <content><![CDATA[<ul>
-<li><ul>
-<li><h1 id="什么，你还不会用AiPPT吗？让Kimi教教你"><a href="#什么，你还不会用AiPPT吗？让Kimi教教你" class="headerlink" title="什么，你还不会用AiPPT吗？让Kimi教教你"></a>什么，你还不会用AiPPT吗？让Kimi教教你</h1><h2 id="第一部分：Kimi介绍"><a href="#第一部分：Kimi介绍" class="headerlink" title="第一部分：Kimi介绍"></a>第一部分：Kimi介绍</h2><p>Kimi是由月之暗面科技有限公司开发的智能助手，它支持长达20万汉字的输入，成为全球市场中可产品化使用的大模型服务里所能支持的最长上下文输入。在2024年3月18日，Kimi宣布支持200万字的超长无损上下文，并开启了产品内测。Kimi的官网是<a href="https://kimi.moonshot.cn/">kimi.moonshot.cn</a>，用户可以在这里注册登录账号并使用Kimi的各项功能。Kimi的最新支持功能包括：</p>
-<ul>
-<li><strong>智能搜索</strong>：能够搜索实时信息，迅速整合并给出详尽答复，同时提供信息来源，使对话既丰富又准确。</li>
-<li><strong>高效阅读</strong>：能够迅速进行摘要，助您精准理解文献书籍、长篇报告、复杂合同、网页长文，并提供深刻的洞察与分析。</li>
-<li><strong>专业解读文件</strong>：支持上传PDF、Word、Excel、PPT、TXT文件和图片，进行快速摘要、翻译、答疑。</li>
-<li><strong>整理资料</strong>：智能识别并整理资料，自动提取关键要点，让资料整理不再繁杂。</li>
-<li><strong>辅助创作</strong>：协助用户梳理大纲、续写文章、创作文案、撰写周报、制定方案。</li>
-<li><strong>编程助手</strong>：帮助用户阅读API文档，定位所需信息，生成代码、快速Debug，涵盖Python、C++、Java等多种编程语言。</li>
-</ul>
-<h2 id="第二部分：用AI生成PPT的步骤"><a href="#第二部分：用AI生成PPT的步骤" class="headerlink" title="第二部分：用AI生成PPT的步骤"></a>第二部分：用AI生成PPT的步骤</h2><h3 id="1-列出提纲或简述文档"><a href="#1-列出提纲或简述文档" class="headerlink" title="1. 列出提纲或简述文档"></a>1. 列出提纲或简述文档</h3><p>在制作PPT之前，一个清晰的提纲可以帮助你组织思路和内容。以下是如何创建提纲的步骤，以及一个具体的示例。</p>
-<h4 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h4><ol>
-<li><strong>确定主题</strong>：明确你的PPT要传达的核心信息或主题。</li>
-<li><strong>列出关键点</strong>：围绕主题，列出你想要在PPT中展示的关键点。</li>
-<li><strong>组织结构</strong>：将关键点按照逻辑顺序排列，形成一个清晰的结构。</li>
-<li><strong>分配内容</strong>：为每个关键点分配具体的内容或数据支持。</li>
-</ol>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>假设你要制作一个关于“如何提高工作效率”的PPT，你的提纲可能如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">标题：如何提高工作效率</span><br><span class="line"></span><br><span class="line">1. 引言</span><br><span class="line">   - 工作效率的重要性</span><br><span class="line">   - 当前面临的挑战</span><br><span class="line"></span><br><span class="line">2. 时间管理</span><br><span class="line">   - 制定工作计划</span><br><span class="line">   - 优先级排序</span><br><span class="line">   - 避免拖延的策略</span><br><span class="line"></span><br><span class="line">3. 技术工具的使用</span><br><span class="line">   - 项目管理软件</span><br><span class="line">   - 协作工具</span><br><span class="line">   - 自动化工具</span><br><span class="line"></span><br><span class="line">4. 团队协作</span><br><span class="line">   - 沟通技巧</span><br><span class="line">   - 团队建设活动</span><br><span class="line">   - 分工与合作</span><br><span class="line"></span><br><span class="line">5. 个人发展</span><br><span class="line">   - 持续学习</span><br><span class="line">   - 技能提升</span><br><span class="line">   - 健康管理</span><br><span class="line"></span><br><span class="line">6. 结论</span><br><span class="line">   - 总结提高工作效率的关键点</span><br><span class="line">   - 鼓励采取行动</span><br></pre></td></tr></table></figure>
-
-<p>就像这样的模板，交给AI之后，会自动根据部分和主题对应内容分配给你的ppt的每一页</p>
-<h3 id="2-交给Kimi的PPT助手"><a href="#2-交给Kimi的PPT助手" class="headerlink" title="2. 交给Kimi的PPT助手"></a>2. 交给Kimi的PPT助手</h3><p>接下来，你可以通过在Kimi的对话框中@PPT助手来唤起PPT助手，或者在Kimi+中找到PPT助手。</p>
-<h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ol>
-<li>登录Kimi官网（<a href="https://kimi.moonshot.cn/">点击这里</a>）</li>
-<li>在聊天界面点击图示位置</li>
-<li><img src="/imgs/kimi/1.png"></li>
-<li>随后点击PPT助手</li>
-<li><img src="/imgs/kimi/2.png"></li>
-<li>按照你写好的提纲或者内容如图所示进行操作</li>
-<li><img src="/imgs/kimi/3.png"></li>
-</ol>
-<h3 id="3-等待Kimi的PPT助手生成预览"><a href="#3-等待Kimi的PPT助手生成预览" class="headerlink" title="3. 等待Kimi的PPT助手生成预览"></a>3. 等待Kimi的PPT助手生成预览</h3><p>输入你想要的PPT内容后，Kimi会自动帮你构思整理好PPT大纲，并生成预览。</p>
-<ol>
-<li>在这里查看结果，和编辑ppt</li>
-<li><img src="/imgs/kimi/4.png"></li>
-</ol>
-<h3 id="4-在KIMI网页的PPT助手可进行修改"><a href="#4-在KIMI网页的PPT助手可进行修改" class="headerlink" title="4. 在KIMI网页的PPT助手可进行修改"></a>4. 在KIMI网页的PPT助手可进行修改</h3><p>生成预览后，你可以在Kimi网页的PPT助手中对PPT进行修改，优化演示内容。</p>
-<ol>
-<li>下拉点击编辑，即可下载或者编辑</li>
-<li><img src="/imgs/kimi/5.png"></li>
-</ol>
-<h3 id="5-点击下载按钮即可得到你的成品"><a href="#5-点击下载按钮即可得到你的成品" class="headerlink" title="5. 点击下载按钮即可得到你的成品"></a>5. 点击下载按钮即可得到你的成品</h3><p>最后，当你对PPT满意后，点击下载按钮即可得到你的成品PPT。</p>
-<ol>
-<li>编辑界面，也可以直接下载或保存你编辑的内容</li>
-<li><img src="/imgs/kimi/6.png"></li>
-</ol>
-<h2 id="第三部分：点缀，让你的PPT更完善"><a href="#第三部分：点缀，让你的PPT更完善" class="headerlink" title="第三部分：点缀，让你的PPT更完善"></a>第三部分：点缀，让你的PPT更完善</h2><p>下载后的PPT文件支持WPS或者Office打开，你可以进行自定义的二次修改，这样，你的PPT就更加完善了。</p>
-<ol>
-<li>如图，点击了下载，可以在浏览器的下载记录找到</li>
-<li><img src="/imgs/kimi/7.png"></li>
-<li>同样的，本地如果用wps和office，还可以再次精修保证最符合你的想要</li>
-<li><img src="/imgs/kimi/8.png"></li>
-</ol>
-<h2 id="第四部分：总结"><a href="#第四部分：总结" class="headerlink" title="第四部分：总结"></a>第四部分：总结</h2><p>使用Kimi的PPT助手制作PPT的优势在于：</p>
-<ul>
-<li><strong>节省时间</strong>：用户可以快速创建和设计PPT，节省大量时间。</li>
-<li><strong>提高专业度</strong>：Kimi的PPT助手提供布局和色彩搭配建议，帮助用户制作出既专业又个性化的PPT。</li>
-<li><strong>多轮对话优化</strong>：Kimi还能根据用户反馈进行多轮对话，优化演示内容。</li>
-</ul>
-<p>通过充分利用Kimi这样的工具，用户可以提升工作效率，将更多的精力投入到内容的创意和演讲的准备上。</p>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>ppt AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
-    <url>//email-to-chatgpt/</url>
-    <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
-<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
-<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
-<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
-<thead>
-<tr>
-<th align="center">站点</th>
-<th align="center">链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CloudFllare注册</td>
-<td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">ChatGPT注册</td>
-<td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">outlook邮箱申请</td>
-<td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p>
-<h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p>
-<h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p>
-<h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p>
-<h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p>
-<p><strong>点击“电子邮件”开始设置</strong></p>
-<h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p>
-<h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还在用盗版免费加速器？快来这里看看吧！</title>
-    <url>//free-personal-node/</url>
-    <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
-<p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
-<ol>
-<li>连通性，是否适合三大运营商</li>
-<li>节点的流媒体解锁：是否支持GPT</li>
-<li>价格不高，且达到1，2两点</li>
-<li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li>
-</ol>
-<h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p>
-<h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p>
-<h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p>
-<p>推荐列表放在最后</p>
-<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table>
-<thead>
-<tr>
-<th align="center">节点推荐</th>
-<th align="center">价格</th>
-<th align="center">类型</th>
-<th align="center">是否支持GPT</th>
-<th align="center">购买链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">一分机场</td>
-<td align="center">2&#x2F;月</td>
-<td align="center">直连</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">69云</td>
-<td align="center">6.9&#x2F;月</td>
-<td align="center">中转</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十分钟速成个人节点：支持ChatGPT</title>
-    <url>//vpn1/</url>
-    <content><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<p><a href="https://halos.xtstudy.site/archives/uskg">注册视频教学</a></p>
-<p><strong><a href="https://register.us.kg/">uskg官网</a></strong></p>
-<p>注册教程参考<strong>以下文章</strong>：<a href="https://blog.ioacx.com/us-kg-free-doamin/">点击前往</a></p>
-<p>邮箱推荐：<strong>outlook，gmail</strong></p>
-<p>注册方法不过多缀述</p>
-<h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></p>
-<p>登录之后，来到dash页面，<strong>点击workers and pages</strong></p>
-<h3 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h3><p><strong>github项目地址</strong>：<a href="https://github.com/cmliu/edgetunnel">点击前往</a></p>
-<p><strong>项目已经为大家配置了教学，大家只需要观看文档说明即可！</strong></p>
-<blockquote>
-<p>这里列出需要用到的信息</p>
-<p><strong>ProxyIP合集</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">ProxyIP</th>
-<th align="center">落地区域</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">ProxylP.US.fxxk.dedyn.io</td>
-<td align="center">美国</td>
-</tr>
-<tr>
-<td align="center">ProxylPSG.fxxk.dedyn.io</td>
-<td align="center">新加坡</td>
-</tr>
-<tr>
-<td align="center">ProxylPJP.fxxk.dedyn.io</td>
-<td align="center">日本</td>
-</tr>
-<tr>
-<td align="center">ProxylP.HK.fxxk.dedyn.io</td>
-<td align="center">香港</td>
-</tr>
-<tr>
-<td align="center">ProxyIP.KR.fxxk.dedyn.io</td>
-<td align="center">韩国</td>
-</tr>
-<tr>
-<td align="center">ProxylP.DE.tp2024.fxxk.dedyn.io GPT</td>
-<td align="center">德国ChatGPT专用</td>
-</tr>
-<tr>
-<td align="center">ProxyIP.Aliyun.fxxk.dedyn.io</td>
-<td align="center">阿里云</td>
-</tr>
-<tr>
-<td align="center">ProxylPOracle.fxxk.dedyn.io</td>
-<td align="center">甲骨文</td>
-</tr>
-<tr>
-<td align="center">hk.ipdb.rr.nu</td>
-<td align="center">第三方维护</td>
-</tr>
-</tbody></table>
-</blockquote>
-<h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><h3 id="CFWorkers"><a href="#CFWorkers" class="headerlink" title="CFWorkers"></a>CFWorkers</h3><ol>
-<li>复制仓库里Workers.js的代码，粘贴到你创建好的workers里面，保存并部署</li>
-<li>UUID在线生成：<a href="https://1024tools.com/uuid">点击前往</a></li>
-<li>在设置里面添加变量：UUID，输入生成的UUID，保存</li>
-<li>添加自定义域，输入一个前缀.你的域名</li>
-<li>访问自定义域名：<strong>格式如下：你的自定义域名&#x2F;UUID</strong></li>
-<li>复制页面的订阅链接就可以导入你的订阅软件了</li>
-</ol>
-<h2 id="开始你的尝试吧！"><a href="#开始你的尝试吧！" class="headerlink" title="开始你的尝试吧！"></a>开始你的尝试吧！</h2><h1 id="进阶教学"><a href="#进阶教学" class="headerlink" title="进阶教学"></a>进阶教学</h1><h2 id="自定义节点订阅器："><a href="#自定义节点订阅器：" class="headerlink" title="自定义节点订阅器："></a>自定义节点订阅器：</h2><p>首先在你的订阅页面复制订阅链接，然后在https:&#x2F;&#x2F;你的域名&#x2F;uuid？sub后面加上&#x3D;订阅器地址</p>
-<blockquote>
-<p>这里列出几个订阅器地址</p>
-<p>周润发大佬线路：<strong>vless.durl.nyc.mn</strong></p>
-<p>3K大佬线路：<strong>3k.fxxk.dedyn.io</strong></p>
-<p>CM优选线路：<strong>VLESS.fxxk.dedyn.io</strong></p>
-</blockquote>
-<p>如你的域名是b.cd，uuid为123，那么格式如下</p>
-<p><strong><a href="https://b.cd/123?sub=vless.durl.nyc.mn">https://b.cd/123?sub=vless.durl.nyc.mn</a></strong></p>
-<p><strong>操作时把域名和你的uuid改为你在workers设置的即可导入订阅</strong></p>
-<p>导入订阅以后，更新一次订阅即可刷新节点</p>
-<h2 id="指定ip落地的地区"><a href="#指定ip落地的地区" class="headerlink" title="指定ip落地的地区"></a>指定ip落地的地区</h2><p>在workers里面添加变量，命名为 <strong>ProxyIP</strong>，输入上方 ProxyIP的列表之一，你的订阅在使用的时候，就会落到 ProxyIP指定的区域，如使用:<strong>hk.ipdb.rr.nu</strong>，在你测试ip的时候就会落到香港，根据你的需要更改ProxyIP的地址即可随时随地进行自定义操作</p>
-<p>该操作不能和线路优选混用</p>
-<h2 id="一些第三方ProxyIP"><a href="#一些第三方ProxyIP" class="headerlink" title="一些第三方ProxyIP"></a>一些第三方ProxyIP</h2><p>由第三方维护的ProxyIP</p>
-<blockquote>
-<p>第二万维护 Proxyimy-telegram-is-herocore.onecf.eu.org</p>
-<p>Mingyu维护</p>
-<p>sg.ipdb.rr.nu</p>
-<p>nl.ipdb.rr.nu</p>
-<p>hk.ipdb.rr.nu</p>
-<p>jp.ipdb.rr.nu</p>
-<p>us.ipdb.rr.nu</p>
-<p>小一维护</p>
-<p>hk.cf.zhetengsha.eu.org</p>
-<p>sg.cf.zhetengsha.eu.org</p>
-<p>us.cf.zhetengsha.eu.org</p>
-<p>jp.ct.zhetengsha.eu.org</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学生的好帮手：OCS</title>
-    <url>//ocs/</url>
-    <content><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p>
-<p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p>
-<h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p>
-<p><a href="https://docs.ocsjs.com/docs/about">官方文档</a></p>
-<p>点击 <strong>官方文档 ，</strong> 开始你的批量化刷课之路吧！</p>
-<h2 id="OCS官网"><a href="#OCS官网" class="headerlink" title="OCS官网"></a>OCS官网</h2><p>首先，你了解一款工具或软件，要知道他的官网或者官方渠道，这里给大家提供了OCS的官网界面，供大家识别正版！！</p>
-<p><img src="/imgs/ocs/ocs%E5%AE%98%E7%BD%91.png"></p>
-<h2 id="开始阅读文档"><a href="#开始阅读文档" class="headerlink" title="开始阅读文档"></a>开始阅读文档</h2><p>点击<strong>点击查看使用教程</strong>，开始阅读他的文档<br>随后来到这个页面</p>
-<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B.png"></p>
-<p><strong>这里已经写好了左右资料的链接，供你点击</strong><br>我们需要下载他的软件，那么需要点击<strong>左侧的软件教程</strong><br><strong>如图所示，软件教程界面提供了快速链接：如下载，教程等</strong></p>
-<p>根据目录选择你需要的操作，如下载安装程序</p>
-<p>这里是下载列表<strong>根据你自己的系统选择</strong></p>
-<p><img src="/imgs/ocs/xiazai.png"></p>
-<p>这里列出win系统的链接<strong>点击即可下载</strong><br><strong>点击这里→<a href="https://cdn.ocsjs.com/app/download/ocs-2.6.7-setup-win-x64.exe">下载</a></strong></p>
-<h2 id="补充运行库"><a href="#补充运行库" class="headerlink" title="补充运行库"></a>补充运行库</h2><p><strong>这一步为了防止安装过程出现报错</strong>，需要下载<strong>微软运行库合集</strong><br>如果不知道去哪里下载，可以通过本文推荐的系统之家下载安装包<br><strong>系统之家下载地址：<a href="https://www.xitongzhijia.net/soft/289196.html">点击前往</a></strong><br><strong>安装程序界面如下</strong></p>
-<p><img src="/imgs/ocs/%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85.png"></p>
-<p>一路下一步安装即可</p>
-<h2 id="下载OCS助手"><a href="#下载OCS助手" class="headerlink" title="下载OCS助手"></a>下载OCS助手</h2><p>上面已经给出了下载链接，和运行库链接，做好准备步骤，即可开始安装ocs助手<br>下载好安装程序，双击运行即可</p>
-<p><img src="/imgs/ocs/ocs%E5%AE%89%E8%A3%85.png"></p>
-<p><strong>注意：路径可以修改，如我把默认的C盘路径改成了D盘</strong><br>随后安装即可<br>安装完直接运行即可</p>
-<h2 id="初次运行OCS"><a href="#初次运行OCS" class="headerlink" title="初次运行OCS"></a>初次运行OCS</h2><p><strong>第一次使用软件，需要进行初始化配置，按照图中默认的设置即可</strong></p>
-<p><strong>点击一键初始化</strong></p>
-<p><img src="/imgs/ocs/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE.png"></p>
-<p><strong>注意，初始化完成后，需要重启软件！！！（会有提示，点击立即重启即可)</strong></p>
-<h2 id="配置题库"><a href="#配置题库" class="headerlink" title="配置题库"></a>配置题库</h2><p><strong>OCS内置了作者的enncy题库，地址：<a href="https://tk.enncy.cn/">enncy题库</a></strong><br>这里给大家列出价格，<strong>（题库需要付费购买）</strong></p>
-<table>
-<thead>
-<tr>
-<th>价格</th>
-<th>次数</th>
-<th>购买建议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1米</td>
-<td>100</td>
-<td>尝鲜，测试OCS</td>
-</tr>
-<tr>
-<td>5米</td>
-<td>2000</td>
-<td>有较多课程：如选修课，需要一直答题</td>
-</tr>
-<tr>
-<td>20米</td>
-<td>10000</td>
-<td>课程很多，或组团购买，批量刷课</td>
-</tr>
-</tbody></table>
-<p><strong>根据你个人的需要，合理选择购买方案</strong></p>
-<h3 id="注册题库需要准备的：一个可用的邮箱"><a href="#注册题库需要准备的：一个可用的邮箱" class="headerlink" title="注册题库需要准备的：一个可用的邮箱"></a>注册题库需要准备的：一个可用的邮箱</h3><p>没有账号可以用邮箱注册一个，然后去购买</p>
-<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在如图所示的界面，复制你的题库配置<br>上方胡显示<strong>你的做题次数，，已使用次数，成功次数，成功率</strong>等信息，下方的内容中需要选择你的题库配置<strong>复制第二个</strong><br><img src="/imgs/ocs/tiku.png"></p>
-<h3 id="回到软件"><a href="#回到软件" class="headerlink" title="回到软件"></a>回到软件</h3><p>回到软件，点击<strong>软件设置→OCS配置，点击通用，即可找到配置页面</strong><br>配置页面下，找到题库配置（旁边的开关是把这些设置应用到所有的任务）</p>
-<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE.png"></p>
-<p>点一下<strong>点击配置</strong><br>把你在题库网页复制的<strong>题库配置</strong>，粘贴进去，保存配置即可<br><strong>保存后，出现这个界面即配置成功！！</strong></p>
-<p><img src="/imgs/ocs/%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png"></p>
-<h2 id="关于脚本不能正常显示的问题"><a href="#关于脚本不能正常显示的问题" class="headerlink" title="关于脚本不能正常显示的问题"></a>关于脚本不能正常显示的问题</h2><p>根据作者的说法：是因为浏览器的api更新导致的冲突导致脚本不运行，<strong>解决办法是：把篡改猴换成脚本猫</strong></p>
-<h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p><strong>视频引用自ocs官网</strong></p>
-<iframe height="350" width="450" src="https://cdn.ocsjs.com/app/resources/video/app-use-guide.mp4" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-bottom: 20px; color: rgb(85, 85, 85); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
-
-<p>如果本期内容对你有所帮助，可以在评论区留下你的痕迹！！<br><strong>作者邮箱：<a href="mailto:crazy2403@outlook.com">crazy2403@outlook.com</a></strong><br><strong>vx公众号：烟雨江南的小窝</strong></p>
-]]></content>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>AIGC降重和论文改进的策略思考2：特征和应对办法</title>
+      <link href="//AIGC-thinkings2/"/>
+      <url>//AIGC-thinkings2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="大学生应对AIGC论文检查的策略与方法"><a href="#大学生应对AIGC论文检查的策略与方法" class="headerlink" title="大学生应对AIGC论文检查的策略与方法"></a>大学生应对AIGC论文检查的策略与方法</h1><p>随着人工智能生成内容（AIGC）技术的快速发展，其在学术论文写作中的应用日益普及。与此同时，针对AIGC论文的检查也变得越来越普遍。对于大学生而言，如何有效地应对和处理AIGC论文检查，以及如何规避或减轻AIGC检查的百分比，是当前需要关注的重要问题。本报告旨在结合互联网上的经验，为大学生提供具体可行的操作方法，以应对这一挑战。</p><h2 id="1-AIGC论文检查原理简述"><a href="#1-AIGC论文检查原理简述" class="headerlink" title="1. AIGC论文检查原理简述"></a>1. AIGC论文检查原理简述</h2><p>理解AIGC论文检查的原理是制定有效应对策略的基础。目前，主流的AI内容检测器主要通过分析文本的特定特征来判断其是否由AI生成 。这些特征主要包括文本的困惑度（perplexity）和突发性（burstiness）。  </p><h3 id="1-1-AI内容检测器的工作方式"><a href="#1-1-AI内容检测器的工作方式" class="headerlink" title="1.1 AI内容检测器的工作方式"></a>1.1 AI内容检测器的工作方式</h3><p>AI内容检测器的工作原理与AI写作工具类似，它们都基于语言模型。检测器通过分析输入的文本，判断其是否符合AI模型的写作模式 。具体来说，检测模型会关注以下两个关键指标：  </p><ul><li><p>困惑度 (Perplexity):</p><p> 困惑度衡量的是文本的不可预测性。AI语言模型的目标是生成困惑度较低的文本，这样的文本通常读起来流畅且有意义，但也相对更具可预测性。相比之下，人类的写作往往具有更高的困惑度，因为人类在遣词造句时会做出更多创造性的选择，同时也可能包含一些错误 </p><p>。低困惑度通常被认为是文本由AI生成的证据 </p></li><li><p>突发性 (Burstiness):</p><p> 突发性衡量的是句子结构和长度的变化程度。人类的写作在句子结构和长度上往往呈现出较大的变化，而AI生成的文本则倾向于使用长度和结构都较为一致的句子，因此突发性较低 </p><p>。低突发性也可能表明文本是由AI生成的</p></li></ul><p>​    </p><p>值得注意的是，AI检测器并不像查重工具那样通过比对数据库来工作，而是分析文本固有的统计学属性 。此外，一些检测器还利用机器学习（ML）和自然语言处理（NLP）技术来识别语言模式和句子结构 。分类器作为一种ML模型，通过学习已标记为人类或AI撰写的文本数据，对新的文本进行分类 。词嵌入技术则将词语表示为向量，揭示它们之间的语义关系，帮助AI理解语境 。随着AI检测器分析的文本量增加，它们识别AI和人类写作之间细微差别的能力也会增强 。大型语言模型（LLMs）本质上是高级的预测文本生成器，它们逐字预测下一个最有可能出现的词语 。AI检测器本身也常常使用LLMs和其他ML技术来分析文本 。总而言之，AI检测器通过分析文本的语言和结构特征（如语义、句子结构和语言选择）或将其与AI或人类创建的文本数据集进行比较，来区分两者 。关键的检测方法包括文体分析、水印技术、像素预测技术、双流网络、机器学习模型、区块链和混合方法 。虽然水印技术是一种潜在的解决方案，但目前尚未得到普遍应用 。  </p><h3 id="1-2-AIGC检测工具的局限性"><a href="#1-2-AIGC检测工具的局限性" class="headerlink" title="1.2 AIGC检测工具的局限性"></a>1.2 AIGC检测工具的局限性</h3><p>尽管AIGC检测工具在不断发展，但它们并非完美无缺。AI检测的准确性可能会有所不同，并且工具可能会产生误报（将人类文本标记为AI生成）和漏报（未能检测到AI生成的文本）。例如，如果模型在特定类型的人类写作上过度训练，则可能导致误报 。对于更模糊或更具创造性的写作内容，检测的准确性往往会下降 。值得注意的是，AIGC检测器在代码相关数据上的表现不如在自然语言数据上 。此外，检测工具和AI写作工具都在不断进步，形成一场持续的技术竞赛 。AI检测工具的具体工作方式也缺乏完全的透明度 。因此，仅仅依赖AI检测工具来证明学术不端行为是有问题的，因为它们存在不准确性 。  </p><h2 id="2-大学生应对AIGC检查的基本策略"><a href="#2-大学生应对AIGC检查的基本策略" class="headerlink" title="2. 大学生应对AIGC检查的基本策略"></a>2. 大学生应对AIGC检查的基本策略</h2><p>面对日益普及的AIGC论文检查，大学生需要采取一系列基本策略来有效应对。</p><h3 id="2-1-理解学术诚信政策"><a href="#2-1-理解学术诚信政策" class="headerlink" title="2.1 理解学术诚信政策"></a>2.1 理解学术诚信政策</h3><p>首先，大学生务必详细了解所在大学关于在学术工作中AI使用的具体政策 。不同的院校可能允许AI用于特定的目的，例如头脑风暴或构建大纲，但禁止生成完整的论文 。许多大学还要求学生披露任何AI的使用情况 。由于政策差异很大，学生必须查阅自己院校的具体规定 。不披露AI使用的后果可能非常严重，包括课程不及格、损害个人声誉，甚至面临法律诉讼 。  </p><h3 id="2-2-优先考虑原创性工作"><a href="#2-2-优先考虑原创性工作" class="headerlink" title="2.2 优先考虑原创性工作"></a>2.2 优先考虑原创性工作</h3><p>在学术写作中，大学生应该将重点放在发展自己的想法、论点和批判性思维上，而不是仅仅依赖AI来生成内容 。AI生成的内容可能缺乏创造性和独特的学术视角 。AI应该被视为一种增强工具，而不是取代个人的思考 。即使在使用AI的情况下，论文的核心思想和分析也应该是学生自己的 。  </p><h3 id="2-3-如果使用AI，要负责任地使用"><a href="#2-3-如果使用AI，要负责任地使用" class="headerlink" title="2.3 如果使用AI，要负责任地使用"></a>2.3 如果使用AI，要负责任地使用</h3><p>如果院校允许使用AI，大学生应该将其作为一种辅助工具，用于研究、构建大纲或改进语言等方面，而不是用于生成完整的作业 。同时，要遵守院校或期刊的要求，透明地披露AI的使用情况 。更重要的是，必须始终审查和批判性地评估AI生成的内容，检查其准确性、偏见和连贯性 。AI可能会生成虚假的参考文献和带有偏见的信息 ，提供不实信息并歪曲材料 ，甚至产生“幻觉”或虚假数据 。因此，人为监督对于确保AI生成内容的准确性和伦理合理性至关重要 。大学生不能盲目信任AI的输出，而必须运用自己的知识和批判性判断。  </p><h2 id="3-规避与减轻AIGC检查百分比的具体方法"><a href="#3-规避与减轻AIGC检查百分比的具体方法" class="headerlink" title="3. 规避与减轻AIGC检查百分比的具体方法"></a>3. 规避与减轻AIGC检查百分比的具体方法</h2><p>为了有效规避或减轻AIGC检查的百分比，大学生可以采取以下具体方法：</p><h3 id="3-1-人工润色与个性化"><a href="#3-1-人工润色与个性化" class="headerlink" title="3.1 人工润色与个性化"></a>3.1 人工润色与个性化</h3><p>对AI生成的内容进行人工润色和个性化处理是降低检测率的关键步骤。</p><h4 id="3-1-1-添加个人见解和经验"><a href="#3-1-1-添加个人见解和经验" class="headerlink" title="3.1.1 添加个人见解和经验"></a>3.1.1 添加个人见解和经验</h4><p>AI缺乏个人的故事和真实的经验，而融入这些元素可以使内容更加真实，也更难被AI检测出来 。大学生可以在论文中分享与主题相关的个人轶事、案例和观点 。这种做法能够注入AI无法复制的人性化元素 。通过分享独特的见解，学生可以超越AI的通用输出。  </p><h4 id="3-1-2-调整语气和风格"><a href="#3-1-2-调整语气和风格" class="headerlink" title="3.1.2 调整语气和风格"></a>3.1.2 调整语气和风格</h4><p>AI通常会生成中性或机器人式的文本，因此需要调整语气和风格，使其与学生自身的写作风格以及作业的要求相符 。在适当的情况下，可以使用更具对话性或更随意的措辞 。这有助于使写作听起来更自然，更不像是公式化的AI生成 。这种调整涉及到使用反映人类交流模式的语言。  </p><h4 id="3-1-3-避免过度使用的AI术语"><a href="#3-1-3-避免过度使用的AI术语" class="headerlink" title="3.1.3 避免过度使用的AI术语"></a>3.1.3 避免过度使用的AI术语</h4><p>AI工具倾向于重复使用某些词语和短语（例如，“在当今世界”，“解锁”，“深入探讨”）。识别并改写这些过度使用的AI术语，可以使文本听起来更像人类写作 。同时，也要注意避免使用浮夸的形容词和过于正式的语言 。这样做可以降低文本的可预测性，使其不太可能被AI检测器标记出来 。识别并替换这些明显的AI痕迹是使内容人性化的关键一步。  </p><h3 id="3-2-重写与重构"><a href="#3-2-重写与重构" class="headerlink" title="3.2 重写与重构"></a>3.2 重写与重构</h3><p>对AI生成的内容进行重写和重构，可以从根本上改变文本的特征。</p><h4 id="3-2-1-重写段落而非逐句修改"><a href="#3-2-1-重写段落而非逐句修改" class="headerlink" title="3.2.1 重写段落而非逐句修改"></a>3.2.1 重写段落而非逐句修改</h4><p>与其逐句替换单词，不如着重于重写整个段落，以改变其整体结构和流程 。这样做有助于避免仅仅进行同义词替换，因为这可能无法欺骗先进的检测器 。这种方法能够改变AI检测器所寻找的潜在模式 。通过在段落层面进行思考，学生可以对文本的特征进行更显著的改变。  </p><h4 id="3-2-2-改变句子结构和长度"><a href="#3-2-2-改变句子结构和长度" class="headerlink" title="3.2.2 改变句子结构和长度"></a>3.2.2 改变句子结构和长度</h4><p>AI通常使用重复的句子结构，因此有意识地改变句子的长度和复杂性，可以模仿人类的写作风格 。可以结合使用短句，拆分长句，并使用不同的句子开头 。这会增加文本的突发性，使其看起来更像是人类所写 。有意识地调整句子结构是规避检测的有效方法。  </p><h4 id="3-2-3-重新组织内容"><a href="#3-2-3-重新组织内容" class="headerlink" title="3.2.3 重新组织内容"></a>3.2.3 重新组织内容</h4><p>重新排列副标题，改写标题，并重新定义结论，可以创造与原始AI输出不同的文本流 。重新组合段落和章节有助于找到表达想法的更清晰方式 。这种基本的结构调整可以显著改变文本的特征 。通过改变信息的顺序和重点，学生可以进一步偏离AI的原始结构。  </p><h3 id="3-3-巧妙地使用辅助内容"><a href="#3-3-巧妙地使用辅助内容" class="headerlink" title="3.3 巧妙地使用辅助内容"></a>3.3 巧妙地使用辅助内容</h3><p>巧妙地融入辅助内容可以增强论文的原创性。</p><h4 id="3-3-1-添加案例研究"><a href="#3-3-1-添加案例研究" class="headerlink" title="3.3.1 添加案例研究"></a>3.3.1 添加案例研究</h4><p>在论文中加入相关的案例研究，并进行自己的分析和解读。AI可以提供案例的总结，但深入的分析需要人类的参与 。定义案例，识别问题，将其与理论联系起来，并提出解决方案 。案例研究能够展示实际应用和批判性思维，这是人类学术工作的标志 。这增加了一层AI难以完全复制的复杂性和人为见解。  </p><h4 id="3-3-2-整合实验数据"><a href="#3-3-2-整合实验数据" class="headerlink" title="3.3.2 整合实验数据"></a>3.3.2 整合实验数据</h4><p>如果适用，可以在论文中包含实验数据以及对研究结果的解读 。将实验数据与计算技术相结合，可以进行更深入的分析 。这能够展示原创研究和分析，使论文不太可能被标记为完全由AI生成 。整合和解读数据需要超越AI能力的专业知识水平。  </p><h3 id="3-4-谨慎使用同义词替换工具"><a href="#3-4-谨慎使用同义词替换工具" class="headerlink" title="3.4 谨慎使用同义词替换工具"></a>3.4 谨慎使用同义词替换工具</h3><p>虽然同义词替换工具可以帮助改变词语的选择，但仅仅替换词语而不改变句子结构或整体风格可能无法有效对抗AI检测 。应该将这些工具作为更广泛的重写策略的一部分来使用，而不是作为独立的解决方案 。过度依赖简单的同义词替换有时会导致措辞笨拙或不自然，这也可能成为检测器的警告信号 。学生应该谨慎使用这些工具，并确保替换的词语符合其写作的语境和语气。  </p><h3 id="3-5-保持学术诚信"><a href="#3-5-保持学术诚信" class="headerlink" title="3.5 保持学术诚信"></a>3.5 保持学术诚信</h3><p>正确引用所有参考文献，即使使用了AI来帮助查找它们 。这表明学生是在现有知识的基础上进行研究，而不是将AI生成的内容完全视为自己的原创想法。虽然这不能直接避免AI检测，但正确的引用是学术工作的基础，反映了学术诚信 。通过遵守引用规范，学生可以展示对学术规范的理解。  </p><h2 id="4-结合互联网经验的可行操作办法"><a href="#4-结合互联网经验的可行操作办法" class="headerlink" title="4. 结合互联网经验的可行操作办法"></a>4. 结合互联网经验的可行操作办法</h2><p>互联网上提供了许多可以帮助大学生应对AIGC论文检查的可行操作方法。</p><h3 id="4-1-使用AI文本润色工具"><a href="#4-1-使用AI文本润色工具" class="headerlink" title="4.1 使用AI文本润色工具"></a>4.1 使用AI文本润色工具</h3><p>可以利用Grammarly 、QuillBot 、Wordvice AI 、Type.ai  和 Copy.ai  等在线工具来润色AI生成的文本，改进其语法、风格和清晰度。这些工具可以帮助提高句子的流畅性和结构 。虽然这些工具本身也使用AI，但它们可以帮助使文本听起来更精炼和更像人类的写作 。学生可以利用AI来改进AI的输出，创造一种混合方法。  </p><h3 id="4-2-尝试AI文本“人类化”工具"><a href="#4-2-尝试AI文本“人类化”工具" class="headerlink" title="4.2 尝试AI文本“人类化”工具"></a>4.2 尝试AI文本“人类化”工具</h3><p>探索Surfer AI Humanizer 、JustDone AI Humanizer 、Scribbr AI Humanizer 、Monica AI Humanizer 、Writesonic Text Humanizer 、WriteHuman AI  和 Humanize AI Pro  等工具，可以将AI生成的文本转换为听起来更自然的文本。这些工具旨在消除常见的AI模式，使文本与人类写作难以区分 。然而，这些工具的有效性可能有所不同，人工编辑仍然至关重要 。学生应该尝试不同的“人类化”工具，并批判性地评估它们的输出。  </p><h3 id="4-3-借鉴在线资源和社区经验"><a href="#4-3-借鉴在线资源和社区经验" class="headerlink" title="4.3 借鉴在线资源和社区经验"></a>4.3 借鉴在线资源和社区经验</h3><p>在网上搜索学生和教育工作者分享他们应对AIGC检查的经验和策略的讨论和论坛。查找提供关于使AI生成的内容人性化和避免检测的实用技巧的博客文章和文章。真实世界的经验和共享知识可以提供超越学术文献的有价值的见解。互联网提供了大量来自AI写作和检测工具用户的轶事证据和实用建议。</p><h3 id="4-4-迭代优化写作过程"><a href="#4-4-迭代优化写作过程" class="headerlink" title="4.4 迭代优化写作过程"></a>4.4 迭代优化写作过程</h3><p>如果允许，可以使用AI撰写草稿，然后使用AI检测工具（如果可用且可靠）检查其百分比。使用上述方法改进文本，重点关注检测器标记的区域。重复检查和改进的过程，直到对结果满意并且AI检测百分比降低为止。这种迭代方法允许持续改进和学习规避检测的最佳方法 。将写作过程视为一个实验可以帮助学生开发有效的策略。  </p><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>在人工智能日益融入学术写作的背景下，大学生需要认真对待AIGC论文检查。负责任地使用AI并坚守学术诚信原则至关重要。应对AIGC检查的关键策略包括深入理解检查原理，遵守学术诚信政策，优先考虑原创性工作，并在使用AI时保持透明和批判性评估。通过人工润色、个性化、重写与重构、巧妙使用辅助内容以及谨慎使用同义词替换工具等具体方法，可以有效规避和减轻AIGC检查的百分比。结合互联网上的经验，利用AI文本润色和“人类化”工具，借鉴在线资源和社区经验，并进行迭代优化写作过程，将有助于大学生在学术环境中更好地应对这一挑战。最终，批判性思考和独立工作能力仍然是大学生在学术生涯中取得成功的基石。</p><p><strong>表1：AI写作检测器检测到的常见特征</strong></p><table><thead><tr><th><strong>特征</strong></th><th><strong>描述</strong></th></tr></thead><tbody><tr><td>困惑度低</td><td>文本可预测性高，缺乏创造性的语言选择</td></tr><tr><td>突发性低</td><td>句子结构和长度变化小，缺乏多样性</td></tr><tr><td>句子结构重复</td><td>频繁使用相似的句子结构</td></tr><tr><td>措辞不自然</td><td>出现人类写作中不常见的短语或表达</td></tr><tr><td>AI术语过度使用</td><td>频繁出现AI写作工具常用的特定词语或短语</td></tr><tr><td>缺乏个人观点</td><td>内容客观平淡，缺乏作者的主观看法或感受</td></tr></tbody></table><p><strong>表2：降低AIGC检测百分比的实用方法</strong></p><table><thead><tr><th><strong>方法</strong></th><th><strong>说明</strong></th></tr></thead><tbody><tr><td>添加个人见解和经验</td><td>融入个人故事、案例、观点和独特的分析</td></tr><tr><td>调整语气和风格</td><td>使文本更具对话性、更自然，符合个人写作习惯</td></tr><tr><td>重写段落而非逐句修改</td><td>改变段落的整体结构和流程，避免简单的同义词替换</td></tr><tr><td>改变句子结构和长度</td><td>使用不同长度和复杂程度的句子，增加文本的突发性</td></tr><tr><td>重新组织内容</td><td>调整标题、副标题和结论，改变文本的整体逻辑和呈现方式</td></tr><tr><td>添加案例研究</td><td>结合具体案例进行深入分析和解读</td></tr><tr><td>整合实验数据</td><td>纳入实验结果并进行个人化的分析和讨论</td></tr><tr><td>谨慎使用同义词替换工具</td><td>将其作为重写策略的一部分，避免过度依赖导致不自然的表达</td></tr><tr><td>保持学术诚信</td><td>正确引用所有来源，包括AI辅助查找的资料</td></tr></tbody></table><h1 id="本文引用表："><a href="#本文引用表：" class="headerlink" title="本文引用表："></a>本文引用表：</h1><h2 id="AI-检测原理与局限性"><a href="#AI-检测原理与局限性" class="headerlink" title="AI 检测原理与局限性"></a><strong>AI 检测原理与局限性</strong></h2><ul><li>How Do AI Detectors Work? | Methods &amp; Reliability - Scribbr: <a href="https://www.scribbr.com/ai-tools/ai-detector/how-do-ai-detectors-work/">https://www.scribbr.com/ai-tools/ai-detector/how-do-ai-detectors-work/</a></li><li>Why Don’t AI Detectors Work - Center for Integrated Professional Development - Illinois State: <a href="https://prodev.illinoisstate.edu/2023/04/why-dont-ai-detectors-work/">https://prodev.illinoisstate.edu/2023/04/why-dont-ai-detectors-work/</a></li><li>How Do AI Detectors Work? - AutoGPT: <a href="https://autogpt.net/how-do-ai-detectors-work/">https://autogpt.net/how-do-ai-detectors-work/</a></li><li>Distinguishing Reality from AI: Approaches for Detecting Synthetic Content - MDPI: <a href="https://www.mdpi.com/2076-3417/13/16/9246">https://www.mdpi.com/2076-3417/13/16/9246</a></li><li>4 Ways AI Content Detectors Work To Spot AI - Surfer SEO: <a href="https://www.surferseo.com/blog/ai-content-detector/">https://www.surferseo.com/blog/ai-content-detector/</a></li><li>Detecting AIGC in Academic Journals: Methods and Consequences: <a href="https://cwauthors.com/article/detecting-aigc-in-academic-journals-methods-and-consequences">https://cwauthors.com/article/detecting-aigc-in-academic-journals-methods-and-consequences</a></li><li>How Do AI Detectors Work? | Techniques &amp; Accuracy - QuillBot: <a href="https://quillbot.com/blog/how-do-ai-detectors-work-techniques-accuracy/">https://quillbot.com/blog/how-do-ai-detectors-work-techniques-accuracy/</a></li><li>How AI Content Detectors Work To Spot AI - GPTZero: <a href="https://gptzero.me/how-ai-content-detectors-work-to-spot-ai/">https://gptzero.me/how-ai-content-detectors-work-to-spot-ai/</a></li><li>An empirical study to evaluate AIGC detectors on code content: <a href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1260&context=sis_research">https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1260&context=sis_research</a></li></ul><h2 id="AI-写作与润色工具"><a href="#AI-写作与润色工具" class="headerlink" title="AI 写作与润色工具"></a><strong>AI 写作与润色工具</strong></h2><ul><li>Free AI Writer | Grammarly: <a href="https://www.grammarly.com/ai/writer">https://www.grammarly.com/ai/writer</a></li><li>Free AI Detector | GPT-4, GPT-3, &amp; ChatGPT AI Checker - Grammarly: <a href="https://www.grammarly.com/ai/detector">https://www.grammarly.com/ai/detector</a></li><li>Wordvice AI: <a href="https://wordvice.ai/">https://wordvice.ai/</a></li><li>Type.ai: The all-in-one AI writing assistant: <a href="https://type.ai/">https://type.ai/</a></li><li>Free AI Paragraph Rewriter - Copy.ai: <a href="https://www.copy.ai/tools/ai-paragraph-rewriter">https://www.copy.ai/tools/ai-paragraph-rewriter</a></li><li>QuillBot: <a href="https://quillbot.com/">https://quillbot.com/</a></li></ul><h2 id="AI-文本“人类化”工具"><a href="#AI-文本“人类化”工具" class="headerlink" title="AI 文本“人类化”工具"></a><strong>AI 文本“人类化”工具</strong></h2><ul><li>Ryne AI: <a href="https://ryne.ai/">https://ryne.ai/</a></li><li>Best AI Humanizer: Comprehensive Analysis and the Rise of Ryne AI: <a href="https://ryne.ai/best-ai-humanizer/">https://ryne.ai/best-ai-humanizer/</a></li><li>AI Text Humanizer - Justdone: <a href="https://justdone.com/ai-text-humanizer">https://justdone.com/ai-text-humanizer</a></li><li>AI Humanizer | Turn AI text into human-like writing - Scribbr: <a href="https://www.scribbr.com/ai-tools/ai-humanizer/">https://www.scribbr.com/ai-tools/ai-humanizer/</a></li><li>Free AI Humanizer - Surfer SEO: <a href="https://www.surferseo.com/free-ai-humanizer/">https://www.surferseo.com/free-ai-humanizer/</a></li><li>Free AI Text Humanizer | No Signup Required by Writesonic: <a href="https://writesonic.com/ai-humanizer">https://writesonic.com/ai-humanizer</a></li><li>Free AI Humanizer | Humanize AI Text &amp; Content - Monica: <a href="https://monica.im/humanize-ai">https://monica.im/humanize-ai</a></li><li>WriteHuman: Undetectable AI and AI Humanizer: <a href="https://writehuman.ai/">https://writehuman.ai/</a></li><li>AI Humanizer - Humanize AI Text Effortlessly - QuillBot: <a href="https://quillbot.com/ai-humanizer">https://quillbot.com/ai-humanizer</a></li><li>Humanize AI: <a href="https://humanizeai.pro/">https://humanizeai.pro/</a></li></ul><h2 id="学术写作与诚信"><a href="#学术写作与诚信" class="headerlink" title="学术写作与诚信"></a><strong>学术写作与诚信</strong></h2><ul><li>Maintaining academic integrity in the AI era | Center for Teaching Excellence: <a href="https://cte.ku.edu/maintaining-academic-integrity-in-the-ai-era/">https://cte.ku.edu/maintaining-academic-integrity-in-the-ai-era/</a></li><li>Artificial Intelligence (AI) Tools - Academic Integrity: <a href="https://academics.umw.edu/academicintegrity/ai/">https://academics.umw.edu/academicintegrity/ai/</a></li><li>AI and academic integrity - Artificial Intelligence (AI) in Education - Research Guides: <a href="https://libguides.unm.edu/ai/academic_integrity">https://libguides.unm.edu/ai/academic_integrity</a></li><li>Encouraging Academic Integrity - University Center for Teaching and Learning: <a href="https://teaching.pitt.edu/teaching-strategies/academic-integrity/">https://teaching.pitt.edu/teaching-strategies/academic-integrity/</a></li><li>Five Tips for Writing Academic Integrity Statements in the Age of AI - Faculty Focus: <a href="https://www.facultyfocus.com/articles/teaching-and-learning/five-tips-for-writing-academic-integrity-statements-in-the-age-of-ai/">https://www.facultyfocus.com/articles/teaching-and-learning/five-tips-for-writing-academic-integrity-statements-in-the-age-of-ai/</a></li><li>Guidelines for the Use of Generative Artificial Intelligence (GenAI) Tools at UMD: <a href="https://ai.umd.edu/guidelines-for-the-use-of-generative-artificial-intelligence-genai-tools-at-umd">https://ai.umd.edu/guidelines-for-the-use-of-generative-artificial-intelligence-genai-tools-at-umd</a></li><li>AI in Academic Writing - Clemson University: <a href="https://www.clemson.edu/oir/ai-academic-writing.html">https://www.clemson.edu/oir/ai-academic-writing.html</a></li><li>Concerns about Generative Artificial Intelligence | Alliant International University Center for Teaching Excellence: <a href="https://cte.alliant.edu/concerns-about-generative-artificial-intelligence/">https://cte.alliant.edu/concerns-about-generative-artificial-intelligence/</a></li></ul><h2 id="内容重写与优化"><a href="#内容重写与优化" class="headerlink" title="内容重写与优化"></a><strong>内容重写与优化</strong></h2><ul><li>Reword Tool - Reword Sentences with Scientific Words - Ref-n-Write: <a href="https://www.ref-n-write.com/reword-tool/">https://www.ref-n-write.com/reword-tool/</a></li><li>Article rewriting – InstaText | Write like a native speaker: <a href="https://instatext.io/article-rewriting/">https://instatext.io/article-rewriting/</a></li><li>How to Rewrite a Paragraph: 7 Strategies for Effective Revision (2024) - SEO.AI: <a href="https://seo.ai/blog/how-to-rewrite-a-paragraph/">https://seo.ai/blog/how-to-rewrite-a-paragraph/</a></li><li>Free AI Paragraph Rewriter | Rewrite Text Easily - Grammarly: <a href="https://www.grammarly.com/rewriter/paragraph-rewriter">https://www.grammarly.com/rewriter/paragraph-rewriter</a></li><li>AI Synonym Tool by TextCortex: <a href="https://textcortex.com/ai-synonym-tool/">https://textcortex.com/ai-synonym-tool/</a></li><li>6 Effective Tricks To Rewrite Content And Improve Its Quality - TextCortex: <a href="https://textcortex.com/blog/rewrite-content/">https://textcortex.com/blog/rewrite-content/</a></li><li>Paraphrasing Tool – Academic Rephrase Tool for Researchers - Ref-n-Write: <a href="https://www.ref-n-write.com/paraphrasing-tool/">https://www.ref-n-write.com/paraphrasing-tool/</a></li><li>Free AI Paraphrasing Tool - Scribbr: <a href="https://www.scribbr.com/ai-tools/ai-paraphrasing-tool/">https://www.scribbr.com/ai-tools/ai-paraphrasing-tool/</a></li></ul><h2 id="句子结构与多样性"><a href="#句子结构与多样性" class="headerlink" title="句子结构与多样性"></a><strong>句子结构与多样性</strong></h2><ul><li>How to Vary Sentence Structure in Your Writing - 2025 - MasterClass: <a href="https://www.masterclass.com/articles/how-to-vary-sentence-structure-in-your-writing">https://www.masterclass.com/articles/how-to-vary-sentence-structure-in-your-writing</a></li><li>Sentences and Paragraphs out of Order? Reassembling as a Tool to Restructure: <a href="https://gcwritingcenter.commons.gc.cuny.edu/sentences-and-paragraphs-out-of-order-reassembling-as-a-tool-to-restructure/">https://gcwritingcenter.commons.gc.cuny.edu/sentences-and-paragraphs-out-of-order-reassembling-as-a-tool-to-restructure/</a></li><li>sentence-variety.pdf: <a href="https://www.sunysuffolk.edu/getattachment/ac78306c-c995-4173-9595-69c505e12a91/sentence-variety.pdf">https://www.sunysuffolk.edu/getattachment/ac78306c-c995-4173-9595-69c505e12a91/sentence-variety.pdf</a></li><li>Reorganizing Drafts - UNC Writing Center - The University of North Carolina at Chapel Hill: <a href="https://writingcenter.unc.edu/tips-and-tools/reorganizing-drafts/">https://writingcenter.unc.edu/tips-and-tools/reorganizing-drafts/</a></li><li>Sentence Variety and Rhythm - San Jose State University: <a href="https://www.sjsu.edu/writingcenter/handouts/sentence-variety.pdf">https://www.sjsu.edu/writingcenter/handouts/sentence-variety.pdf</a></li><li>Rearrange This Paragraph - Quick Guide to Better Writing - Effie: <a href="https://effie.pro/blog/rearrange-this-paragraph">https://effie.pro/blog/rearrange-this-paragraph</a></li><li>Varying Sentence Structure - Writing - Academic Guides at Walden University: <a href="https://academicguides.waldenu.edu/writingcenter/grammar/sentences/varyingstructure">https://academicguides.waldenu.edu/writingcenter/grammar/sentences/varyingstructure</a></li><li>How to Vary Your Sentence Structure (And Stop Boring Your Readers) - The Write Life: <a href="https://thewritelife.com/vary-sentence-structure/">https://thewritelife.com/vary-sentence-structure/</a></li></ul><h2 id="案例研究与实验数据"><a href="#案例研究与实验数据" class="headerlink" title="案例研究与实验数据"></a><strong>案例研究与实验数据</strong></h2><ul><li>Using AI in Academic Writing: Tips for Maintaining Originality - Jenni AI: <a href="https://jenni.ai/blog/using-ai-in-academic-writing-tips-for-maintaining-originality">https://jenni.ai/blog/using-ai-in-academic-writing-tips-for-maintaining-originality</a></li><li>AI in Academic Writing: Tips for Maintaining Originality and Integrity - Ryne AI Blog: <a href="https://ryne.ai/blog/ai-in-academic-writing/">https://ryne.ai/blog/ai-in-academic-writing/</a></li><li>Combining Experimental Data and Computational Methods for the Non-Computer Specialist - PMC - PubMed Central: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282443/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282443/</a></li><li>Case study - Student Academic Success - Monash University: <a href="https://www.monash.edu/students/success/assessments/types/case-studies">https://www.monash.edu/students/success/assessments/types/case-studies</a></li><li>Methods for Integrating Trials and Non-experimental Data to Examine Treatment Effect Heterogeneity - Project Euclid: <a href="https://projecteuclid.org/journals/statistical-science/volume-35/issue-3/Methods-for-Integrating-Trials-and-Non-experimental-Data-to-Examine-Treatment/10.1214/19-STS741.full">https://projecteuclid.org/journals/statistical-science/volume-35/issue-3/Methods-for-Integrating-Trials-and-Non-experimental-Data-to-Examine-Treatment/10.1214/19-STS741.full</a></li><li>Incorporating Relevant Case Studies in Your Assignments - MakeMyAssignments Blog: <a href="https://www.makemyassignments.com/blog/incorporating-relevant-case-studies-in-your-assignments/">https://www.makemyassignments.com/blog/incorporating-relevant-case-studies-in-your-assignments/</a></li><li>Six steps to approaching a case study - Student Academic Success - Monash University: <a href="https://www.monash.edu/students/success/assessments/plan/steps">https://www.monash.edu/students/success/assessments/plan/steps</a></li><li>Integrating Research Findings Across Studies - Sage Publishing: <a href="https://us.sagepub.com/en-us/nam/integrating-research-findings-across-studies/book9841">https://us.sagepub.com/en-us/nam/integrating-research-findings-across-studies/book9841</a></li><li>Using Case Studies to Teach | Center for Teaching &amp; Learning - Boston University: <a href="https://www.bu.edu/ctl/guides/using-case-studies-to-teach/">https://www.bu.edu/ctl/guides/using-case-studies-to-teach/</a></li><li>Best practices for data management and sharing in experimental biomedical research: <a href="https://journals.physiology.org/doi/full/10.1152/advan.00132.2022">https://journals.physiology.org/doi/full/10.1152/advan.00132.2022</a></li><li>Research data infrastructure for high-throughput experimental materials science - PMC: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4874448/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4874448/</a></li><li>Introducing Case Studies in Essays [Examples] - Writers Per Hour: <a href="https://www.writersperhour.com/blog/case-study-in-essay">https://www.writersperhour.com/blog/case-study-in-essay</a></li></ul><h2 id="人性化-AI-内容"><a href="#人性化-AI-内容" class="headerlink" title="人性化 AI 内容"></a><strong>人性化 AI 内容</strong></h2><ul><li>How to Humanise AI Content: Tips + Examples | Salesforce ANZ: <a href="https://www.salesforce.com/au/blog/humanise-ai-content/">https://www.salesforce.com/au/blog/humanise-ai-content/</a></li><li>13 Ways To Humanize AI Content - Surfer SEO: <a href="https://www.surferseo.com/blog/how-to-humanize-ai-content/">https://www.surferseo.com/blog/how-to-humanize-ai-content/</a></li><li>How to Infuse Personality into Your AI-Generated Content - Benchmark Email: <a href="https://www.benchmarkemail.com/blog/how-to-infuse-personality-into-your-ai-generated-content/">https://www.benchmarkemail.com/blog/how-to-infuse-personality-into-your-ai-generated-content/</a></li><li>3 Ways to Infuse a Human Touch into AI-Generated Content: <a href="https://marketmymarket.com/blog/how-to-infuse-a-human-touch-into-ai-generated-content.html">https://marketmymarket.com/blog/how-to-infuse-a-human-touch-into-ai-generated-content.html</a></li><li>How to Edit AI Content: 9 Tips for Adding a Human Touch to AI Outputs - Jasper AI: <a href="https://www.jasper.ai/blog/how-to-edit-ai-content">https://www.jasper.ai/blog/how-to-edit-ai-content</a></li><li>The art of AI-enhanced content: 8 ways to keep human creativity front and center: <a href="https://searchengineland.com/the-art-of-ai-enhanced-content-8-ways-to-keep-human-creativity-front-and-center-412761">https://searchengineland.com/the-art-of-ai-enhanced-content-8-ways-to-keep-human-creativity-front-and-center-412761</a></li><li>Artificial Intelligence-Generated Content Needs a Human Oversight - PMC: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9934218/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9934218/</a></li><li>The crucial role of humans in AI oversight - Cornerstone OnDemand: <a href="https://www.cornerstoneondemand.com/blog/crucial-role-humans-ai-oversight/">https://www.cornerstoneondemand.com/blog/crucial-role-humans-ai-oversight/</a></li><li>The Vital Role of Human Oversight in Ethical AI Governance - Nemko: <a href="https://www.nemko.com/insights/the-vital-role-of-human-oversight-in-ethical-ai-governance">https://www.nemko.com/insights/the-vital-role-of-human-oversight-in-ethical-ai-governance</a></li><li>The Strategic Necessity of Human Oversight in AI Systems - Lumenova AI: <a href="https://lumenova.ai/the-strategic-necessity-of-human-oversight-in-ai-systems/">https://lumenova.ai/the-strategic-necessity-of-human-oversight-in-ai-systems/</a></li></ul><h2 id="AI-的局限性与伦理"><a href="#AI-的局限性与伦理" class="headerlink" title="AI 的局限性与伦理"></a><strong>AI 的局限性与伦理</strong></h2><ul><li>AI in Schools: Pros and Cons - College of Education | Illinois: <a href="https://education.illinois.edu/news-stories/ai-in-schools-pros-and-cons/">https://education.illinois.edu/news-stories/ai-in-schools-pros-and-cons/</a></li><li>Strengths and limitations of AI - Learning at Lincoln: <a href="https://learning.lincoln.ac.uk/technology-enhanced-learning/ai-tel/strengths-and-limitations-of-ai/">https://learning.lincoln.ac.uk/technology-enhanced-learning/ai-tel/strengths-and-limitations-of-ai/</a></li><li>Artificial intelligence as a writing tool: Cautions and limitations - American Nurse Journal: <a href="https://www.myamericannurse.com/artificial-intelligence-as-a-writing-tool-cautions-and-limitations/">https://www.myamericannurse.com/artificial-intelligence-as-a-writing-tool-cautions-and-limitations/</a></li><li>Practical Considerations and Ethical Implications of Using Artificial Intelligence in Writing Scientific Manuscripts - PMC: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9869998/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9869998/</a></li><li>Clarifying Ethical Dilemmas of Using Artificial Intelligence in Research Writing: A Rapid Review: <a href="https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=16757&context=dissertations">https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=16757&context=dissertations</a></li><li>Discussing the paper on the ethics of disclosing the use of artificial intelligence tools in writing research - PhilArchive: <a href="https://philarchive.org/rec/GUECDT">https://philarchive.org/rec/GUECDT</a></li><li>Reminder of the Importance of Research Integrity &amp; Use of AI | Compliance &amp; Training: <a href="https://compliance.research.virginia.edu/news/reminder-importance-research-integrity-use-ai">https://compliance.research.virginia.edu/news/reminder-importance-research-integrity-use-ai</a></li></ul><h2 id="引用规范"><a href="#引用规范" class="headerlink" title="引用规范"></a><strong>引用规范</strong></h2><ul><li>Citation Styles: APA, MLA, Chicago, Turabian, IEEE - Guides at University of Pittsburgh: <a href="https://pitt.libguides.com/citationhelp">https://pitt.libguides.com/citationhelp</a></li><li>APA, MLA, Chicago&#x2F;Turbian, AMA - Citation Styles: Get Started - Research Guides: <a href="https://libguides.su.edu/citationstyles">https://libguides.su.edu/citationstyles</a></li><li>guides.library.ucsc.edu: <a href="https://guides.library.ucsc.edu/citations">https://guides.library.ucsc.edu/citations</a></li><li>Citing&#x2F;Documenting Resources - Instruction - Guides at University of Alaska Fairbanks: <a href="https://library.uaf.edu/instruction/citing">https://library.uaf.edu/instruction/citing</a></li><li>Overview - Citing sources - LibGuides at MIT Libraries: <a href="https://libguides.mit.edu/citing">https://libguides.mit.edu/citing</a></li><li>Citation Styles - Citation Practices and Avoiding Plagiarism - Guides at Penn Libraries: <a href="https://guides.library.upenn.edu/citing/styles">https://guides.library.upenn.edu/citing/styles</a></li><li>How to Cite Sources | Citation Generator &amp; Quick Guide - Scribbr: <a href="https://www.scribbr.com/citing-sources/how-to-cite-sources/">https://www.scribbr.com/citing-sources/how-to-cite-sources/</a></li><li>Citation Styles – Library - Merritt College: <a href="https://merritt.edu/library/citation-styles/">https://merritt.edu/library/citation-styles/</a></li><li>Attributing Sources and Avoiding Plagiarism - Library at Averett University: <a href="https://averett.libguides.com/c.php?g=1234678">https://averett.libguides.com/c.php?g=1234678</a></li><li>In-Text Citations: The Basics - Purdue OWL: <a href="https://owl.purdue.edu/owl/research_and_citation/using_research/quotations_and_citations/in_text_citations_the_basics.html">https://owl.purdue.edu/owl/research_and_citation&#x2F;using_research&#x2F;quotations_and_citations&#x2F;in_text_citations_the_basics.html</a></li><li>Choosing the Right Citation Style: A Guide to Harvard, APA, MLA and Chicago: <a href="https://cwauthors.com/article/choosing-the-right-citation-style-a-guide-to-harvard-apa-mla-and-chicago">https://cwauthors.com/article/choosing-the-right-citation-style-a-guide-to-harvard-apa-mla-and-chicago</a></li><li>Guidelines for Citations and References - College of Business and Economics: <a href="https://www.boisestate.edu/cobe-student/wp-content/uploads/sites/119/2023/07/Citation-and-Reference-Guide-CBE-July-2023.pdf">https://www.boisestate.edu/cobe-student/wp-content/uploads/sites/119/2023/07/Citation-and-Reference-Guide-CBE-July-2023.pdf</a></li><li>Citation vs. Attribution – Self-Publishing Guide - BC Open Textbooks: <a href="https://opentextbc.ca/selfpublishguide/chapter/citation-vs-attribution/">https://opentextbc.ca/selfpublishguide/chapter/citation-vs-attribution/</a></li><li>Citing Sources - The University Writing Center: <a href="https://writingcenter.tamu.edu/members/workshop-handouts/citing-sources/">https://writingcenter.tamu.edu/members/workshop-handouts/citing-sources/</a></li><li>How To Cite a Research Paper for 2025: Citation Styles Guide: <a href="https://research.com/research/how-to-cite-a-research-paper">https://research.com/research/how-to-cite-a-research-paper</a></li><li>Recommended practices for attribution - Creative Commons Wiki: <a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">https://wiki.creativecommons.org/wiki/Best_practices_for_attribution</a></li><li>Proper attribution | Wiki - FreedomGPT: <a href="https://wiki.freedomgpt.com/en/Proper_attribution">https://wiki.freedomgpt.com/en/Proper_attribution</a></li><li>Disclosing the Use of AI - Generative AI - Research Guides at Princeton University: <a href="https://libguides.princeton.edu/GenAI/disclose">https://libguides.princeton.edu/GenAI/disclose</a></li><li>Artificial Intelligence (AI): Publisher Policies - Research Guides - Purdue University: <a href="https://guides.lib.purdue.edu/ai/publisherpolicies">https://guides.lib.purdue.edu/ai/publisherpolicies</a></li><li>Using of Generative AI in Scholarship &amp; Research - USC Libraries Research Guides: <a href="https://libguides.usc.edu/ai/scholarship">https://libguides.usc.edu/ai/scholarship</a></li><li>Generative Artificial Intelligence (AI) Guidelines - Harvard University Information Technology: <a href="https://huit.harvard.edu/generative-artificial-intelligence-ai-guidelines">https://huit.harvard.edu/generative-artificial-intelligence-ai-guidelines</a></li></ul><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a><strong>其他</strong></h2><ul><li>Do AI Humanizers Work ? How Do They Work ? - Intellectual Lead: <a href="https://intellectualead.com/ai-humanizers/">https://intellectualead.com/ai-humanizers/</a></li><li>(PDF) ANALYSIS OF AI HUMANIZER TOOLS - ResearchGate: <a href="https://www.researchgate.net/publication/378438102_ANALYSIS_OF_AI_HUMANIZER_TOOLS">https://www.researchgate.net/publication/378438102_ANALYSIS_OF_AI_HUMANIZER_TOOLS</a></li><li>Can You Trust AI Detectors and AI Humanizers?: <a href="https://braide.ai/blog/can-you-trust-ai-detectors-and-ai-humanizers">https://braide.ai/blog/can-you-trust-ai-detectors-and-ai-humanizers</a></li><li>The Importance of Humanizing AI-Generated Research Work for Postgraduate Students: <a href="https://proofreadingmalaysia.com/2024/07/10/the-importance-of-humanizing-ai-generated-research-work-for-postgraduate-students/">https://proofreadingmalaysia.com/2024/07/10/the-importance-of-humanizing-ai-generated-research-work-for-postgraduate-students/</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大模型 </tag>
+            
+            <tag> 谷歌Gemini </tag>
+            
+            <tag> DeepSeek </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> 论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AIGC降重和论文改进的策略思考</title>
+      <link href="//AIGC-thinkings/"/>
+      <url>//AIGC-thinkings/</url>
+      
+        <content type="html"><![CDATA[<p>好的，这是更侧重方法论，讲述 AIGC 检测方法、检测逻辑、检测语言和段落特征，以及针对不同情况和特征的处理方法的翻译版本：</p><p><strong>降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略</strong></p><p><strong>1. 学术论文中人工智能不断演变的情况：挑战与思考</strong></p><ul><li><p><strong>1.1 人工智能写作工具的普及及其影响</strong></p><ul><li>近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。</li><li>这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。</li><li>因此，传统上严重依赖书面论文的评估方法面临挑战。</li><li>由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。</li></ul></li><li><p><strong>1.2 人工智能使用的双刃剑效应</strong></p><ul><li>人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。</li><li>人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。</li><li>因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。</li></ul></li><li><p><strong>1.3 区分人类写作与人工智能生成的文本的难度</strong></p><ul><li>区分人类撰写的文本和人工智能生成的文本变得越来越困难。</li><li>由于人工智能模型模仿人类写作风格的能力不断提高，仅仅依靠手动检测变得越来越不可靠。</li></ul></li></ul><p><strong>2. 人工智能检测的剖析：这些工具如何识别人工智能生成的文本</strong></p><ul><li><p><strong>2.1 人工智能检测工具的工作原理：基于统计模式和语言特征的分析</strong></p><ul><li>人工智能检测工具基于与人工智能写作工具使用的类似的语言模型运行，分析文本中人工智能生成内容特有的统计模式和语言特征。</li><li>这些模型本质上会检查输入，并询问“这会是我写的那种文章吗？”如果答案是“是”，则得出结论，该文本很可能是由人工智能生成的。</li><li>这种相似性导致人工智能写作的进步需要人工智能检测的进步，从而形成持续的“猫捉老鼠”游戏。</li></ul></li><li><p><strong>2.2 人工智能检测工具采用的主要分析方法：方法论与特征分析</strong></p><ul><li><strong>2.2.1 困惑度 (Perplexity)：衡量文本可预测性的指标</strong><ul><li><strong>检测方法：</strong> 评估文本中单词序列的概率分布。困惑度越低，文本越可预测，越可能由人工智能生成。</li><li><strong>检测逻辑：</strong> 人工智能倾向于生成流畅但缺乏创造性的文本，因此困惑度较低。</li><li><strong>检测语言&#x2F;特征：</strong> 文本中单词的出现频率和组合方式。</li><li><strong>处理方法：</strong><ul><li><strong>如果困惑度过低：</strong> 检查文本是否过于流畅和缺乏变化。</li><li><strong>改进策略：</strong> 鼓励学生使用更复杂的句子结构，更不常见的词汇，以及更具创造性的表达方式。</li></ul></li></ul></li><li><strong>2.2.2 突发性 (Burstiness)：衡量句子结构和长度变化的指标</strong><ul><li><strong>检测方法：</strong> 评估文本中句子长度和结构的差异程度。突发性越低，文本越单调，越可能由人工智能生成。</li><li><strong>检测逻辑：</strong> 人工智能倾向于生成句子结构和长度相似的文本，缺乏人类写作的自然变化。</li><li><strong>检测语言&#x2F;特征：</strong> 句子长度的方差，句子结构的复杂程度。</li><li><strong>处理方法：</strong><ul><li><strong>如果突发性过低：</strong> 检查文本是否过于单调和缺乏变化。</li><li><strong>改进策略：</strong> 鼓励学生使用不同长度和结构的句子，例如简单句、复合句和复杂句的组合。</li></ul></li></ul></li><li><strong>2.2.3 词频分析：识别过度使用的常见词汇</strong><ul><li><strong>检测方法：</strong> 统计文本中每个单词的出现频率，并识别过度使用的常见词汇。</li><li><strong>检测逻辑：</strong> 人工智能倾向于过度使用某些常见词汇，缺乏人类写作的多样性。</li><li><strong>检测语言&#x2F;特征：</strong> 文本中单词的频率分布。</li><li><strong>处理方法：</strong><ul><li><strong>如果发现过度使用的常见词汇：</strong> 检查文本是否过于依赖某些词汇，缺乏多样性。</li><li><strong>改进策略：</strong> 鼓励学生使用更丰富的词汇，避免过度依赖常见词汇，并使用词库来寻找同义词。</li></ul></li></ul></li><li><strong>2.2.4 N-gram 分析：识别常见的语言模式</strong><ul><li><strong>检测方法：</strong> 将文本分解为 N 个单词的序列 (N-gram)，并识别常见的语言模式。</li><li><strong>检测逻辑：</strong> 人工智能倾向于使用常见的语言模式，缺乏人类写作的独特性。</li><li><strong>检测语言&#x2F;特征：</strong> 文本中 N-gram 的频率分布。</li><li><strong>处理方法：</strong><ul><li><strong>如果发现常见的语言模式：</strong> 检查文本是否过于依赖某些短语和表达方式，缺乏独特性。</li><li><strong>改进策略：</strong> 鼓励学生使用更具创造性和非陈词滥调的措辞，避免使用常见的语言模式。</li></ul></li></ul></li><li><strong>2.2.5 句法分析：评估句子结构的复杂性</strong><ul><li><strong>检测方法：</strong> 分析句子的语法结构，例如主语、谓语、宾语等，并评估其复杂性。</li><li><strong>检测逻辑：</strong> 人工智能倾向于使用简单的句子结构，缺乏人类写作的复杂性。</li><li><strong>检测语言&#x2F;特征：</strong> 句子结构的复杂程度，例如从句的数量和类型。</li><li><strong>处理方法：</strong><ul><li><strong>如果句子结构过于简单：</strong> 检查文本是否缺乏复杂性和细微差别。</li><li><strong>改进策略：</strong> 鼓励学生使用更复杂的句子结构，例如使用从句和插入语来表达更复杂的思想。</li></ul></li></ul></li><li><strong>2.2.6 语义分析：理解文本的含义和语境</strong><ul><li><strong>检测方法：</strong> 分析单词和短语的含义，包括比喻和文化参考等细微差别，并评估文本的整体连贯性和一致性。</li><li><strong>检测逻辑：</strong> 人工智能可能无法完全理解文本的含义和语境，导致语义错误或不一致。</li><li><strong>检测语言&#x2F;特征：</strong> 文本的整体连贯性和一致性，以及对语境的理解程度。</li><li><strong>处理方法：</strong><ul><li><strong>如果发现语义错误或不一致：</strong> 检查文本是否缺乏理解和细微差别。</li><li><strong>改进策略：</strong> 鼓励学生更深入地理解主题，并使用更准确和细致的语言来表达自己的思想。</li></ul></li></ul></li><li><strong>2.2.7 嵌入 (Embedding)：评估单词之间的语义关系</strong><ul><li><strong>检测方法：</strong> 将单词表示为向量，并评估它们之间的语义关系，例如相似性、相关性和距离。</li><li><strong>检测逻辑：</strong> 人工智能可能无法准确地捕捉单词之间的语义关系，导致不自然的表达方式。</li><li><strong>检测语言&#x2F;特征：</strong> 单词向量之间的距离和关系。</li><li><strong>处理方法：</strong><ul><li><strong>如果发现不自然的表达方式：</strong> 检查文本是否缺乏流畅性和自然性。</li><li><strong>改进策略：</strong> 鼓励学生使用更自然和流畅的语言，并注意单词之间的语义关系。</li></ul></li></ul></li><li><strong>2.2.8 分类器 (Classifier)：基于机器学习的文本分类</strong><ul><li><strong>检测方法：</strong> 使用在标记数据（人类 vs. 人工智能）上训练的机器学习模型来对新文本进行分类。</li><li><strong>检测逻辑：</strong> 分类器可以识别人工智能生成的文本中常见的模式和特征。</li><li><strong>检测语言&#x2F;特征：</strong> 基于机器学习模型的预测结果。</li><li><strong>处理方法：</strong><ul><li><strong>如果分类器将文本标记为人工智能生成：</strong> 检查文本是否具有人工智能生成的文本中常见的特征，例如低困惑度、低突发性、过度使用的常见词汇等。</li><li><strong>改进策略：</strong> 结合其他检测方法，并根据具体情况进行判断。</li></ul></li></ul></li><li><strong>2.2.9 水印 (Watermarking)：嵌入隐藏信息的未来方法</strong><ul><li><strong>检测方法：</strong> 在人工智能生成的文本中嵌入隐藏的信息，例如特定的单词序列或字符编码。</li><li><strong>检测逻辑：</strong> 只有知道水印信息的检测器才能识别人工智能生成的文本。</li><li><strong>检测语言&#x2F;特征：</strong> 嵌入在文本中的隐藏信息。</li><li><strong>处理方法：</strong><ul><li><strong>如果检测到水印信息：</strong> 确认文本是由人工智能生成的。</li><li><strong>改进策略：</strong> 目前该技术仍在开发中，尚未得到广泛应用。</li></ul></li></ul></li></ul></li><li><p><strong>2.3 人工智能检测工具与抄袭检查器的区别：目标与方法</strong></p><ul><li>人工智能检测工具和抄袭检查器具有不同的目标和方法。</li><li>人工智能检测工具寻找类似人工智能的特征，而抄袭检查器则将文本与现有来源的数据库进行比较。</li><li>学生需要理解这些差异，并认识到人工智能生成的内容可能会因与现有在线文本的相似性而被抄袭检查器标记。</li></ul></li><li><p><strong>2.4 手动检测的价值：识别语言和段落特征</strong></p><ul><li>手动检测涉及注意单调的写作、可预测的语言、缺乏句子结构变化以及过度使用对冲语言。</li><li>培训教育工作者和学生识别这些模式是一种有价值的补充方法，尤其是在与人工智能检测工具和其他评估策略结合使用时。</li><li><strong>2.4.1 单调的写作：</strong> 缺乏创造性和独特性，使用常见的短语和表达方式。<ul><li><strong>处理方法：</strong> 鼓励学生使用更具创造性的语言，避免使用常见的短语和表达方式。</li></ul></li><li><strong>2.4.2 可预测的语言：</strong> 使用简单的句子结构和常见的词汇，缺乏复杂性和细微差别。<ul><li><strong>处理方法：</strong> 鼓励学生使用更复杂的句子结构和更丰富的词汇。</li></ul></li><li><strong>2.4.3 缺乏句子结构变化：</strong> 使用句子长度和结构相似的文本，缺乏自然变化。<ul><li><strong>处理方法：</strong> 鼓励学生使用不同长度和结构的句子。</li></ul></li><li><strong>2.4.4 过度使用对冲语言：</strong> 使用模糊和不确定的语言，例如“可能”、“似乎”等。<ul><li><strong>处理方法：</strong> 鼓励学生使用更自信和明确的语言。</li></ul></li></ul></li></ul><p><strong>3. 尽量减少学术论文中人工智能生成利用的主动策略</strong></p><ul><li><p><strong>3.1 培养原创思维和想法</strong></p><ul><li>在可能利用人工智能之前，强调让学生产生自己想法的写作前活动。</li><li>自由写作、头脑风暴、聚类和维护个人日志等技术可以培养原创思维。</li><li>这些活动可以帮助学生利用自己的知识和观点，减少他们最初依赖人工智能生成内容的倾向。</li><li>首先关注想法的产生可以使学生更深入地参与自己的想法。</li><li>鼓励学生积极分析作业和课程材料，并发展自己独特的解释和问题。</li><li>提出关于作业的目的、受众和所需任务的关键问题可以激发自主思考。</li><li>通过深入理解作业的细微差别，人工智能更难在没有学生大量指导的情况下创建真正相关且富有洞察力的回答。</li><li>促进“畅谈”或协作讨论，作为集思广益和完善自己观点的一种方式。</li><li>同伴互动可以产生新的见解，并帮助学生阐明自己的想法。</li><li>协作环境鼓励积极参与教材，并发展人工智能可能难以复制的独特观点。</li><li>整合需要将课程概念与自己的经验、观察和信念联系起来的活动。</li><li>鼓励反思性写作或个人联系的作业可以培养原创性。</li><li>由于人工智能没有个人经验或主观观点，因此利用这些领域的作业更能抵抗人工智能驱动的内容。</li><li>鼓励使用图表、列表和其他视觉方法来组织思想并识别思想之间的联系。</li><li>这些技术可以帮助学生全面理解主题及其独特的处理方式。</li><li>想法的视觉组织可以揭示纯粹基于文本的人工智能生成可能会遗漏的非线性联系和见解。</li><li>在课堂上模拟发展想法的过程，展示如何从一般主题过渡到具体和原创的讨论。</li><li>明确的指导和示例可以指导学生自己的想法生成。</li><li>向学生展示想法发展的“幕后花絮”可以使该过程更加清晰，并减少他们依赖人工智能作为捷径的倾向。</li></ul></li><li><p><strong>3.2 设计本质上引人入胜的作业</strong></p><ul><li>避免可以简单地通过事实回忆或一般总结来回答的作业。人工智能擅长生成这些内容。</li><li>需要分析、综合、评估和创造性问题解决等高级思维技能的作业不太容易受到人工智能直接生成的影响。</li><li>纳入需要学生分析特定的复杂数据集或案例研究并得出自己独特结论的任务。</li><li>这些作业需要批判性思维和解释，这超出了人工智能目前的能力。</li><li>人工智能可以处理数据，但以新颖的方式细致地解释和应用研究结果通常需要人类的智慧。</li><li>设计专注于写作过程本身的作业，包括草稿、基于反馈的修改以及对写作体验的思考。</li><li>这些面向过程的任务评估学生在整个写作过程中的参与度和理解力。</li><li>人工智能可以生成最终成果，但它本质上无法复制人类写作过程中发生的学习和完善的迭代过程。</li><li>实施需要学生口头展示研究和想法的作业，从而实现实时对话和提问。</li><li>口头展示可以揭示学生对书面论文之外的理解深度。</li><li>人工智能可以生成脚本，但在自发和互动环境中阐明和捍卫想法的能力是人类理解的关键区分因素。</li><li>开发需要整合人工智能无法以有意义的方式轻松创建或合成的多媒体元素（视频、录音、交互式视觉效果等）的作业。</li><li>这些类型的作业需要超越人工智能文本生成重点的多样化技能和创造性投入。</li><li>考虑“无评分”或替代评估方法，重点关注学习和成长，而不是仅仅关注论文的最终成绩。</li><li>这可以将重点从创建完美的 AI 生成论文转移到真正参与教材。</li><li>重视学习而不是成绩可以减轻使用 AI 来获得高分的压力。</li></ul></li><li><p><strong>3.3 将写作过程整合为学习活动的核心</strong></p><ul><li>明确教授写作过程的各个阶段（构思、起草、修改、编辑、发表），并强调每个阶段的重要性。</li><li>通过将写作分解为易于管理的步骤，学生不太可能感到不知所措，并且减少了他们通过人工智能寻找捷径的诱惑。</li><li>在整个课程中纳入低风险的写作作业和活动，以逐步建立学生的信心和技能。</li><li>定期练习可以提高写作能力，并减少对主要作业中人工智能的依赖。</li><li>在写作过程的多个阶段提供同伴评审和反馈的机会。</li><li>来自同事的建设性批评可以帮助学生识别需要改进的领域并发展自己的声音。</li><li>提供关于草稿的详细指导反馈，重点关注想法的发展、分析和讨论，而不仅仅是语法和机制。</li><li>引导学生进行更深入的思考和原创见解的反馈可以抵消他们依赖人工智能进行表面内容创作的倾向。</li><li>整合研究技能指导，强调通过适当的引用和释义来道德地使用来源。</li><li>对学术诚信和来源使用的强烈理解可以减少学生不当使用人工智能的可能性。</li><li>鼓励学生将写作视为学习和探索想法的工具，而不仅仅是需要完成的任务。</li><li>将写作视为智力发现的手段可以提高学生的参与度和原创性。</li></ul></li></ul><p><strong>4. 赋予学生权力，超越人工智能依赖，完善和提高草稿质量</strong></p><ul><li><p><strong>4.1 培养强大的分析和批判性思维能力</strong></p><ul><li>教导学生如何评估信息来源的偏见、可靠性和相关性。</li><li>批判性评估技能对于做出自己的判断和超越人工智能生成的摘要至关重要。</li><li>能够批判性地评估信息来源的学生更有能力发展自己的论点，而不是依赖人工智能的解释。</li><li>鼓励学生对研究主题提出深入的问题，挑战假设并探索不同的观点。</li><li>探索式学习可以培养更深入的理解和原创见解。</li><li>提出问题并探索多个观点可以带来比人工智能通常提供的更细致的分析。</li><li>模拟分析复杂信息并将多个信息来源的研究结果整合到连贯论证中的过程。</li><li>关于分析和整合技能的明确指导对于超越人工智能生成的内容至关重要。</li><li>通过展示如何将不同的信息联系起来以形成自己的论证，学生可以获得力量。</li><li>纳入需要学生识别和评估证据的不同解释的活动。</li><li>理解多个观点是批判性思维的重要方面。</li><li>认识和分析不同的观点可以带来更完善和更不像人工智能的写作。</li><li>鼓励学生在分析信息时反思自己的思维过程和偏见。</li><li>自我意识可以提高分析的深度和原创性。</li><li>认识到个人偏见可以实现更客观和细致的分析。</li></ul></li><li><p><strong>4.2 掌握详细解释和展开的技巧</strong></p><ul><li>教导学生使用“5W1H”（谁、什么、哪里、何时、为什么、如何）来用具体的细节展开想法。</li><li>详细的解释为学术写作增添了深度和清晰度。</li><li>由于人工智能生成的内容可能含糊不清，因此强调详细的解释可以使学生超越表面写作。</li><li>展示如何通过在后续句子中坚持该想法来使用放大来展开早期想法。</li><li>展开对于彻底发展一个观点至关重要。</li><li>通过鼓励学生用支持性细节和推理来展开想法，他们的写作将比典型的人工智能输出更实质。</li><li>鼓励使用具体的例子、类比和生动的描述来解释和阐明抽象概念。</li><li>这些技巧使写作更具吸引力和易于理解。</li><li>人工智能可能会做出一般的解释，但使用例证性技巧可以增加人性和更深入的理解。</li><li>教导学生如何限制主张、承认局限性并在写作中添加细微差别和智力诚实。</li><li>承认复杂性表明对主题有更深入的理解。</li><li>虽然人工智能经常将信息呈现为确定性的，但教导限制可以增加人类判断和批判性思维的层次。</li><li>模拟如何在学术写作中适当地诉诸情感，以与读者建立联系并使论证更有效。</li><li>战略性地使用情感诉求可以提高参与度。</li><li>虽然学术写作是正式的，但微妙的人际联系可以使写作更具说服力，更不像是机器人。</li></ul></li><li><p><strong>4.3 论证的逻辑和连贯组织</strong></p><ul><li>强调引导整个论文的清晰且重点突出的论文的重要性。</li><li>强有力的论文为读者和作者都提供了路线图。</li><li>明确定义的论文表明清晰的理解和论证，人工智能更难在没有特定指导的情况下生成真正连贯的论文。</li><li>教导学生学术论文的各种结构（时间顺序、比较&#x2F;对比、原因&#x2F;结果、问题&#x2F;解决方案）以及如何选择对论证最有效的结构。</li><li>逻辑结构可以提高清晰度和说服力。</li><li>通过理解不同的结构，学生可以以比人工智能默认执行的更完善的方式组织思想。</li><li>强调每个段落的主题句的重要性，明确陈述要点并将其与论文联系起来。</li><li>清晰的主题句可以提高段落的连贯性。</li><li>精心制作的主题句表明清晰的推理，这可能是纯粹的人工智能生成文本所缺乏的。</li><li>展示段落和章节之间有效过渡的使用，以使想法的流动更加顺畅。</li><li>过渡在论文的不同部分之间创建逻辑联系。</li><li>人工智能生成的文本可能缺乏以人类思维发展为特征的微妙过渡。</li><li>强调段落内逻辑内部结构的必要性，其中证据支持主张，而主张最终支持论文。</li><li>结构良好的段落对于强有力的论证至关重要。</li><li>通过教导学生在段落级别逻辑地构建论证，可以帮助他们发展更强大且不依赖人工智能的写作。</li><li>指导学生如何撰写有效的引言和结论，以构建论证并总结要点。但是，不要仅仅重复。</li><li>强有力的引言和结论给读者留下持久的印象。</li><li>通过教导学生创建超越基本总结的引人入胜的引言和结论，可以将他们的作品与人工智能生成的文本区分开来。</li></ul></li><li><p><strong>4.4 将人性化的声音、细微差别和洞察力注入写作</strong></p><ul><li>鼓励学生使用主动语态写作，以创建更清晰和更直接的句子。</li><li>主动语态通常使写作更具吸引力。</li><li>由于人工智能可能会根据语境默认使用被动语态，因此鼓励主动语态可以增加更人性化的感觉。</li><li>指导学生避免过度正式或机械的语言，并发展自己独特的写作风格和语调。</li><li>个人风格使写作更具特色。</li><li>由于人工智能经常生成平庸或通用的语言，因此培养个人声音可以使学生的写作脱颖而出。</li><li>鼓励使用各种句子结构和句子长度，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然和引人入胜的节奏。</li><li>句子的多样性可以提高可读性和流畅性。</li><li>由于人工智能可能会始终如一地生成类似的句子结构，因此教导多样性可以使写作更人性化。</li><li>鼓励学生在整个写作过程中融入自己的观点、见解和批判性分析，而不仅仅是总结或报告信息。</li><li>原创见解是强大学术研究的证明。</li><li>强调将自己对教材的“看法”添加到其中的重要性对于区分人类写作和人工智能的输出至关重要。</li><li>鼓励使用适当的情感语言和个人轶事（如果相关且允许），以与读者建立联系并增加真实性。</li><li>人际联系可以使写作更具影响力。</li><li>由于人工智能通常缺乏真正的情感，因此融入适当的情感表达可以使写作更人性化。</li><li>指导学生修改自己的作品，以消除人工智能生成的文本中常见的陈词滥调、术语（除非对读者来说是合适的）和过度通用的短语。</li><li>准确和原创的语言可以增强写作。</li><li>通过教导学生注意单词的选择并避免常见的人工智能模式，可以完善写作。</li></ul></li><li><p><strong>4.5 提高学术严谨性的词汇和句子结构</strong></p><ul><li>鼓励学生通过广泛的阅读以及使用词库（谨慎且根据语境使用）、词汇日志等资源来增加词汇量。</li><li>多样化的词汇可以提高准确性和精致度。</li><li>虽然人工智能拥有庞大的词汇量，但教导学生深思熟虑地使用广泛的单词可以提高写作水平。</li><li>教导学生有效地使用动词，而不是依赖名词化（由动词形成的名词），以使写作更主动和简洁。</li><li>强有力的动词可以提高句子的清晰度。</li><li>通过鼓励使用动词而不是名词，可以使写作更具活力，更不像人工智能。</li><li>指导学生使用从属连词和关系代词来构建复杂的句子，以表达想法之间的细微关系。</li><li>复杂的句子可以表达复杂的思想。</li><li>由于人工智能可能会生成更简单的句子结构，因此教导复杂性可以提高学生的写作水平。</li><li>强调正确使用准确且特定于领域的术语的重要性。</li><li>准确的术语对于学术写作至关重要。</li><li>虽然人工智能可以使用专业术语，但确保学生理解并正确应用它们可以表明真正的学习。</li><li>提醒学生注意过度使用同义词，因为在科学写作中，为了清晰起见，首选一致的术语。</li><li>术语的一致性可以避免混淆。</li><li>虽然避免重复很重要，但在某些领域，一致地使用相同的术语比仅仅使词汇多样化更重要。</li><li>教导学生通过释义、代词的使用和句子改写来有效地避免单词和短语的重复的技巧。</li><li>避免不必要的重复可以提高可读性。</li><li>人工智能可能会变得重复，但教导学生避免重复的有效技巧可以提高写作质量，而与人工智能检测无关。</li></ul></li></ul><p><strong>5. 导航人工智能检测：学生和教育工作者的最佳实践</strong></p><ul><li><p><strong>5.1 理解人工智能检测工具的局限性和潜在偏见</strong></p><ul><li>告知学生和教育工作者人工智能检测的根本机制（如第 2 节所述），并促进对人工智能检测的能力和局限性的现实理解。</li><li>通过透明地了解这些工具的工作方式，可以管理期望并防止过度依赖其结果。</li><li>强调人类撰写的文本（包括历史文献）被错误地标记为人工智能生成的假阳性案例。</li><li>强调人工智能检测的结果应被视为指标，而不是人工智能使用的确凿证据。</li><li>讨论基于训练数据的人工智能检测工具的潜在偏见。</li><li>不同的 AI 模型和检测工具的准确性可能不同，并且更容易在特定类型的写作中产生假阳性。</li><li>强调人工智能检测技术在不断发展，并且准确性可能因使用的 AI 写作模型和检测算法的精细程度而异。</li><li>教育工作者需要随时了解 AI 写作和检测的最新发展。</li><li>提醒不要将 AI 检测工具用作学术不端行为的唯一决定因素。</li><li>相反，提倡一种全面的方法，评估作品的质量，评估学生对内容的理解，并考虑其他环境因素。</li><li>多方面的评估方法比依赖单一技术工具更可靠。</li></ul></li><li><p><strong>5.2 适当引用和释义的重要作用</strong></p><ul><li>重申学术诚信的基本原则，以及通过适当的引用来表彰信息来源的重要性。</li><li>无论是否使用了 AI，适当的引用都至关重要，并且仍然是学术诚信的基础。</li><li>提供关于有效释义技巧的明确指导，而不仅仅是更改几个单词。</li><li>强调需要用自己的话重写原始文本，并准确地表达其含义。</li><li>掌握有效释义的学生不太可能被标记为 AI，并且可以展示对信息来源的更深入理解。</li><li>解释释义、引用和总结之间的区别，以及每种方法何时合适。</li><li>清晰地理解这些区别对于学术写作至关重要。</li><li>了解何时以及如何有效地使用每种技巧有助于强有力的学术写作，并避免抄袭（或无意的 AI 式写作）。</li><li>强调以所需的引用样式进行准确和完整引用的重要性。</li><li>适当的引用使读者能够找到原始信息来源并验证信息。</li><li>不准确或缺失的引用可能会发出危险信号，无论是否使用了 AI。</li><li>建议学生在研究过程中保持对信息来源的细致记录，以确保准确的引用，并避免无意的抄袭或对 AI 依赖的怀疑。</li><li>有组织的笔记对于道德研究至关重要。</li><li>良好的研究习惯有助于学术诚信，并帮助学生避免 AI 误用或错误分类的陷阱。</li></ul></li><li><p><strong>5.3 加强写作中人性化特征以避免错误分类的策略</strong></p><ul><li>鼓励学生将个人见解、独特的观点和原创分析注入写作中，超越 AI 容易获得的信息。</li><li>AI 很难产生真正新颖的想法或主观解释。</li><li>建议学生发展反映自己个性的清晰写作声音和风格，而不是采用通用或过度正式的语调。</li><li>AI 经常生成缺乏强烈个人声音的文本。</li><li>建议采用各种句子结构，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然的节奏。</li><li>AI 可能会生成更均匀的句子结构。</li><li>鼓励学生使用具体和细致的语言，避免过度依赖 AI 生成的文本中常见的通用单词和短语。</li><li>AI 可能会默认使用通用词汇。</li><li>建议学生纳入例子、轶事和个人思考（如果合适），以使写作更具吸引力和共鸣。</li><li>AI 没有个人经验，并且很难生成真实的轶事。</li><li>建议学生仔细审查和编辑 AI 辅助的草稿，以确保自然的流程、想法之间的逻辑联系，并避免重复的措辞或语调的急剧变化。</li><li>人工编辑可以消除 AI 生成的文本中可能存在的矛盾。</li><li>鼓励学生通过添加（在语境中适当的范围内）轻微的不完美或文体上的变化来“人性化”写作，以使文本“完美”而不是更真实的人性化。</li><li>过度精致且语法完美的文本可能是 AI 的迹象。</li></ul></li></ul><p><strong>6. 结论：在智能机器时代培养学术诚信文化</strong></p><ul><li>重申尽量减少 AI 使用、提高学生写作水平和导航 AI 检测的主要策略。</li><li>强调发展批判性思维、写作技能和对学术诚信的理解的重要性，采取积极主动的教育方法。</li><li>强调教育工作者、学生和教育机构之间持续对话和合作的必要性，以适应教育中 AI 不断演变的情况。</li><li>以强调学术追求中真实的人类思维和表达的持久价值的信息结束。</li></ul><p>希望这个版本更符合您的要求，更侧重方法论和 AIGC 检测的细节！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大模型 </tag>
+            
+            <tag> 谷歌Gemini </tag>
+            
+            <tag> DeepSeek </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> 论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OpenRouter注册指南</title>
+      <link href="//OpenRouter/"/>
+      <url>//OpenRouter/</url>
+      
+        <content type="html"><![CDATA[<hr><h3 id="免费用AI：OpenRouter注册指南"><a href="#免费用AI：OpenRouter注册指南" class="headerlink" title="免费用AI：OpenRouter注册指南"></a><strong>免费用AI：OpenRouter注册指南</strong></h3><h4 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h4><p>OpenRouter.ai是一个聚合多种AI模型的平台，提供免费的API调用服务，包括Gemini 2.0和DeepSeek模型。本文将指导你如何注册OpenRouter.ai，获取免费API调用权限，并推荐实用的免费模型。</p><hr><h3 id="一、注册OpenRouter-ai"><a href="#一、注册OpenRouter-ai" class="headerlink" title="一、注册OpenRouter.ai"></a><strong>一、注册OpenRouter.ai</strong></h3><h2 id="注册前准备：一个邮箱，ChatBox软件"><a href="#注册前准备：一个邮箱，ChatBox软件" class="headerlink" title="注册前准备：一个邮箱，ChatBox软件"></a>注册前准备：一个邮箱，ChatBox软件</h2><ol><li><p><strong>访问官网</strong><br>打开<a href="https://openrouter.ai/">OpenRouter.ai</a>。</p></li><li><p><strong>创建账户</strong>  </p><ul><li>点击“Sign Up”，使用邮箱或第三方账户（如Google、GitHub）注册。</li><li>完成邮箱验证并登录。</li></ul></li><li><p><strong>生成API Key</strong>  </p><ul><li>登录后，进入<a href="https://openrouter.ai/settings/keys">API Keys页面</a>。</li><li>点击“Generate New Key”生成API密钥。</li></ul></li></ol><hr><h3 id="二、获取免费API调用"><a href="#二、获取免费API调用" class="headerlink" title="二、获取免费API调用"></a><strong>二、获取免费API调用</strong></h3><ol><li>在查找免费模型一步，点击任意一个免费模型，找到下图</li><li><img src="/imgs/ai/0228.png" alt="示例界面"></li><li>点击创建APIkey，保存好后开始第三步，点击链接查看免费模型，后续步骤已写好</li></ol><hr><h3 id="三、查找免费模型"><a href="#三、查找免费模型" class="headerlink" title="三、查找免费模型"></a><strong>三、查找免费模型</strong></h3><ol><li><p><strong>免费模型列表</strong></p><ul><li>访问<a href="https://openrouter.ai/models?q=free">OpenRouter免费模型列表</a>查看所有免费模型。</li></ul></li><li><p><strong>选择模型</strong></p><ul><li>在列表中选择Gemini 2.0、DeepSeek等免费模型。</li><li>点击“Use Model”即可调用。</li></ul></li></ol><hr><h3 id="四、推荐免费模型：DeepSeek-V3"><a href="#四、推荐免费模型：DeepSeek-V3" class="headerlink" title="四、推荐免费模型：DeepSeek V3"></a><strong>四、推荐免费模型：DeepSeek V3</strong></h3><ol><li><p><strong>优势</strong>  </p><ul><li>高质量的自然语言处理能力。</li><li>支持多语言和多种任务（如翻译、问答、文本生成）。</li><li>免费调用，适合个人开发者和小型项目。</li></ul></li><li><p><strong>使用场景</strong>  </p><ul><li>沉浸式翻译：快速翻译多语言内容。</li><li>CherryStudio：集成到开发环境中，提升效率。</li><li>ChatBox：构建智能聊天机器人。</li></ul></li></ol><hr><h3 id="五、API调用示例"><a href="#五、API调用示例" class="headerlink" title="五、API调用示例"></a><strong>五、API调用示例</strong></h3><ol><li><p><strong>API地址</strong><br>使用<a href="https://openrouter.ai/api/v1/chat/completions">OpenRouter API</a>进行调用。</p></li><li><p><strong>代码示例</strong><br>以下是一个简单的API调用示例（Python）：</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">api_key = <span class="string">&quot;你的API密钥&quot;</span></span><br><span class="line">url = <span class="string">&quot;https://openrouter.ai/api/v1/chat/completions&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&quot;Authorization&quot;</span>: <span class="string">f&quot;Bearer <span class="subst">&#123;api_key&#125;</span>&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&quot;model&quot;</span>: <span class="string">&quot;deepseek-v2-chat&quot;</span>, <span class="comment"># 选择模型</span></span><br><span class="line">    <span class="string">&quot;messages&quot;</span>: [&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;你好，今天天气怎么样？&quot;</span>&#125;]</span><br><span class="line">&#125;</span><br><span class="line">response = requests.post(url, headers=headers, json=data)</span><br><span class="line"><span class="built_in">print</span>(response.json())</span><br></pre></td></tr></table></figure></li></ol><hr><h3 id="六、ChatBox-引用示例"><a href="#六、ChatBox-引用示例" class="headerlink" title="六、ChatBox 引用示例"></a><strong>六、ChatBox 引用示例</strong></h3><ol><li><p><strong>ChatBox 集成</strong></p><ul><li>ChatBox 是一款流行的聊天机器人客户端，支持自定义模型。</li><li>在 ChatBox 中，你可以配置 OpenRouter API 密钥和选择 DeepSeek V3 模型。</li></ul></li><li><p><strong>配置步骤</strong></p><ul><li>打开 ChatBox，进入设置。</li><li>在“模型设置”中，选择“自定义模型”。</li><li>填写 OpenRouter API 密钥。</li><li>选择或输入模型名称（例如：<code>openrouter/deepseek-v2-chat</code>）。</li><li>保存设置，即可在 ChatBox 中使用 DeepSeek V3 模型进行对话。</li></ul></li></ol><hr><h3 id="七、其他付费选择"><a href="#七、其他付费选择" class="headerlink" title="七、其他付费选择"></a><strong>七、其他付费选择</strong></h3><ol><li><p><strong>高级模型</strong>  </p><ul><li>OpenAI GPT-4、Anthropic Claude等高级模型，适合更复杂的需求。</li><li>在“Models”页面查看价格和功能。</li></ul></li><li><p><strong>付费计划</strong>  </p><ul><li>根据使用量选择合适的付费计划，享受更高额度和更快的响应速度。</li></ul></li></ol><hr><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h3><p>OpenRouter.ai是一个功能丰富的AI模型平台，无论是免费还是付费模型，都能满足多样化的需求。通过本文的指导，你可以快速注册并开始使用，推荐从免费的DeepSeek V3入手，体验AI的强大能力。</p><hr><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a><strong>参考链接</strong></h3><ul><li><a href="https://openrouter.ai/">OpenRouter.ai官网</a></li><li><a href="https://openrouter.ai/api/v1/chat/completions">OpenRouter API</a></li><li><a href="https://openrouter.ai/settings/keys">OpenRouter API Keys</a></li><li><a href="https://openrouter.ai/models?q=free">OpenRouter免费模型列表</a></li><li><a href="https://www.chatbox.com/">ChatBox</a> (请替换为ChatBox官方链接)</li></ul><hr>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大模型 </tag>
+            
+            <tag> 谷歌Gemini </tag>
+            
+            <tag> DeepSeek </tag>
+            
+            <tag> API </tag>
+            
+            <tag> AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>via如何下载，以及拦截广告？一篇文章教会你</title>
+      <link href="//via/"/>
+      <url>//via/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Via浏览器，小而美"><a href="#Via浏览器，小而美" class="headerlink" title="Via浏览器，小而美"></a>Via浏览器，小而美</h1></li></ul><h2 id="首先，下载via浏览器！"><a href="#首先，下载via浏览器！" class="headerlink" title="首先，下载via浏览器！"></a>首先，下载via浏览器！</h2><p><strong>点击这里就可以下载了→：<a href="https://res.viayoo.com/v1/via-release-cn.apk">下载地址</a></strong></p><p><strong>Via官网：<a href="https://viayoo.com/zh-cn/">这里！！</a></strong></p><h2 id="其次，保存这些规则"><a href="#其次，保存这些规则" class="headerlink" title="其次，保存这些规则"></a>其次，保存这些规则</h2><p><strong>左侧为名称，右侧为链接</strong></p><p>复制链接到浏览器的广告屏蔽部分即可导入，然后点击更新即可</p><table><thead><tr><th align="center">AdRules AdBlock List 精简版</th><th align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt</a></th></tr></thead><tbody><tr><td align="center">AdRules AdBlock List</td><td align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt</a></td></tr><tr><td align="center">乘风 广告规则</td><td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt</a></td></tr><tr><td align="center">乘风 视频规则</td><td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt</a></td></tr><tr><td align="center">ABP Merge Rules</td><td align="center"><a href="https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt">https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt</a></td></tr><tr><td align="center">去除 APP 下载提示</td><td align="center"><a href="https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt">https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt</a></td></tr><tr><td align="center">Ad-J</td><td align="center"><a href="https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt">https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt</a></td></tr></tbody></table><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="打开博客"><a href="#打开博客" class="headerlink" title="打开博客"></a>打开博客</h3><p><img src="https://img.picgo.net/2024/11/30/95b95b765259d5355.jpeg" alt="9"></p><h3 id="复制链接"><a href="#复制链接" class="headerlink" title="复制链接"></a>复制链接</h3><p><img src="https://img.picgo.net/2024/11/30/911c9a7bd6fad9c4db.jpeg" alt="91"></p><h3 id="点击右下角三条杠"><a href="#点击右下角三条杠" class="headerlink" title="点击右下角三条杠"></a><strong>点击右下角三条杠</strong></h3><p><img src="https://img.picgo.net/2024/11/30/1aa723d2368424d38.jpeg" alt="1"></p><p><strong>找到设置</strong></p><p><img src="https://img.picgo.net/2024/11/30/27b7bbcb3bd5bdb26.jpeg" alt="2"></p><p><strong>接下来点击通用</strong></p><p><img src="https://img.picgo.net/2024/11/30/3ec7ac818d1792f1f.jpeg" alt="3"></p><p><strong>点击广告拦截</strong><img src="https://img.picgo.net/2024/11/30/4ff704c230b0f8f4f.jpeg" alt="4"></p><p><strong>随后点击规则订阅</strong></p><p><img src="https://img.picgo.net/2024/11/30/573f59f67373446c9.jpeg" alt="5"></p><p><strong>点击加号，在上面的表格复制广告拦截规则的链接</strong></p><p><img src="https://img.picgo.net/2024/11/30/641f621f579914905.jpeg" alt="6"></p><p><strong>在这里粘贴，保存，然后点击右上角的更新，即可应用这些规则</strong></p><p><img src="https://img.picgo.net/2024/11/30/8152d5cc5ae2dd697.jpeg" alt="8"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，你的Via已经具备了一定的广告拦截能力，开始享受纯净的冲浪时光吧！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> via浏览器 </tag>
+            
+            <tag> 小而美 </tag>
+            
+            <tag> 广告屏蔽 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
+      <link href="//kimiai/"/>
+      <url>//kimiai/</url>
+      
+        <content type="html"><![CDATA[<ul><li><ul><li><h1 id="什么，你还不会用AiPPT吗？让Kimi教教你"><a href="#什么，你还不会用AiPPT吗？让Kimi教教你" class="headerlink" title="什么，你还不会用AiPPT吗？让Kimi教教你"></a>什么，你还不会用AiPPT吗？让Kimi教教你</h1><h2 id="第一部分：Kimi介绍"><a href="#第一部分：Kimi介绍" class="headerlink" title="第一部分：Kimi介绍"></a>第一部分：Kimi介绍</h2><p>Kimi是由月之暗面科技有限公司开发的智能助手，它支持长达20万汉字的输入，成为全球市场中可产品化使用的大模型服务里所能支持的最长上下文输入。在2024年3月18日，Kimi宣布支持200万字的超长无损上下文，并开启了产品内测。Kimi的官网是<a href="https://kimi.moonshot.cn/">kimi.moonshot.cn</a>，用户可以在这里注册登录账号并使用Kimi的各项功能。Kimi的最新支持功能包括：</p><ul><li><strong>智能搜索</strong>：能够搜索实时信息，迅速整合并给出详尽答复，同时提供信息来源，使对话既丰富又准确。</li><li><strong>高效阅读</strong>：能够迅速进行摘要，助您精准理解文献书籍、长篇报告、复杂合同、网页长文，并提供深刻的洞察与分析。</li><li><strong>专业解读文件</strong>：支持上传PDF、Word、Excel、PPT、TXT文件和图片，进行快速摘要、翻译、答疑。</li><li><strong>整理资料</strong>：智能识别并整理资料，自动提取关键要点，让资料整理不再繁杂。</li><li><strong>辅助创作</strong>：协助用户梳理大纲、续写文章、创作文案、撰写周报、制定方案。</li><li><strong>编程助手</strong>：帮助用户阅读API文档，定位所需信息，生成代码、快速Debug，涵盖Python、C++、Java等多种编程语言。</li></ul><h2 id="第二部分：用AI生成PPT的步骤"><a href="#第二部分：用AI生成PPT的步骤" class="headerlink" title="第二部分：用AI生成PPT的步骤"></a>第二部分：用AI生成PPT的步骤</h2><h3 id="1-列出提纲或简述文档"><a href="#1-列出提纲或简述文档" class="headerlink" title="1. 列出提纲或简述文档"></a>1. 列出提纲或简述文档</h3><p>在制作PPT之前，一个清晰的提纲可以帮助你组织思路和内容。以下是如何创建提纲的步骤，以及一个具体的示例。</p><h4 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h4><ol><li><strong>确定主题</strong>：明确你的PPT要传达的核心信息或主题。</li><li><strong>列出关键点</strong>：围绕主题，列出你想要在PPT中展示的关键点。</li><li><strong>组织结构</strong>：将关键点按照逻辑顺序排列，形成一个清晰的结构。</li><li><strong>分配内容</strong>：为每个关键点分配具体的内容或数据支持。</li></ol><h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>假设你要制作一个关于“如何提高工作效率”的PPT，你的提纲可能如下：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">标题：如何提高工作效率</span><br><span class="line"></span><br><span class="line">1. 引言</span><br><span class="line">   - 工作效率的重要性</span><br><span class="line">   - 当前面临的挑战</span><br><span class="line"></span><br><span class="line">2. 时间管理</span><br><span class="line">   - 制定工作计划</span><br><span class="line">   - 优先级排序</span><br><span class="line">   - 避免拖延的策略</span><br><span class="line"></span><br><span class="line">3. 技术工具的使用</span><br><span class="line">   - 项目管理软件</span><br><span class="line">   - 协作工具</span><br><span class="line">   - 自动化工具</span><br><span class="line"></span><br><span class="line">4. 团队协作</span><br><span class="line">   - 沟通技巧</span><br><span class="line">   - 团队建设活动</span><br><span class="line">   - 分工与合作</span><br><span class="line"></span><br><span class="line">5. 个人发展</span><br><span class="line">   - 持续学习</span><br><span class="line">   - 技能提升</span><br><span class="line">   - 健康管理</span><br><span class="line"></span><br><span class="line">6. 结论</span><br><span class="line">   - 总结提高工作效率的关键点</span><br><span class="line">   - 鼓励采取行动</span><br></pre></td></tr></table></figure><p>就像这样的模板，交给AI之后，会自动根据部分和主题对应内容分配给你的ppt的每一页</p><h3 id="2-交给Kimi的PPT助手"><a href="#2-交给Kimi的PPT助手" class="headerlink" title="2. 交给Kimi的PPT助手"></a>2. 交给Kimi的PPT助手</h3><p>接下来，你可以通过在Kimi的对话框中@PPT助手来唤起PPT助手，或者在Kimi+中找到PPT助手。</p><h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><ol><li>登录Kimi官网（<a href="https://kimi.moonshot.cn/">点击这里</a>）</li><li>在聊天界面点击图示位置</li><li><img src="/imgs/kimi/1.png"></li><li>随后点击PPT助手</li><li><img src="/imgs/kimi/2.png"></li><li>按照你写好的提纲或者内容如图所示进行操作</li><li><img src="/imgs/kimi/3.png"></li></ol><h3 id="3-等待Kimi的PPT助手生成预览"><a href="#3-等待Kimi的PPT助手生成预览" class="headerlink" title="3. 等待Kimi的PPT助手生成预览"></a>3. 等待Kimi的PPT助手生成预览</h3><p>输入你想要的PPT内容后，Kimi会自动帮你构思整理好PPT大纲，并生成预览。</p><ol><li>在这里查看结果，和编辑ppt</li><li><img src="/imgs/kimi/4.png"></li></ol><h3 id="4-在KIMI网页的PPT助手可进行修改"><a href="#4-在KIMI网页的PPT助手可进行修改" class="headerlink" title="4. 在KIMI网页的PPT助手可进行修改"></a>4. 在KIMI网页的PPT助手可进行修改</h3><p>生成预览后，你可以在Kimi网页的PPT助手中对PPT进行修改，优化演示内容。</p><ol><li>下拉点击编辑，即可下载或者编辑</li><li><img src="/imgs/kimi/5.png"></li></ol><h3 id="5-点击下载按钮即可得到你的成品"><a href="#5-点击下载按钮即可得到你的成品" class="headerlink" title="5. 点击下载按钮即可得到你的成品"></a>5. 点击下载按钮即可得到你的成品</h3><p>最后，当你对PPT满意后，点击下载按钮即可得到你的成品PPT。</p><ol><li>编辑界面，也可以直接下载或保存你编辑的内容</li><li><img src="/imgs/kimi/6.png"></li></ol><h2 id="第三部分：点缀，让你的PPT更完善"><a href="#第三部分：点缀，让你的PPT更完善" class="headerlink" title="第三部分：点缀，让你的PPT更完善"></a>第三部分：点缀，让你的PPT更完善</h2><p>下载后的PPT文件支持WPS或者Office打开，你可以进行自定义的二次修改，这样，你的PPT就更加完善了。</p><ol><li>如图，点击了下载，可以在浏览器的下载记录找到</li><li><img src="/imgs/kimi/7.png"></li><li>同样的，本地如果用wps和office，还可以再次精修保证最符合你的想要</li><li><img src="/imgs/kimi/8.png"></li></ol><h2 id="第四部分：总结"><a href="#第四部分：总结" class="headerlink" title="第四部分：总结"></a>第四部分：总结</h2><p>使用Kimi的PPT助手制作PPT的优势在于：</p><ul><li><strong>节省时间</strong>：用户可以快速创建和设计PPT，节省大量时间。</li><li><strong>提高专业度</strong>：Kimi的PPT助手提供布局和色彩搭配建议，帮助用户制作出既专业又个性化的PPT。</li><li><strong>多轮对话优化</strong>：Kimi还能根据用户反馈进行多轮对话，优化演示内容。</li></ul><p>通过充分利用Kimi这样的工具，用户可以提升工作效率，将更多的精力投入到内容的创意和演讲的准备上。</p></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ppt AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本站说明:迅速熟悉本站的用法</title>
+      <link href="//index/"/>
+      <url>//index/</url>
+      
+        <content type="html"><![CDATA[<h1 id="认识主页面"><a href="#认识主页面" class="headerlink" title="认识主页面"></a>认识主页面</h1><h2 id="打开本站后，你会看到这样的页面"><a href="#打开本站后，你会看到这样的页面" class="headerlink" title="打开本站后，你会看到这样的页面"></a>打开本站后，你会看到这样的页面</h2><p>只需要记住这两个必要的按钮的作用即可！</p><p>其余部分还在完善当中！</p><p><strong>本站如何阅览，在这一部分用图例的方法给大家讲述</strong></p><h3 id="图一：主页面"><a href="#图一：主页面" class="headerlink" title="图一：主页面"></a>图一：主页面</h3><p><img src="/imgs/notions/zhuye.png"></p><h3 id="图二：文章页面（下拉即可看到）"><a href="#图二：文章页面（下拉即可看到）" class="headerlink" title="图二：文章页面（下拉即可看到）"></a>图二：文章页面（下拉即可看到）</h3><p><img src="/imgs/notions/wenz.png"></p><h3 id="图三：阅读界面（点击主页面标题即可进入）"><a href="#图三：阅读界面（点击主页面标题即可进入）" class="headerlink" title="图三：阅读界面（点击主页面标题即可进入）"></a>图三：阅读界面（点击主页面标题即可进入）</h3><p><img src="/imgs/notions/readd.png"></p><h3 id="图四：评论功能"><a href="#图四：评论功能" class="headerlink" title="图四：评论功能"></a>图四：评论功能</h3><p><img src="/imgs/notions/pinglun.png"></p><h2 id="我有疑问？"><a href="#我有疑问？" class="headerlink" title="我有疑问？"></a>我有疑问？</h2><h3 id="作者的小红书"><a href="#作者的小红书" class="headerlink" title="作者的小红书"></a>作者的小红书</h3><p><img src="/imgs/notions/xhs.jpg"></p><h3 id="qq交流频道"><a href="#qq交流频道" class="headerlink" title="qq交流频道"></a>qq交流频道</h3><p><img src="/imgs/notions/qqpd.jpg"></p><h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p><img src="/imgs/notions/vxt.jpg"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 说明 </tag>
+            
+            <tag> 站点使用方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
+      <link href="//email-to-chatgpt/"/>
+      <url>//email-to-chatgpt/</url>
+      
+        <content type="html"><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p><p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p><p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p><h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table><thead><tr><th align="center">站点</th><th align="center">链接</th></tr></thead><tbody><tr><td align="center">CloudFllare注册</td><td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td></tr><tr><td align="center">ChatGPT注册</td><td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td></tr><tr><td align="center">outlook邮箱申请</td><td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td></tr></tbody></table><h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p><h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p><h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p><h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p><h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p><p><strong>点击“电子邮件”开始设置</strong></p><h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p><h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>还在用盗版免费加速器？快来这里看看吧！</title>
+      <link href="//free-personal-node/"/>
+      <url>//free-personal-node/</url>
+      
+        <content type="html"><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p><p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p><ol><li>连通性，是否适合三大运营商</li><li>节点的流媒体解锁：是否支持GPT</li><li>价格不高，且达到1，2两点</li><li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li></ol><h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p><h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p><h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p><p>推荐列表放在最后</p><h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table><thead><tr><th align="center">节点推荐</th><th align="center">价格</th><th align="center">类型</th><th align="center">是否支持GPT</th><th align="center">购买链接</th></tr></thead><tbody><tr><td align="center">一分机场</td><td align="center">2&#x2F;月</td><td align="center">直连</td><td align="center">支持</td><td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td></tr><tr><td align="center">69云</td><td align="center">6.9&#x2F;月</td><td align="center">中转</td><td align="center">支持</td><td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>十分钟速成个人节点：支持ChatGPT</title>
+      <link href="//vpn1/"/>
+      <url>//vpn1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><p><a href="https://halos.xtstudy.site/archives/uskg">注册视频教学</a></p><p><strong><a href="https://register.us.kg/">uskg官网</a></strong></p><p>注册教程参考<strong>以下文章</strong>：<a href="https://blog.ioacx.com/us-kg-free-doamin/">点击前往</a></p><p>邮箱推荐：<strong>outlook，gmail</strong></p><p>注册方法不过多缀述</p><h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></p><p>登录之后，来到dash页面，<strong>点击workers and pages</strong></p><h3 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h3><p><strong>github项目地址</strong>：<a href="https://github.com/cmliu/edgetunnel">点击前往</a></p><p><strong>项目已经为大家配置了教学，大家只需要观看文档说明即可！</strong></p><blockquote><p>这里列出需要用到的信息</p><p><strong>ProxyIP合集</strong></p><table><thead><tr><th align="center">ProxyIP</th><th align="center">落地区域</th></tr></thead><tbody><tr><td align="center">ProxylP.US.fxxk.dedyn.io</td><td align="center">美国</td></tr><tr><td align="center">ProxylPSG.fxxk.dedyn.io</td><td align="center">新加坡</td></tr><tr><td align="center">ProxylPJP.fxxk.dedyn.io</td><td align="center">日本</td></tr><tr><td align="center">ProxylP.HK.fxxk.dedyn.io</td><td align="center">香港</td></tr><tr><td align="center">ProxyIP.KR.fxxk.dedyn.io</td><td align="center">韩国</td></tr><tr><td align="center">ProxylP.DE.tp2024.fxxk.dedyn.io GPT</td><td align="center">德国ChatGPT专用</td></tr><tr><td align="center">ProxyIP.Aliyun.fxxk.dedyn.io</td><td align="center">阿里云</td></tr><tr><td align="center">ProxylPOracle.fxxk.dedyn.io</td><td align="center">甲骨文</td></tr><tr><td align="center">hk.ipdb.rr.nu</td><td align="center">第三方维护</td></tr></tbody></table></blockquote><h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><h3 id="CFWorkers"><a href="#CFWorkers" class="headerlink" title="CFWorkers"></a>CFWorkers</h3><ol><li>复制仓库里Workers.js的代码，粘贴到你创建好的workers里面，保存并部署</li><li>UUID在线生成：<a href="https://1024tools.com/uuid">点击前往</a></li><li>在设置里面添加变量：UUID，输入生成的UUID，保存</li><li>添加自定义域，输入一个前缀.你的域名</li><li>访问自定义域名：<strong>格式如下：你的自定义域名&#x2F;UUID</strong></li><li>复制页面的订阅链接就可以导入你的订阅软件了</li></ol><h2 id="开始你的尝试吧！"><a href="#开始你的尝试吧！" class="headerlink" title="开始你的尝试吧！"></a>开始你的尝试吧！</h2><h1 id="进阶教学"><a href="#进阶教学" class="headerlink" title="进阶教学"></a>进阶教学</h1><h2 id="自定义节点订阅器："><a href="#自定义节点订阅器：" class="headerlink" title="自定义节点订阅器："></a>自定义节点订阅器：</h2><p>首先在你的订阅页面复制订阅链接，然后在https:&#x2F;&#x2F;你的域名&#x2F;uuid？sub后面加上&#x3D;订阅器地址</p><blockquote><p>这里列出几个订阅器地址</p><p>周润发大佬线路：<strong>vless.durl.nyc.mn</strong></p><p>3K大佬线路：<strong>3k.fxxk.dedyn.io</strong></p><p>CM优选线路：<strong>VLESS.fxxk.dedyn.io</strong></p></blockquote><p>如你的域名是b.cd，uuid为123，那么格式如下</p><p><strong><a href="https://b.cd/123?sub=vless.durl.nyc.mn">https://b.cd/123?sub=vless.durl.nyc.mn</a></strong></p><p><strong>操作时把域名和你的uuid改为你在workers设置的即可导入订阅</strong></p><p>导入订阅以后，更新一次订阅即可刷新节点</p><h2 id="指定ip落地的地区"><a href="#指定ip落地的地区" class="headerlink" title="指定ip落地的地区"></a>指定ip落地的地区</h2><p>在workers里面添加变量，命名为 <strong>ProxyIP</strong>，输入上方 ProxyIP的列表之一，你的订阅在使用的时候，就会落到 ProxyIP指定的区域，如使用:<strong>hk.ipdb.rr.nu</strong>，在你测试ip的时候就会落到香港，根据你的需要更改ProxyIP的地址即可随时随地进行自定义操作</p><p>该操作不能和线路优选混用</p><h2 id="一些第三方ProxyIP"><a href="#一些第三方ProxyIP" class="headerlink" title="一些第三方ProxyIP"></a>一些第三方ProxyIP</h2><p>由第三方维护的ProxyIP</p><blockquote><p>第二万维护 Proxyimy-telegram-is-herocore.onecf.eu.org</p><p>Mingyu维护</p><p>sg.ipdb.rr.nu</p><p>nl.ipdb.rr.nu</p><p>hk.ipdb.rr.nu</p><p>jp.ipdb.rr.nu</p><p>us.ipdb.rr.nu</p><p>小一维护</p><p>hk.cf.zhetengsha.eu.org</p><p>sg.cf.zhetengsha.eu.org</p><p>us.cf.zhetengsha.eu.org</p><p>jp.ct.zhetengsha.eu.org</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大学生的好帮手：OCS</title>
+      <link href="//ocs/"/>
+      <url>//ocs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p><p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p><h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p><p><a href="https://docs.ocsjs.com/docs/about">官方文档</a></p><p>点击 <strong>官方文档 ，</strong> 开始你的批量化刷课之路吧！</p><h2 id="OCS官网"><a href="#OCS官网" class="headerlink" title="OCS官网"></a>OCS官网</h2><p>首先，你了解一款工具或软件，要知道他的官网或者官方渠道，这里给大家提供了OCS的官网界面，供大家识别正版！！</p><p><img src="/imgs/ocs/ocs%E5%AE%98%E7%BD%91.png"></p><h2 id="开始阅读文档"><a href="#开始阅读文档" class="headerlink" title="开始阅读文档"></a>开始阅读文档</h2><p>点击<strong>点击查看使用教程</strong>，开始阅读他的文档<br>随后来到这个页面</p><p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B.png"></p><p><strong>这里已经写好了左右资料的链接，供你点击</strong><br>我们需要下载他的软件，那么需要点击<strong>左侧的软件教程</strong><br><strong>如图所示，软件教程界面提供了快速链接：如下载，教程等</strong></p><p>根据目录选择你需要的操作，如下载安装程序</p><p>这里是下载列表<strong>根据你自己的系统选择</strong></p><p><img src="/imgs/ocs/xiazai.png"></p><p>这里列出win系统的链接<strong>点击即可下载</strong><br><strong>点击这里→<a href="https://cdn.ocsjs.com/app/download/ocs-2.6.7-setup-win-x64.exe">下载</a></strong></p><h2 id="补充运行库"><a href="#补充运行库" class="headerlink" title="补充运行库"></a>补充运行库</h2><p><strong>这一步为了防止安装过程出现报错</strong>，需要下载<strong>微软运行库合集</strong><br>如果不知道去哪里下载，可以通过本文推荐的系统之家下载安装包<br><strong>系统之家下载地址：<a href="https://www.xitongzhijia.net/soft/289196.html">点击前往</a></strong><br><strong>安装程序界面如下</strong></p><p><img src="/imgs/ocs/%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85.png"></p><p>一路下一步安装即可</p><h2 id="下载OCS助手"><a href="#下载OCS助手" class="headerlink" title="下载OCS助手"></a>下载OCS助手</h2><p>上面已经给出了下载链接，和运行库链接，做好准备步骤，即可开始安装ocs助手<br>下载好安装程序，双击运行即可</p><p><img src="/imgs/ocs/ocs%E5%AE%89%E8%A3%85.png"></p><p><strong>注意：路径可以修改，如我把默认的C盘路径改成了D盘</strong><br>随后安装即可<br>安装完直接运行即可</p><h2 id="初次运行OCS"><a href="#初次运行OCS" class="headerlink" title="初次运行OCS"></a>初次运行OCS</h2><p><strong>第一次使用软件，需要进行初始化配置，按照图中默认的设置即可</strong></p><p><strong>点击一键初始化</strong></p><p><img src="/imgs/ocs/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE.png"></p><p><strong>注意，初始化完成后，需要重启软件！！！（会有提示，点击立即重启即可)</strong></p><h2 id="配置题库"><a href="#配置题库" class="headerlink" title="配置题库"></a>配置题库</h2><p><strong>OCS内置了作者的enncy题库，地址：<a href="https://tk.enncy.cn/">enncy题库</a></strong><br>这里给大家列出价格，<strong>（题库需要付费购买）</strong></p><table><thead><tr><th>价格</th><th>次数</th><th>购买建议</th></tr></thead><tbody><tr><td>1米</td><td>100</td><td>尝鲜，测试OCS</td></tr><tr><td>5米</td><td>2000</td><td>有较多课程：如选修课，需要一直答题</td></tr><tr><td>20米</td><td>10000</td><td>课程很多，或组团购买，批量刷课</td></tr></tbody></table><p><strong>根据你个人的需要，合理选择购买方案</strong></p><h3 id="注册题库需要准备的：一个可用的邮箱"><a href="#注册题库需要准备的：一个可用的邮箱" class="headerlink" title="注册题库需要准备的：一个可用的邮箱"></a>注册题库需要准备的：一个可用的邮箱</h3><p>没有账号可以用邮箱注册一个，然后去购买</p><h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在如图所示的界面，复制你的题库配置<br>上方胡显示<strong>你的做题次数，，已使用次数，成功次数，成功率</strong>等信息，下方的内容中需要选择你的题库配置<strong>复制第二个</strong><br><img src="/imgs/ocs/tiku.png"></p><h3 id="回到软件"><a href="#回到软件" class="headerlink" title="回到软件"></a>回到软件</h3><p>回到软件，点击<strong>软件设置→OCS配置，点击通用，即可找到配置页面</strong><br>配置页面下，找到题库配置（旁边的开关是把这些设置应用到所有的任务）</p><p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE.png"></p><p>点一下<strong>点击配置</strong><br>把你在题库网页复制的<strong>题库配置</strong>，粘贴进去，保存配置即可<br><strong>保存后，出现这个界面即配置成功！！</strong></p><p><img src="/imgs/ocs/%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png"></p><h2 id="关于脚本不能正常显示的问题"><a href="#关于脚本不能正常显示的问题" class="headerlink" title="关于脚本不能正常显示的问题"></a>关于脚本不能正常显示的问题</h2><p>根据作者的说法：是因为浏览器的api更新导致的冲突导致脚本不运行，<strong>解决办法是：把篡改猴换成脚本猫</strong></p><h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p><strong>视频引用自ocs官网</strong></p><iframe height="350" width="450" src="https://cdn.ocsjs.com/app/resources/video/app-use-guide.mp4" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-bottom: 20px; color: rgb(85, 85, 85); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe><p>如果本期内容对你有所帮助，可以在评论区留下你的痕迹！！<br><strong>作者邮箱：<a href="mailto:crazy2403@outlook.com">crazy2403@outlook.com</a></strong><br><strong>vx公众号：烟雨江南的小窝</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>

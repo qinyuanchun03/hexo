@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AIGC降重和论文改进的策略思考2：特征和应对办法 | 江湖笔者玩电脑</title><meta name="author" content="江湖笔者"><meta name="copyright" content="江湖笔者"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大学生应对AIGC论文检查的策略与方法随着人工智能生成内容（AIGC）技术的快速发展，其在学术论文写作中的应用日益普及。与此同时，针对AIGC论文的检查也变得越来越普遍。对于大学生而言，如何有效地应对和处理AIGC论文检查，以及如何规避或减轻AIGC检查的百分比，是当前需要关注的重要问题。本报告旨在结合互联网上的经验，为大学生提供具体可行的操作方法，以应对这一挑战。 1. AIGC论文检查原理简述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIGC降重和论文改进的策略思考2：特征和应对办法">
+<meta property="og:url" content="https://blog1.jianghu.cfd/AIGC-thinkings2/index.html">
+<meta property="og:site_name" content="江湖笔者玩电脑">
+<meta property="og:description" content="大学生应对AIGC论文检查的策略与方法随着人工智能生成内容（AIGC）技术的快速发展，其在学术论文写作中的应用日益普及。与此同时，针对AIGC论文的检查也变得越来越普遍。对于大学生而言，如何有效地应对和处理AIGC论文检查，以及如何规避或减轻AIGC检查的百分比，是当前需要关注的重要问题。本报告旨在结合互联网上的经验，为大学生提供具体可行的操作方法，以应对这一挑战。 1. AIGC论文检查原理简述">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog1.jianghu.cfd/img/ico.png">
+<meta property="article:published_time" content="2025-03-15T08:17:47.000Z">
+<meta property="article:modified_time" content="2025-03-16T14:24:11.542Z">
+<meta property="article:author" content="江湖笔者">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="谷歌Gemini">
+<meta property="article:tag" content="DeepSeek">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="论文">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog1.jianghu.cfd/img/ico.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog1.jianghu.cfd/AIGC-thinkings2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//static.cloudflareinsights.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;5240dcba55024bedb39bf312590633d8&quot;}"></script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AIGC降重和论文改进的策略思考2：特征和应对办法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2025-03-16 22:24:11',
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="江湖笔者玩电脑" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/back.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/ico.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">江湖笔者玩电脑</span></a><a class="nav-page-title" href="/"><span class="site-name">AIGC降重和论文改进的策略思考2：特征和应对办法</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AIGC降重和论文改进的策略思考2：特征和应对办法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-15T08:17:47.000Z" title="发表于 2025-03-15 16:17:47">2025-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-16T14:24:11.542Z" title="更新于 2025-03-16 22:24:11">2025-03-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span class="waline-pageview-count" data-path="/AIGC-thinkings2/"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="大学生应对AIGC论文检查的策略与方法"><a href="#大学生应对AIGC论文检查的策略与方法" class="headerlink" title="大学生应对AIGC论文检查的策略与方法"></a>大学生应对AIGC论文检查的策略与方法</h1><p>随着人工智能生成内容（AIGC）技术的快速发展，其在学术论文写作中的应用日益普及。与此同时，针对AIGC论文的检查也变得越来越普遍。对于大学生而言，如何有效地应对和处理AIGC论文检查，以及如何规避或减轻AIGC检查的百分比，是当前需要关注的重要问题。本报告旨在结合互联网上的经验，为大学生提供具体可行的操作方法，以应对这一挑战。</p>
+<h2 id="1-AIGC论文检查原理简述"><a href="#1-AIGC论文检查原理简述" class="headerlink" title="1. AIGC论文检查原理简述"></a>1. AIGC论文检查原理简述</h2><p>理解AIGC论文检查的原理是制定有效应对策略的基础。目前，主流的AI内容检测器主要通过分析文本的特定特征来判断其是否由AI生成 。这些特征主要包括文本的困惑度（perplexity）和突发性（burstiness）。  </p>
+<h3 id="1-1-AI内容检测器的工作方式"><a href="#1-1-AI内容检测器的工作方式" class="headerlink" title="1.1 AI内容检测器的工作方式"></a>1.1 AI内容检测器的工作方式</h3><p>AI内容检测器的工作原理与AI写作工具类似，它们都基于语言模型。检测器通过分析输入的文本，判断其是否符合AI模型的写作模式 。具体来说，检测模型会关注以下两个关键指标：  </p>
+<ul>
+<li><p>困惑度 (Perplexity):</p>
+<p> 困惑度衡量的是文本的不可预测性。AI语言模型的目标是生成困惑度较低的文本，这样的文本通常读起来流畅且有意义，但也相对更具可预测性。相比之下，人类的写作往往具有更高的困惑度，因为人类在遣词造句时会做出更多创造性的选择，同时也可能包含一些错误 </p>
+<p>。低困惑度通常被认为是文本由AI生成的证据 </p>
+</li>
+<li><p>突发性 (Burstiness):</p>
+<p> 突发性衡量的是句子结构和长度的变化程度。人类的写作在句子结构和长度上往往呈现出较大的变化，而AI生成的文本则倾向于使用长度和结构都较为一致的句子，因此突发性较低 </p>
+<p>。低突发性也可能表明文本是由AI生成的</p>
+</li>
+</ul>
+<p>​    </p>
+<p>值得注意的是，AI检测器并不像查重工具那样通过比对数据库来工作，而是分析文本固有的统计学属性 。此外，一些检测器还利用机器学习（ML）和自然语言处理（NLP）技术来识别语言模式和句子结构 。分类器作为一种ML模型，通过学习已标记为人类或AI撰写的文本数据，对新的文本进行分类 。词嵌入技术则将词语表示为向量，揭示它们之间的语义关系，帮助AI理解语境 。随着AI检测器分析的文本量增加，它们识别AI和人类写作之间细微差别的能力也会增强 。大型语言模型（LLMs）本质上是高级的预测文本生成器，它们逐字预测下一个最有可能出现的词语 。AI检测器本身也常常使用LLMs和其他ML技术来分析文本 。总而言之，AI检测器通过分析文本的语言和结构特征（如语义、句子结构和语言选择）或将其与AI或人类创建的文本数据集进行比较，来区分两者 。关键的检测方法包括文体分析、水印技术、像素预测技术、双流网络、机器学习模型、区块链和混合方法 。虽然水印技术是一种潜在的解决方案，但目前尚未得到普遍应用 。  </p>
+<h3 id="1-2-AIGC检测工具的局限性"><a href="#1-2-AIGC检测工具的局限性" class="headerlink" title="1.2 AIGC检测工具的局限性"></a>1.2 AIGC检测工具的局限性</h3><p>尽管AIGC检测工具在不断发展，但它们并非完美无缺。AI检测的准确性可能会有所不同，并且工具可能会产生误报（将人类文本标记为AI生成）和漏报（未能检测到AI生成的文本）。例如，如果模型在特定类型的人类写作上过度训练，则可能导致误报 。对于更模糊或更具创造性的写作内容，检测的准确性往往会下降 。值得注意的是，AIGC检测器在代码相关数据上的表现不如在自然语言数据上 。此外，检测工具和AI写作工具都在不断进步，形成一场持续的技术竞赛 。AI检测工具的具体工作方式也缺乏完全的透明度 。因此，仅仅依赖AI检测工具来证明学术不端行为是有问题的，因为它们存在不准确性 。  </p>
+<h2 id="2-大学生应对AIGC检查的基本策略"><a href="#2-大学生应对AIGC检查的基本策略" class="headerlink" title="2. 大学生应对AIGC检查的基本策略"></a>2. 大学生应对AIGC检查的基本策略</h2><p>面对日益普及的AIGC论文检查，大学生需要采取一系列基本策略来有效应对。</p>
+<h3 id="2-1-理解学术诚信政策"><a href="#2-1-理解学术诚信政策" class="headerlink" title="2.1 理解学术诚信政策"></a>2.1 理解学术诚信政策</h3><p>首先，大学生务必详细了解所在大学关于在学术工作中AI使用的具体政策 。不同的院校可能允许AI用于特定的目的，例如头脑风暴或构建大纲，但禁止生成完整的论文 。许多大学还要求学生披露任何AI的使用情况 。由于政策差异很大，学生必须查阅自己院校的具体规定 。不披露AI使用的后果可能非常严重，包括课程不及格、损害个人声誉，甚至面临法律诉讼 。  </p>
+<h3 id="2-2-优先考虑原创性工作"><a href="#2-2-优先考虑原创性工作" class="headerlink" title="2.2 优先考虑原创性工作"></a>2.2 优先考虑原创性工作</h3><p>在学术写作中，大学生应该将重点放在发展自己的想法、论点和批判性思维上，而不是仅仅依赖AI来生成内容 。AI生成的内容可能缺乏创造性和独特的学术视角 。AI应该被视为一种增强工具，而不是取代个人的思考 。即使在使用AI的情况下，论文的核心思想和分析也应该是学生自己的 。  </p>
+<h3 id="2-3-如果使用AI，要负责任地使用"><a href="#2-3-如果使用AI，要负责任地使用" class="headerlink" title="2.3 如果使用AI，要负责任地使用"></a>2.3 如果使用AI，要负责任地使用</h3><p>如果院校允许使用AI，大学生应该将其作为一种辅助工具，用于研究、构建大纲或改进语言等方面，而不是用于生成完整的作业 。同时，要遵守院校或期刊的要求，透明地披露AI的使用情况 。更重要的是，必须始终审查和批判性地评估AI生成的内容，检查其准确性、偏见和连贯性 。AI可能会生成虚假的参考文献和带有偏见的信息 ，提供不实信息并歪曲材料 ，甚至产生“幻觉”或虚假数据 。因此，人为监督对于确保AI生成内容的准确性和伦理合理性至关重要 。大学生不能盲目信任AI的输出，而必须运用自己的知识和批判性判断。  </p>
+<h2 id="3-规避与减轻AIGC检查百分比的具体方法"><a href="#3-规避与减轻AIGC检查百分比的具体方法" class="headerlink" title="3. 规避与减轻AIGC检查百分比的具体方法"></a>3. 规避与减轻AIGC检查百分比的具体方法</h2><p>为了有效规避或减轻AIGC检查的百分比，大学生可以采取以下具体方法：</p>
+<h3 id="3-1-人工润色与个性化"><a href="#3-1-人工润色与个性化" class="headerlink" title="3.1 人工润色与个性化"></a>3.1 人工润色与个性化</h3><p>对AI生成的内容进行人工润色和个性化处理是降低检测率的关键步骤。</p>
+<h4 id="3-1-1-添加个人见解和经验"><a href="#3-1-1-添加个人见解和经验" class="headerlink" title="3.1.1 添加个人见解和经验"></a>3.1.1 添加个人见解和经验</h4><p>AI缺乏个人的故事和真实的经验，而融入这些元素可以使内容更加真实，也更难被AI检测出来 。大学生可以在论文中分享与主题相关的个人轶事、案例和观点 。这种做法能够注入AI无法复制的人性化元素 。通过分享独特的见解，学生可以超越AI的通用输出。  </p>
+<h4 id="3-1-2-调整语气和风格"><a href="#3-1-2-调整语气和风格" class="headerlink" title="3.1.2 调整语气和风格"></a>3.1.2 调整语气和风格</h4><p>AI通常会生成中性或机器人式的文本，因此需要调整语气和风格，使其与学生自身的写作风格以及作业的要求相符 。在适当的情况下，可以使用更具对话性或更随意的措辞 。这有助于使写作听起来更自然，更不像是公式化的AI生成 。这种调整涉及到使用反映人类交流模式的语言。  </p>
+<h4 id="3-1-3-避免过度使用的AI术语"><a href="#3-1-3-避免过度使用的AI术语" class="headerlink" title="3.1.3 避免过度使用的AI术语"></a>3.1.3 避免过度使用的AI术语</h4><p>AI工具倾向于重复使用某些词语和短语（例如，“在当今世界”，“解锁”，“深入探讨”）。识别并改写这些过度使用的AI术语，可以使文本听起来更像人类写作 。同时，也要注意避免使用浮夸的形容词和过于正式的语言 。这样做可以降低文本的可预测性，使其不太可能被AI检测器标记出来 。识别并替换这些明显的AI痕迹是使内容人性化的关键一步。  </p>
+<h3 id="3-2-重写与重构"><a href="#3-2-重写与重构" class="headerlink" title="3.2 重写与重构"></a>3.2 重写与重构</h3><p>对AI生成的内容进行重写和重构，可以从根本上改变文本的特征。</p>
+<h4 id="3-2-1-重写段落而非逐句修改"><a href="#3-2-1-重写段落而非逐句修改" class="headerlink" title="3.2.1 重写段落而非逐句修改"></a>3.2.1 重写段落而非逐句修改</h4><p>与其逐句替换单词，不如着重于重写整个段落，以改变其整体结构和流程 。这样做有助于避免仅仅进行同义词替换，因为这可能无法欺骗先进的检测器 。这种方法能够改变AI检测器所寻找的潜在模式 。通过在段落层面进行思考，学生可以对文本的特征进行更显著的改变。  </p>
+<h4 id="3-2-2-改变句子结构和长度"><a href="#3-2-2-改变句子结构和长度" class="headerlink" title="3.2.2 改变句子结构和长度"></a>3.2.2 改变句子结构和长度</h4><p>AI通常使用重复的句子结构，因此有意识地改变句子的长度和复杂性，可以模仿人类的写作风格 。可以结合使用短句，拆分长句，并使用不同的句子开头 。这会增加文本的突发性，使其看起来更像是人类所写 。有意识地调整句子结构是规避检测的有效方法。  </p>
+<h4 id="3-2-3-重新组织内容"><a href="#3-2-3-重新组织内容" class="headerlink" title="3.2.3 重新组织内容"></a>3.2.3 重新组织内容</h4><p>重新排列副标题，改写标题，并重新定义结论，可以创造与原始AI输出不同的文本流 。重新组合段落和章节有助于找到表达想法的更清晰方式 。这种基本的结构调整可以显著改变文本的特征 。通过改变信息的顺序和重点，学生可以进一步偏离AI的原始结构。  </p>
+<h3 id="3-3-巧妙地使用辅助内容"><a href="#3-3-巧妙地使用辅助内容" class="headerlink" title="3.3 巧妙地使用辅助内容"></a>3.3 巧妙地使用辅助内容</h3><p>巧妙地融入辅助内容可以增强论文的原创性。</p>
+<h4 id="3-3-1-添加案例研究"><a href="#3-3-1-添加案例研究" class="headerlink" title="3.3.1 添加案例研究"></a>3.3.1 添加案例研究</h4><p>在论文中加入相关的案例研究，并进行自己的分析和解读。AI可以提供案例的总结，但深入的分析需要人类的参与 。定义案例，识别问题，将其与理论联系起来，并提出解决方案 。案例研究能够展示实际应用和批判性思维，这是人类学术工作的标志 。这增加了一层AI难以完全复制的复杂性和人为见解。  </p>
+<h4 id="3-3-2-整合实验数据"><a href="#3-3-2-整合实验数据" class="headerlink" title="3.3.2 整合实验数据"></a>3.3.2 整合实验数据</h4><p>如果适用，可以在论文中包含实验数据以及对研究结果的解读 。将实验数据与计算技术相结合，可以进行更深入的分析 。这能够展示原创研究和分析，使论文不太可能被标记为完全由AI生成 。整合和解读数据需要超越AI能力的专业知识水平。  </p>
+<h3 id="3-4-谨慎使用同义词替换工具"><a href="#3-4-谨慎使用同义词替换工具" class="headerlink" title="3.4 谨慎使用同义词替换工具"></a>3.4 谨慎使用同义词替换工具</h3><p>虽然同义词替换工具可以帮助改变词语的选择，但仅仅替换词语而不改变句子结构或整体风格可能无法有效对抗AI检测 。应该将这些工具作为更广泛的重写策略的一部分来使用，而不是作为独立的解决方案 。过度依赖简单的同义词替换有时会导致措辞笨拙或不自然，这也可能成为检测器的警告信号 。学生应该谨慎使用这些工具，并确保替换的词语符合其写作的语境和语气。  </p>
+<h3 id="3-5-保持学术诚信"><a href="#3-5-保持学术诚信" class="headerlink" title="3.5 保持学术诚信"></a>3.5 保持学术诚信</h3><p>正确引用所有参考文献，即使使用了AI来帮助查找它们 。这表明学生是在现有知识的基础上进行研究，而不是将AI生成的内容完全视为自己的原创想法。虽然这不能直接避免AI检测，但正确的引用是学术工作的基础，反映了学术诚信 。通过遵守引用规范，学生可以展示对学术规范的理解。  </p>
+<h2 id="4-结合互联网经验的可行操作办法"><a href="#4-结合互联网经验的可行操作办法" class="headerlink" title="4. 结合互联网经验的可行操作办法"></a>4. 结合互联网经验的可行操作办法</h2><p>互联网上提供了许多可以帮助大学生应对AIGC论文检查的可行操作方法。</p>
+<h3 id="4-1-使用AI文本润色工具"><a href="#4-1-使用AI文本润色工具" class="headerlink" title="4.1 使用AI文本润色工具"></a>4.1 使用AI文本润色工具</h3><p>可以利用Grammarly 、QuillBot 、Wordvice AI 、Type.ai  和 Copy.ai  等在线工具来润色AI生成的文本，改进其语法、风格和清晰度。这些工具可以帮助提高句子的流畅性和结构 。虽然这些工具本身也使用AI，但它们可以帮助使文本听起来更精炼和更像人类的写作 。学生可以利用AI来改进AI的输出，创造一种混合方法。  </p>
+<h3 id="4-2-尝试AI文本“人类化”工具"><a href="#4-2-尝试AI文本“人类化”工具" class="headerlink" title="4.2 尝试AI文本“人类化”工具"></a>4.2 尝试AI文本“人类化”工具</h3><p>探索Surfer AI Humanizer 、JustDone AI Humanizer 、Scribbr AI Humanizer 、Monica AI Humanizer 、Writesonic Text Humanizer 、WriteHuman AI  和 Humanize AI Pro  等工具，可以将AI生成的文本转换为听起来更自然的文本。这些工具旨在消除常见的AI模式，使文本与人类写作难以区分 。然而，这些工具的有效性可能有所不同，人工编辑仍然至关重要 。学生应该尝试不同的“人类化”工具，并批判性地评估它们的输出。  </p>
+<h3 id="4-3-借鉴在线资源和社区经验"><a href="#4-3-借鉴在线资源和社区经验" class="headerlink" title="4.3 借鉴在线资源和社区经验"></a>4.3 借鉴在线资源和社区经验</h3><p>在网上搜索学生和教育工作者分享他们应对AIGC检查的经验和策略的讨论和论坛。查找提供关于使AI生成的内容人性化和避免检测的实用技巧的博客文章和文章。真实世界的经验和共享知识可以提供超越学术文献的有价值的见解。互联网提供了大量来自AI写作和检测工具用户的轶事证据和实用建议。</p>
+<h3 id="4-4-迭代优化写作过程"><a href="#4-4-迭代优化写作过程" class="headerlink" title="4.4 迭代优化写作过程"></a>4.4 迭代优化写作过程</h3><p>如果允许，可以使用AI撰写草稿，然后使用AI检测工具（如果可用且可靠）检查其百分比。使用上述方法改进文本，重点关注检测器标记的区域。重复检查和改进的过程，直到对结果满意并且AI检测百分比降低为止。这种迭代方法允许持续改进和学习规避检测的最佳方法 。将写作过程视为一个实验可以帮助学生开发有效的策略。  </p>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>在人工智能日益融入学术写作的背景下，大学生需要认真对待AIGC论文检查。负责任地使用AI并坚守学术诚信原则至关重要。应对AIGC检查的关键策略包括深入理解检查原理，遵守学术诚信政策，优先考虑原创性工作，并在使用AI时保持透明和批判性评估。通过人工润色、个性化、重写与重构、巧妙使用辅助内容以及谨慎使用同义词替换工具等具体方法，可以有效规避和减轻AIGC检查的百分比。结合互联网上的经验，利用AI文本润色和“人类化”工具，借鉴在线资源和社区经验，并进行迭代优化写作过程，将有助于大学生在学术环境中更好地应对这一挑战。最终，批判性思考和独立工作能力仍然是大学生在学术生涯中取得成功的基石。</p>
+<p><strong>表1：AI写作检测器检测到的常见特征</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>特征</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>困惑度低</td>
+<td>文本可预测性高，缺乏创造性的语言选择</td>
+</tr>
+<tr>
+<td>突发性低</td>
+<td>句子结构和长度变化小，缺乏多样性</td>
+</tr>
+<tr>
+<td>句子结构重复</td>
+<td>频繁使用相似的句子结构</td>
+</tr>
+<tr>
+<td>措辞不自然</td>
+<td>出现人类写作中不常见的短语或表达</td>
+</tr>
+<tr>
+<td>AI术语过度使用</td>
+<td>频繁出现AI写作工具常用的特定词语或短语</td>
+</tr>
+<tr>
+<td>缺乏个人观点</td>
+<td>内容客观平淡，缺乏作者的主观看法或感受</td>
+</tr>
+</tbody></table>
+<p><strong>表2：降低AIGC检测百分比的实用方法</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>添加个人见解和经验</td>
+<td>融入个人故事、案例、观点和独特的分析</td>
+</tr>
+<tr>
+<td>调整语气和风格</td>
+<td>使文本更具对话性、更自然，符合个人写作习惯</td>
+</tr>
+<tr>
+<td>重写段落而非逐句修改</td>
+<td>改变段落的整体结构和流程，避免简单的同义词替换</td>
+</tr>
+<tr>
+<td>改变句子结构和长度</td>
+<td>使用不同长度和复杂程度的句子，增加文本的突发性</td>
+</tr>
+<tr>
+<td>重新组织内容</td>
+<td>调整标题、副标题和结论，改变文本的整体逻辑和呈现方式</td>
+</tr>
+<tr>
+<td>添加案例研究</td>
+<td>结合具体案例进行深入分析和解读</td>
+</tr>
+<tr>
+<td>整合实验数据</td>
+<td>纳入实验结果并进行个人化的分析和讨论</td>
+</tr>
+<tr>
+<td>谨慎使用同义词替换工具</td>
+<td>将其作为重写策略的一部分，避免过度依赖导致不自然的表达</td>
+</tr>
+<tr>
+<td>保持学术诚信</td>
+<td>正确引用所有来源，包括AI辅助查找的资料</td>
+</tr>
+</tbody></table>
+<h1 id="本文引用表："><a href="#本文引用表：" class="headerlink" title="本文引用表："></a>本文引用表：</h1><h2 id="AI-检测原理与局限性"><a href="#AI-检测原理与局限性" class="headerlink" title="AI 检测原理与局限性"></a><strong>AI 检测原理与局限性</strong></h2><ul>
+<li>How Do AI Detectors Work? | Methods &amp; Reliability - Scribbr: <a target="_blank" rel="noopener" href="https://www.scribbr.com/ai-tools/ai-detector/how-do-ai-detectors-work/">https://www.scribbr.com/ai-tools/ai-detector/how-do-ai-detectors-work/</a></li>
+<li>Why Don’t AI Detectors Work - Center for Integrated Professional Development - Illinois State: <a target="_blank" rel="noopener" href="https://prodev.illinoisstate.edu/2023/04/why-dont-ai-detectors-work/">https://prodev.illinoisstate.edu/2023/04/why-dont-ai-detectors-work/</a></li>
+<li>How Do AI Detectors Work? - AutoGPT: <a target="_blank" rel="noopener" href="https://autogpt.net/how-do-ai-detectors-work/">https://autogpt.net/how-do-ai-detectors-work/</a></li>
+<li>Distinguishing Reality from AI: Approaches for Detecting Synthetic Content - MDPI: <a target="_blank" rel="noopener" href="https://www.mdpi.com/2076-3417/13/16/9246">https://www.mdpi.com/2076-3417/13/16/9246</a></li>
+<li>4 Ways AI Content Detectors Work To Spot AI - Surfer SEO: <a target="_blank" rel="noopener" href="https://www.surferseo.com/blog/ai-content-detector/">https://www.surferseo.com/blog/ai-content-detector/</a></li>
+<li>Detecting AIGC in Academic Journals: Methods and Consequences: <a target="_blank" rel="noopener" href="https://cwauthors.com/article/detecting-aigc-in-academic-journals-methods-and-consequences">https://cwauthors.com/article/detecting-aigc-in-academic-journals-methods-and-consequences</a></li>
+<li>How Do AI Detectors Work? | Techniques &amp; Accuracy - QuillBot: <a target="_blank" rel="noopener" href="https://quillbot.com/blog/how-do-ai-detectors-work-techniques-accuracy/">https://quillbot.com/blog/how-do-ai-detectors-work-techniques-accuracy/</a></li>
+<li>How AI Content Detectors Work To Spot AI - GPTZero: <a target="_blank" rel="noopener" href="https://gptzero.me/how-ai-content-detectors-work-to-spot-ai/">https://gptzero.me/how-ai-content-detectors-work-to-spot-ai/</a></li>
+<li>An empirical study to evaluate AIGC detectors on code content: <a target="_blank" rel="noopener" href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1260&context=sis_research">https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1260&context=sis_research</a></li>
+</ul>
+<h2 id="AI-写作与润色工具"><a href="#AI-写作与润色工具" class="headerlink" title="AI 写作与润色工具"></a><strong>AI 写作与润色工具</strong></h2><ul>
+<li>Free AI Writer | Grammarly: <a target="_blank" rel="noopener" href="https://www.grammarly.com/ai/writer">https://www.grammarly.com/ai/writer</a></li>
+<li>Free AI Detector | GPT-4, GPT-3, &amp; ChatGPT AI Checker - Grammarly: <a target="_blank" rel="noopener" href="https://www.grammarly.com/ai/detector">https://www.grammarly.com/ai/detector</a></li>
+<li>Wordvice AI: <a target="_blank" rel="noopener" href="https://wordvice.ai/">https://wordvice.ai/</a></li>
+<li>Type.ai: The all-in-one AI writing assistant: <a target="_blank" rel="noopener" href="https://type.ai/">https://type.ai/</a></li>
+<li>Free AI Paragraph Rewriter - Copy.ai: <a target="_blank" rel="noopener" href="https://www.copy.ai/tools/ai-paragraph-rewriter">https://www.copy.ai/tools/ai-paragraph-rewriter</a></li>
+<li>QuillBot: <a target="_blank" rel="noopener" href="https://quillbot.com/">https://quillbot.com/</a></li>
+</ul>
+<h2 id="AI-文本“人类化”工具"><a href="#AI-文本“人类化”工具" class="headerlink" title="AI 文本“人类化”工具"></a><strong>AI 文本“人类化”工具</strong></h2><ul>
+<li>Ryne AI: <a target="_blank" rel="noopener" href="https://ryne.ai/">https://ryne.ai/</a></li>
+<li>Best AI Humanizer: Comprehensive Analysis and the Rise of Ryne AI: <a target="_blank" rel="noopener" href="https://ryne.ai/best-ai-humanizer/">https://ryne.ai/best-ai-humanizer/</a></li>
+<li>AI Text Humanizer - Justdone: <a target="_blank" rel="noopener" href="https://justdone.com/ai-text-humanizer">https://justdone.com/ai-text-humanizer</a></li>
+<li>AI Humanizer | Turn AI text into human-like writing - Scribbr: <a target="_blank" rel="noopener" href="https://www.scribbr.com/ai-tools/ai-humanizer/">https://www.scribbr.com/ai-tools/ai-humanizer/</a></li>
+<li>Free AI Humanizer - Surfer SEO: <a target="_blank" rel="noopener" href="https://www.surferseo.com/free-ai-humanizer/">https://www.surferseo.com/free-ai-humanizer/</a></li>
+<li>Free AI Text Humanizer | No Signup Required by Writesonic: <a target="_blank" rel="noopener" href="https://writesonic.com/ai-humanizer">https://writesonic.com/ai-humanizer</a></li>
+<li>Free AI Humanizer | Humanize AI Text &amp; Content - Monica: <a target="_blank" rel="noopener" href="https://monica.im/humanize-ai">https://monica.im/humanize-ai</a></li>
+<li>WriteHuman: Undetectable AI and AI Humanizer: <a target="_blank" rel="noopener" href="https://writehuman.ai/">https://writehuman.ai/</a></li>
+<li>AI Humanizer - Humanize AI Text Effortlessly - QuillBot: <a target="_blank" rel="noopener" href="https://quillbot.com/ai-humanizer">https://quillbot.com/ai-humanizer</a></li>
+<li>Humanize AI: <a target="_blank" rel="noopener" href="https://humanizeai.pro/">https://humanizeai.pro/</a></li>
+</ul>
+<h2 id="学术写作与诚信"><a href="#学术写作与诚信" class="headerlink" title="学术写作与诚信"></a><strong>学术写作与诚信</strong></h2><ul>
+<li>Maintaining academic integrity in the AI era | Center for Teaching Excellence: <a target="_blank" rel="noopener" href="https://cte.ku.edu/maintaining-academic-integrity-in-the-ai-era/">https://cte.ku.edu/maintaining-academic-integrity-in-the-ai-era/</a></li>
+<li>Artificial Intelligence (AI) Tools - Academic Integrity: <a target="_blank" rel="noopener" href="https://academics.umw.edu/academicintegrity/ai/">https://academics.umw.edu/academicintegrity/ai/</a></li>
+<li>AI and academic integrity - Artificial Intelligence (AI) in Education - Research Guides: <a target="_blank" rel="noopener" href="https://libguides.unm.edu/ai/academic_integrity">https://libguides.unm.edu/ai/academic_integrity</a></li>
+<li>Encouraging Academic Integrity - University Center for Teaching and Learning: <a target="_blank" rel="noopener" href="https://teaching.pitt.edu/teaching-strategies/academic-integrity/">https://teaching.pitt.edu/teaching-strategies/academic-integrity/</a></li>
+<li>Five Tips for Writing Academic Integrity Statements in the Age of AI - Faculty Focus: <a target="_blank" rel="noopener" href="https://www.facultyfocus.com/articles/teaching-and-learning/five-tips-for-writing-academic-integrity-statements-in-the-age-of-ai/">https://www.facultyfocus.com/articles/teaching-and-learning/five-tips-for-writing-academic-integrity-statements-in-the-age-of-ai/</a></li>
+<li>Guidelines for the Use of Generative Artificial Intelligence (GenAI) Tools at UMD: <a target="_blank" rel="noopener" href="https://ai.umd.edu/guidelines-for-the-use-of-generative-artificial-intelligence-genai-tools-at-umd">https://ai.umd.edu/guidelines-for-the-use-of-generative-artificial-intelligence-genai-tools-at-umd</a></li>
+<li>AI in Academic Writing - Clemson University: <a target="_blank" rel="noopener" href="https://www.clemson.edu/oir/ai-academic-writing.html">https://www.clemson.edu/oir/ai-academic-writing.html</a></li>
+<li>Concerns about Generative Artificial Intelligence | Alliant International University Center for Teaching Excellence: <a target="_blank" rel="noopener" href="https://cte.alliant.edu/concerns-about-generative-artificial-intelligence/">https://cte.alliant.edu/concerns-about-generative-artificial-intelligence/</a></li>
+</ul>
+<h2 id="内容重写与优化"><a href="#内容重写与优化" class="headerlink" title="内容重写与优化"></a><strong>内容重写与优化</strong></h2><ul>
+<li>Reword Tool - Reword Sentences with Scientific Words - Ref-n-Write: <a target="_blank" rel="noopener" href="https://www.ref-n-write.com/reword-tool/">https://www.ref-n-write.com/reword-tool/</a></li>
+<li>Article rewriting – InstaText | Write like a native speaker: <a target="_blank" rel="noopener" href="https://instatext.io/article-rewriting/">https://instatext.io/article-rewriting/</a></li>
+<li>How to Rewrite a Paragraph: 7 Strategies for Effective Revision (2024) - SEO.AI: <a target="_blank" rel="noopener" href="https://seo.ai/blog/how-to-rewrite-a-paragraph/">https://seo.ai/blog/how-to-rewrite-a-paragraph/</a></li>
+<li>Free AI Paragraph Rewriter | Rewrite Text Easily - Grammarly: <a target="_blank" rel="noopener" href="https://www.grammarly.com/rewriter/paragraph-rewriter">https://www.grammarly.com/rewriter/paragraph-rewriter</a></li>
+<li>AI Synonym Tool by TextCortex: <a target="_blank" rel="noopener" href="https://textcortex.com/ai-synonym-tool/">https://textcortex.com/ai-synonym-tool/</a></li>
+<li>6 Effective Tricks To Rewrite Content And Improve Its Quality - TextCortex: <a target="_blank" rel="noopener" href="https://textcortex.com/blog/rewrite-content/">https://textcortex.com/blog/rewrite-content/</a></li>
+<li>Paraphrasing Tool – Academic Rephrase Tool for Researchers - Ref-n-Write: <a target="_blank" rel="noopener" href="https://www.ref-n-write.com/paraphrasing-tool/">https://www.ref-n-write.com/paraphrasing-tool/</a></li>
+<li>Free AI Paraphrasing Tool - Scribbr: <a target="_blank" rel="noopener" href="https://www.scribbr.com/ai-tools/ai-paraphrasing-tool/">https://www.scribbr.com/ai-tools/ai-paraphrasing-tool/</a></li>
+</ul>
+<h2 id="句子结构与多样性"><a href="#句子结构与多样性" class="headerlink" title="句子结构与多样性"></a><strong>句子结构与多样性</strong></h2><ul>
+<li>How to Vary Sentence Structure in Your Writing - 2025 - MasterClass: <a target="_blank" rel="noopener" href="https://www.masterclass.com/articles/how-to-vary-sentence-structure-in-your-writing">https://www.masterclass.com/articles/how-to-vary-sentence-structure-in-your-writing</a></li>
+<li>Sentences and Paragraphs out of Order? Reassembling as a Tool to Restructure: <a target="_blank" rel="noopener" href="https://gcwritingcenter.commons.gc.cuny.edu/sentences-and-paragraphs-out-of-order-reassembling-as-a-tool-to-restructure/">https://gcwritingcenter.commons.gc.cuny.edu/sentences-and-paragraphs-out-of-order-reassembling-as-a-tool-to-restructure/</a></li>
+<li>sentence-variety.pdf: <a target="_blank" rel="noopener" href="https://www.sunysuffolk.edu/getattachment/ac78306c-c995-4173-9595-69c505e12a91/sentence-variety.pdf">https://www.sunysuffolk.edu/getattachment/ac78306c-c995-4173-9595-69c505e12a91/sentence-variety.pdf</a></li>
+<li>Reorganizing Drafts - UNC Writing Center - The University of North Carolina at Chapel Hill: <a target="_blank" rel="noopener" href="https://writingcenter.unc.edu/tips-and-tools/reorganizing-drafts/">https://writingcenter.unc.edu/tips-and-tools/reorganizing-drafts/</a></li>
+<li>Sentence Variety and Rhythm - San Jose State University: <a target="_blank" rel="noopener" href="https://www.sjsu.edu/writingcenter/handouts/sentence-variety.pdf">https://www.sjsu.edu/writingcenter/handouts/sentence-variety.pdf</a></li>
+<li>Rearrange This Paragraph - Quick Guide to Better Writing - Effie: <a target="_blank" rel="noopener" href="https://effie.pro/blog/rearrange-this-paragraph">https://effie.pro/blog/rearrange-this-paragraph</a></li>
+<li>Varying Sentence Structure - Writing - Academic Guides at Walden University: <a target="_blank" rel="noopener" href="https://academicguides.waldenu.edu/writingcenter/grammar/sentences/varyingstructure">https://academicguides.waldenu.edu/writingcenter/grammar/sentences/varyingstructure</a></li>
+<li>How to Vary Your Sentence Structure (And Stop Boring Your Readers) - The Write Life: <a target="_blank" rel="noopener" href="https://thewritelife.com/vary-sentence-structure/">https://thewritelife.com/vary-sentence-structure/</a></li>
+</ul>
+<h2 id="案例研究与实验数据"><a href="#案例研究与实验数据" class="headerlink" title="案例研究与实验数据"></a><strong>案例研究与实验数据</strong></h2><ul>
+<li>Using AI in Academic Writing: Tips for Maintaining Originality - Jenni AI: <a target="_blank" rel="noopener" href="https://jenni.ai/blog/using-ai-in-academic-writing-tips-for-maintaining-originality">https://jenni.ai/blog/using-ai-in-academic-writing-tips-for-maintaining-originality</a></li>
+<li>AI in Academic Writing: Tips for Maintaining Originality and Integrity - Ryne AI Blog: <a target="_blank" rel="noopener" href="https://ryne.ai/blog/ai-in-academic-writing/">https://ryne.ai/blog/ai-in-academic-writing/</a></li>
+<li>Combining Experimental Data and Computational Methods for the Non-Computer Specialist - PMC - PubMed Central: <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282443/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282443/</a></li>
+<li>Case study - Student Academic Success - Monash University: <a target="_blank" rel="noopener" href="https://www.monash.edu/students/success/assessments/types/case-studies">https://www.monash.edu/students/success/assessments/types/case-studies</a></li>
+<li>Methods for Integrating Trials and Non-experimental Data to Examine Treatment Effect Heterogeneity - Project Euclid: <a target="_blank" rel="noopener" href="https://projecteuclid.org/journals/statistical-science/volume-35/issue-3/Methods-for-Integrating-Trials-and-Non-experimental-Data-to-Examine-Treatment/10.1214/19-STS741.full">https://projecteuclid.org/journals/statistical-science/volume-35/issue-3/Methods-for-Integrating-Trials-and-Non-experimental-Data-to-Examine-Treatment/10.1214/19-STS741.full</a></li>
+<li>Incorporating Relevant Case Studies in Your Assignments - MakeMyAssignments Blog: <a target="_blank" rel="noopener" href="https://www.makemyassignments.com/blog/incorporating-relevant-case-studies-in-your-assignments/">https://www.makemyassignments.com/blog/incorporating-relevant-case-studies-in-your-assignments/</a></li>
+<li>Six steps to approaching a case study - Student Academic Success - Monash University: <a target="_blank" rel="noopener" href="https://www.monash.edu/students/success/assessments/plan/steps">https://www.monash.edu/students/success/assessments/plan/steps</a></li>
+<li>Integrating Research Findings Across Studies - Sage Publishing: <a target="_blank" rel="noopener" href="https://us.sagepub.com/en-us/nam/integrating-research-findings-across-studies/book9841">https://us.sagepub.com/en-us/nam/integrating-research-findings-across-studies/book9841</a></li>
+<li>Using Case Studies to Teach | Center for Teaching &amp; Learning - Boston University: <a target="_blank" rel="noopener" href="https://www.bu.edu/ctl/guides/using-case-studies-to-teach/">https://www.bu.edu/ctl/guides/using-case-studies-to-teach/</a></li>
+<li>Best practices for data management and sharing in experimental biomedical research: <a target="_blank" rel="noopener" href="https://journals.physiology.org/doi/full/10.1152/advan.00132.2022">https://journals.physiology.org/doi/full/10.1152/advan.00132.2022</a></li>
+<li>Research data infrastructure for high-throughput experimental materials science - PMC: <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4874448/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4874448/</a></li>
+<li>Introducing Case Studies in Essays [Examples] - Writers Per Hour: <a target="_blank" rel="noopener" href="https://www.writersperhour.com/blog/case-study-in-essay">https://www.writersperhour.com/blog/case-study-in-essay</a></li>
+</ul>
+<h2 id="人性化-AI-内容"><a href="#人性化-AI-内容" class="headerlink" title="人性化 AI 内容"></a><strong>人性化 AI 内容</strong></h2><ul>
+<li>How to Humanise AI Content: Tips + Examples | Salesforce ANZ: <a target="_blank" rel="noopener" href="https://www.salesforce.com/au/blog/humanise-ai-content/">https://www.salesforce.com/au/blog/humanise-ai-content/</a></li>
+<li>13 Ways To Humanize AI Content - Surfer SEO: <a target="_blank" rel="noopener" href="https://www.surferseo.com/blog/how-to-humanize-ai-content/">https://www.surferseo.com/blog/how-to-humanize-ai-content/</a></li>
+<li>How to Infuse Personality into Your AI-Generated Content - Benchmark Email: <a target="_blank" rel="noopener" href="https://www.benchmarkemail.com/blog/how-to-infuse-personality-into-your-ai-generated-content/">https://www.benchmarkemail.com/blog/how-to-infuse-personality-into-your-ai-generated-content/</a></li>
+<li>3 Ways to Infuse a Human Touch into AI-Generated Content: <a target="_blank" rel="noopener" href="https://marketmymarket.com/blog/how-to-infuse-a-human-touch-into-ai-generated-content.html">https://marketmymarket.com/blog/how-to-infuse-a-human-touch-into-ai-generated-content.html</a></li>
+<li>How to Edit AI Content: 9 Tips for Adding a Human Touch to AI Outputs - Jasper AI: <a target="_blank" rel="noopener" href="https://www.jasper.ai/blog/how-to-edit-ai-content">https://www.jasper.ai/blog/how-to-edit-ai-content</a></li>
+<li>The art of AI-enhanced content: 8 ways to keep human creativity front and center: <a target="_blank" rel="noopener" href="https://searchengineland.com/the-art-of-ai-enhanced-content-8-ways-to-keep-human-creativity-front-and-center-412761">https://searchengineland.com/the-art-of-ai-enhanced-content-8-ways-to-keep-human-creativity-front-and-center-412761</a></li>
+<li>Artificial Intelligence-Generated Content Needs a Human Oversight - PMC: <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9934218/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9934218/</a></li>
+<li>The crucial role of humans in AI oversight - Cornerstone OnDemand: <a target="_blank" rel="noopener" href="https://www.cornerstoneondemand.com/blog/crucial-role-humans-ai-oversight/">https://www.cornerstoneondemand.com/blog/crucial-role-humans-ai-oversight/</a></li>
+<li>The Vital Role of Human Oversight in Ethical AI Governance - Nemko: <a target="_blank" rel="noopener" href="https://www.nemko.com/insights/the-vital-role-of-human-oversight-in-ethical-ai-governance">https://www.nemko.com/insights/the-vital-role-of-human-oversight-in-ethical-ai-governance</a></li>
+<li>The Strategic Necessity of Human Oversight in AI Systems - Lumenova AI: <a target="_blank" rel="noopener" href="https://lumenova.ai/the-strategic-necessity-of-human-oversight-in-ai-systems/">https://lumenova.ai/the-strategic-necessity-of-human-oversight-in-ai-systems/</a></li>
+</ul>
+<h2 id="AI-的局限性与伦理"><a href="#AI-的局限性与伦理" class="headerlink" title="AI 的局限性与伦理"></a><strong>AI 的局限性与伦理</strong></h2><ul>
+<li>AI in Schools: Pros and Cons - College of Education | Illinois: <a target="_blank" rel="noopener" href="https://education.illinois.edu/news-stories/ai-in-schools-pros-and-cons/">https://education.illinois.edu/news-stories/ai-in-schools-pros-and-cons/</a></li>
+<li>Strengths and limitations of AI - Learning at Lincoln: <a target="_blank" rel="noopener" href="https://learning.lincoln.ac.uk/technology-enhanced-learning/ai-tel/strengths-and-limitations-of-ai/">https://learning.lincoln.ac.uk/technology-enhanced-learning/ai-tel/strengths-and-limitations-of-ai/</a></li>
+<li>Artificial intelligence as a writing tool: Cautions and limitations - American Nurse Journal: <a target="_blank" rel="noopener" href="https://www.myamericannurse.com/artificial-intelligence-as-a-writing-tool-cautions-and-limitations/">https://www.myamericannurse.com/artificial-intelligence-as-a-writing-tool-cautions-and-limitations/</a></li>
+<li>Practical Considerations and Ethical Implications of Using Artificial Intelligence in Writing Scientific Manuscripts - PMC: <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9869998/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9869998/</a></li>
+<li>Clarifying Ethical Dilemmas of Using Artificial Intelligence in Research Writing: A Rapid Review: <a target="_blank" rel="noopener" href="https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=16757&context=dissertations">https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=16757&context=dissertations</a></li>
+<li>Discussing the paper on the ethics of disclosing the use of artificial intelligence tools in writing research - PhilArchive: <a target="_blank" rel="noopener" href="https://philarchive.org/rec/GUECDT">https://philarchive.org/rec/GUECDT</a></li>
+<li>Reminder of the Importance of Research Integrity &amp; Use of AI | Compliance &amp; Training: <a target="_blank" rel="noopener" href="https://compliance.research.virginia.edu/news/reminder-importance-research-integrity-use-ai">https://compliance.research.virginia.edu/news/reminder-importance-research-integrity-use-ai</a></li>
+</ul>
+<h2 id="引用规范"><a href="#引用规范" class="headerlink" title="引用规范"></a><strong>引用规范</strong></h2><ul>
+<li>Citation Styles: APA, MLA, Chicago, Turabian, IEEE - Guides at University of Pittsburgh: <a target="_blank" rel="noopener" href="https://pitt.libguides.com/citationhelp">https://pitt.libguides.com/citationhelp</a></li>
+<li>APA, MLA, Chicago&#x2F;Turbian, AMA - Citation Styles: Get Started - Research Guides: <a target="_blank" rel="noopener" href="https://libguides.su.edu/citationstyles">https://libguides.su.edu/citationstyles</a></li>
+<li>guides.library.ucsc.edu: <a target="_blank" rel="noopener" href="https://guides.library.ucsc.edu/citations">https://guides.library.ucsc.edu/citations</a></li>
+<li>Citing&#x2F;Documenting Resources - Instruction - Guides at University of Alaska Fairbanks: <a target="_blank" rel="noopener" href="https://library.uaf.edu/instruction/citing">https://library.uaf.edu/instruction/citing</a></li>
+<li>Overview - Citing sources - LibGuides at MIT Libraries: <a target="_blank" rel="noopener" href="https://libguides.mit.edu/citing">https://libguides.mit.edu/citing</a></li>
+<li>Citation Styles - Citation Practices and Avoiding Plagiarism - Guides at Penn Libraries: <a target="_blank" rel="noopener" href="https://guides.library.upenn.edu/citing/styles">https://guides.library.upenn.edu/citing/styles</a></li>
+<li>How to Cite Sources | Citation Generator &amp; Quick Guide - Scribbr: <a target="_blank" rel="noopener" href="https://www.scribbr.com/citing-sources/how-to-cite-sources/">https://www.scribbr.com/citing-sources/how-to-cite-sources/</a></li>
+<li>Citation Styles – Library - Merritt College: <a target="_blank" rel="noopener" href="https://merritt.edu/library/citation-styles/">https://merritt.edu/library/citation-styles/</a></li>
+<li>Attributing Sources and Avoiding Plagiarism - Library at Averett University: <a target="_blank" rel="noopener" href="https://averett.libguides.com/c.php?g=1234678">https://averett.libguides.com/c.php?g=1234678</a></li>
+<li>In-Text Citations: The Basics - Purdue OWL: <a target="_blank" rel="noopener" href="https://owl.purdue.edu/owl/research_and_citation/using_research/quotations_and_citations/in_text_citations_the_basics.html">https://owl.purdue.edu/owl/research_and_citation&#x2F;using_research&#x2F;quotations_and_citations&#x2F;in_text_citations_the_basics.html</a></li>
+<li>Choosing the Right Citation Style: A Guide to Harvard, APA, MLA and Chicago: <a target="_blank" rel="noopener" href="https://cwauthors.com/article/choosing-the-right-citation-style-a-guide-to-harvard-apa-mla-and-chicago">https://cwauthors.com/article/choosing-the-right-citation-style-a-guide-to-harvard-apa-mla-and-chicago</a></li>
+<li>Guidelines for Citations and References - College of Business and Economics: <a target="_blank" rel="noopener" href="https://www.boisestate.edu/cobe-student/wp-content/uploads/sites/119/2023/07/Citation-and-Reference-Guide-CBE-July-2023.pdf">https://www.boisestate.edu/cobe-student/wp-content/uploads/sites/119/2023/07/Citation-and-Reference-Guide-CBE-July-2023.pdf</a></li>
+<li>Citation vs. Attribution – Self-Publishing Guide - BC Open Textbooks: <a target="_blank" rel="noopener" href="https://opentextbc.ca/selfpublishguide/chapter/citation-vs-attribution/">https://opentextbc.ca/selfpublishguide/chapter/citation-vs-attribution/</a></li>
+<li>Citing Sources - The University Writing Center: <a target="_blank" rel="noopener" href="https://writingcenter.tamu.edu/members/workshop-handouts/citing-sources/">https://writingcenter.tamu.edu/members/workshop-handouts/citing-sources/</a></li>
+<li>How To Cite a Research Paper for 2025: Citation Styles Guide: <a target="_blank" rel="noopener" href="https://research.com/research/how-to-cite-a-research-paper">https://research.com/research/how-to-cite-a-research-paper</a></li>
+<li>Recommended practices for attribution - Creative Commons Wiki: <a target="_blank" rel="noopener" href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">https://wiki.creativecommons.org/wiki/Best_practices_for_attribution</a></li>
+<li>Proper attribution | Wiki - FreedomGPT: <a target="_blank" rel="noopener" href="https://wiki.freedomgpt.com/en/Proper_attribution">https://wiki.freedomgpt.com/en/Proper_attribution</a></li>
+<li>Disclosing the Use of AI - Generative AI - Research Guides at Princeton University: <a target="_blank" rel="noopener" href="https://libguides.princeton.edu/GenAI/disclose">https://libguides.princeton.edu/GenAI/disclose</a></li>
+<li>Artificial Intelligence (AI): Publisher Policies - Research Guides - Purdue University: <a target="_blank" rel="noopener" href="https://guides.lib.purdue.edu/ai/publisherpolicies">https://guides.lib.purdue.edu/ai/publisherpolicies</a></li>
+<li>Using of Generative AI in Scholarship &amp; Research - USC Libraries Research Guides: <a target="_blank" rel="noopener" href="https://libguides.usc.edu/ai/scholarship">https://libguides.usc.edu/ai/scholarship</a></li>
+<li>Generative Artificial Intelligence (AI) Guidelines - Harvard University Information Technology: <a target="_blank" rel="noopener" href="https://huit.harvard.edu/generative-artificial-intelligence-ai-guidelines">https://huit.harvard.edu/generative-artificial-intelligence-ai-guidelines</a></li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a><strong>其他</strong></h2><ul>
+<li>Do AI Humanizers Work ? How Do They Work ? - Intellectual Lead: <a target="_blank" rel="noopener" href="https://intellectualead.com/ai-humanizers/">https://intellectualead.com/ai-humanizers/</a></li>
+<li>(PDF) ANALYSIS OF AI HUMANIZER TOOLS - ResearchGate: <a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/378438102_ANALYSIS_OF_AI_HUMANIZER_TOOLS">https://www.researchgate.net/publication/378438102_ANALYSIS_OF_AI_HUMANIZER_TOOLS</a></li>
+<li>Can You Trust AI Detectors and AI Humanizers?: <a target="_blank" rel="noopener" href="https://braide.ai/blog/can-you-trust-ai-detectors-and-ai-humanizers">https://braide.ai/blog/can-you-trust-ai-detectors-and-ai-humanizers</a></li>
+<li>The Importance of Humanizing AI-Generated Research Work for Postgraduate Students: <a target="_blank" rel="noopener" href="https://proofreadingmalaysia.com/2024/07/10/the-importance-of-humanizing-ai-generated-research-work-for-postgraduate-students/">https://proofreadingmalaysia.com/2024/07/10/the-importance-of-humanizing-ai-generated-research-work-for-postgraduate-students/</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd">江湖笔者</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd/AIGC-thinkings2/">https://blog1.jianghu.cfd/AIGC-thinkings2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog1.jianghu.cfd" target="_blank">江湖笔者玩电脑</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">大模型</a><a class="post-meta__tags" href="/tags/%E8%B0%B7%E6%AD%8CGemini/">谷歌Gemini</a><a class="post-meta__tags" href="/tags/DeepSeek/">DeepSeek</a><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/%E8%AE%BA%E6%96%87/">论文</a></div><div class="post-share"><div class="social-share" data-image="/img/ico.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/AIGC-thinkings/" title="AIGC降重和论文改进的策略思考"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AIGC降重和论文改进的策略思考</div></div><div class="info-2"><div class="info-item-1">好的，这是更侧重方法论，讲述 AIGC 检测方法、检测逻辑、检测语言和段落特征，以及针对不同情况和特征的处理方法的翻译版本： 降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略 1. 学术论文中人工智能不断演变的情况：挑战与思考  1.1 人工智能写作工具的普及及其影响  近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。 这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。 因此，传统上严重依赖书面论文的评估方法面临挑战。 由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。   1.2 人工智能使用的双刃剑效应  人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。 人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。 因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。   1.3...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/AIGC-thinkings/" title="AIGC降重和论文改进的策略思考"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-15</div><div class="info-item-2">AIGC降重和论文改进的策略思考</div></div><div class="info-2"><div class="info-item-1">好的，这是更侧重方法论，讲述 AIGC 检测方法、检测逻辑、检测语言和段落特征，以及针对不同情况和特征的处理方法的翻译版本： 降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略 1. 学术论文中人工智能不断演变的情况：挑战与思考  1.1 人工智能写作工具的普及及其影响  近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。 这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。 因此，传统上严重依赖书面论文的评估方法面临挑战。 由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。   1.2 人工智能使用的双刃剑效应  人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。 人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。 因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。   1.3...</div></div></div></a><a class="pagination-related" href="/OpenRouter/" title="OpenRouter注册指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-02-28</div><div class="info-item-2">OpenRouter注册指南</div></div><div class="info-2"><div class="info-item-1"> 免费用AI：OpenRouter注册指南引言OpenRouter.ai是一个聚合多种AI模型的平台，提供免费的API调用服务，包括Gemini 2.0和DeepSeek模型。本文将指导你如何注册OpenRouter.ai，获取免费API调用权限，并推荐实用的免费模型。  一、注册OpenRouter.ai注册前准备：一个邮箱，ChatBox软件 访问官网打开OpenRouter.ai。  创建账户    点击“Sign Up”，使用邮箱或第三方账户（如Google、GitHub）注册。 完成邮箱验证并登录。   生成API Key    登录后，进入API Keys页面。 点击“Generate New Key”生成API密钥。     二、获取免费API调用 在查找免费模型一步，点击任意一个免费模型，找到下图  点击创建APIkey，保存好后开始第三步，点击链接查看免费模型，后续步骤已写好   三、查找免费模型 免费模型列表  访问OpenRouter免费模型列表查看所有免费模型。   选择模型  在列表中选择Gemini 2.0、DeepSeek等免费模型。 点击“Use...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/ico.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">江湖笔者</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%BA%94%E5%AF%B9AIGC%E8%AE%BA%E6%96%87%E6%A3%80%E6%9F%A5%E7%9A%84%E7%AD%96%E7%95%A5%E4%B8%8E%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">大学生应对AIGC论文检查的策略与方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-AIGC%E8%AE%BA%E6%96%87%E6%A3%80%E6%9F%A5%E5%8E%9F%E7%90%86%E7%AE%80%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1. AIGC论文检查原理简述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-AI%E5%86%85%E5%AE%B9%E6%A3%80%E6%B5%8B%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 AI内容检测器的工作方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-AIGC%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 AIGC检测工具的局限性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%BA%94%E5%AF%B9AIGC%E6%A3%80%E6%9F%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%AD%96%E7%95%A5"><span class="toc-number">1.2.</span> <span class="toc-text">2. 大学生应对AIGC检查的基本策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%90%86%E8%A7%A3%E5%AD%A6%E6%9C%AF%E8%AF%9A%E4%BF%A1%E6%94%BF%E7%AD%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 理解学术诚信政策</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E4%BC%98%E5%85%88%E8%80%83%E8%99%91%E5%8E%9F%E5%88%9B%E6%80%A7%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 优先考虑原创性工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A6%82%E6%9E%9C%E4%BD%BF%E7%94%A8AI%EF%BC%8C%E8%A6%81%E8%B4%9F%E8%B4%A3%E4%BB%BB%E5%9C%B0%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 如果使用AI，要负责任地使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A7%84%E9%81%BF%E4%B8%8E%E5%87%8F%E8%BD%BBAIGC%E6%A3%80%E6%9F%A5%E7%99%BE%E5%88%86%E6%AF%94%E7%9A%84%E5%85%B7%E4%BD%93%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">3. 规避与减轻AIGC检查百分比的具体方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BA%BA%E5%B7%A5%E6%B6%A6%E8%89%B2%E4%B8%8E%E4%B8%AA%E6%80%A7%E5%8C%96"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 人工润色与个性化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E6%B7%BB%E5%8A%A0%E4%B8%AA%E4%BA%BA%E8%A7%81%E8%A7%A3%E5%92%8C%E7%BB%8F%E9%AA%8C"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">3.1.1 添加个人见解和经验</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E8%B0%83%E6%95%B4%E8%AF%AD%E6%B0%94%E5%92%8C%E9%A3%8E%E6%A0%BC"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">3.1.2 调整语气和风格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-3-%E9%81%BF%E5%85%8D%E8%BF%87%E5%BA%A6%E4%BD%BF%E7%94%A8%E7%9A%84AI%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">3.1.3 避免过度使用的AI术语</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E6%9E%84"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 重写与重构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-%E9%87%8D%E5%86%99%E6%AE%B5%E8%90%BD%E8%80%8C%E9%9D%9E%E9%80%90%E5%8F%A5%E4%BF%AE%E6%94%B9"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">3.2.1 重写段落而非逐句修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-%E6%94%B9%E5%8F%98%E5%8F%A5%E5%AD%90%E7%BB%93%E6%9E%84%E5%92%8C%E9%95%BF%E5%BA%A6"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">3.2.2 改变句子结构和长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">3.2.3 重新组织内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%B7%A7%E5%A6%99%E5%9C%B0%E4%BD%BF%E7%94%A8%E8%BE%85%E5%8A%A9%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 巧妙地使用辅助内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-%E6%B7%BB%E5%8A%A0%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">3.3.1 添加案例研究</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E6%95%B4%E5%90%88%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">3.3.2 整合实验数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E8%B0%A8%E6%85%8E%E4%BD%BF%E7%94%A8%E5%90%8C%E4%B9%89%E8%AF%8D%E6%9B%BF%E6%8D%A2%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 谨慎使用同义词替换工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E4%BF%9D%E6%8C%81%E5%AD%A6%E6%9C%AF%E8%AF%9A%E4%BF%A1"><span class="toc-number">1.3.5.</span> <span class="toc-text">3.5 保持学术诚信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%93%E5%90%88%E4%BA%92%E8%81%94%E7%BD%91%E7%BB%8F%E9%AA%8C%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8A%9E%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">4. 结合互联网经验的可行操作办法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%BD%BF%E7%94%A8AI%E6%96%87%E6%9C%AC%E6%B6%A6%E8%89%B2%E5%B7%A5%E5%85%B7"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 使用AI文本润色工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%B0%9D%E8%AF%95AI%E6%96%87%E6%9C%AC%E2%80%9C%E4%BA%BA%E7%B1%BB%E5%8C%96%E2%80%9D%E5%B7%A5%E5%85%B7"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 尝试AI文本“人类化”工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%80%9F%E9%89%B4%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90%E5%92%8C%E7%A4%BE%E5%8C%BA%E7%BB%8F%E9%AA%8C"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 借鉴在线资源和社区经验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E8%BF%AD%E4%BB%A3%E4%BC%98%E5%8C%96%E5%86%99%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 迭代优化写作过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-number">1.5.</span> <span class="toc-text">5. 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E5%BC%95%E7%94%A8%E8%A1%A8%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">本文引用表：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AI-%E6%A3%80%E6%B5%8B%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">2.1.</span> <span class="toc-text">AI 检测原理与局限性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI-%E5%86%99%E4%BD%9C%E4%B8%8E%E6%B6%A6%E8%89%B2%E5%B7%A5%E5%85%B7"><span class="toc-number">2.2.</span> <span class="toc-text">AI 写作与润色工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI-%E6%96%87%E6%9C%AC%E2%80%9C%E4%BA%BA%E7%B1%BB%E5%8C%96%E2%80%9D%E5%B7%A5%E5%85%B7"><span class="toc-number">2.3.</span> <span class="toc-text">AI 文本“人类化”工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%9C%AF%E5%86%99%E4%BD%9C%E4%B8%8E%E8%AF%9A%E4%BF%A1"><span class="toc-number">2.4.</span> <span class="toc-text">学术写作与诚信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E9%87%8D%E5%86%99%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="toc-number">2.5.</span> <span class="toc-text">内容重写与优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%A5%E5%AD%90%E7%BB%93%E6%9E%84%E4%B8%8E%E5%A4%9A%E6%A0%B7%E6%80%A7"><span class="toc-number">2.6.</span> <span class="toc-text">句子结构与多样性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE"><span class="toc-number">2.7.</span> <span class="toc-text">案例研究与实验数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E6%80%A7%E5%8C%96-AI-%E5%86%85%E5%AE%B9"><span class="toc-number">2.8.</span> <span class="toc-text">人性化 AI 内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI-%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7%E4%B8%8E%E4%BC%A6%E7%90%86"><span class="toc-number">2.9.</span> <span class="toc-text">AI 的局限性与伦理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E8%A7%84%E8%8C%83"><span class="toc-number">2.10.</span> <span class="toc-text">引用规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">2.11.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/AIGC-thinkings2/" title="AIGC降重和论文改进的策略思考2：特征和应对办法">AIGC降重和论文改进的策略思考2：特征和应对办法</a><time datetime="2025-03-15T08:17:47.000Z" title="发表于 2025-03-15 16:17:47">2025-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/AIGC-thinkings/" title="AIGC降重和论文改进的策略思考">AIGC降重和论文改进的策略思考</a><time datetime="2025-03-15T08:17:47.000Z" title="发表于 2025-03-15 16:17:47">2025-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/OpenRouter/" title="OpenRouter注册指南">OpenRouter注册指南</a><time datetime="2025-02-28T08:17:47.000Z" title="发表于 2025-02-28 16:17:47">2025-02-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/via/" title="via如何下载，以及拦截广告？一篇文章教会你">via如何下载，以及拦截广告？一篇文章教会你</a><time datetime="2024-11-30T04:59:21.000Z" title="发表于 2024-11-30 12:59:21">2024-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/kimiai/" title="AI教你生成ppt，高效简约速度快，主要还能自定义！">AI教你生成ppt，高效简约速度快，主要还能自定义！</a><time datetime="2024-11-23T05:25:27.000Z" title="发表于 2024-11-23 13:25:27">2024-11-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By 江湖笔者</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一个简单的频道</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://pinglun.yanyujiangnan.site/',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"defer></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="一个,简单的,频道" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
