@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AIGC降重和论文改进的策略思考 | 江湖笔者玩电脑</title><meta name="author" content="江湖笔者"><meta name="copyright" content="江湖笔者"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略1. 学术论文中人工智能不断演变的情况：挑战与思考 近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。因此，传统上严重依赖书面论文的评估方法面临挑战。由于人工智能现在可以生成表面上原创的内容，教">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIGC降重和论文改进的策略思考">
+<meta property="og:url" content="https://blog1.jianghu.cfd/AIGC-thinkings/index.html">
+<meta property="og:site_name" content="江湖笔者玩电脑">
+<meta property="og:description" content="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略1. 学术论文中人工智能不断演变的情况：挑战与思考 近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。因此，传统上严重依赖书面论文的评估方法面临挑战。由于人工智能现在可以生成表面上原创的内容，教">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog1.jianghu.cfd/img/ico.png">
+<meta property="article:published_time" content="2025-03-15T08:17:47.000Z">
+<meta property="article:modified_time" content="2025-03-16T14:07:56.605Z">
+<meta property="article:author" content="江湖笔者">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="谷歌Gemini">
+<meta property="article:tag" content="DeepSeek">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="论文">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog1.jianghu.cfd/img/ico.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog1.jianghu.cfd/AIGC-thinkings/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//static.cloudflareinsights.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;5240dcba55024bedb39bf312590633d8&quot;}"></script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AIGC降重和论文改进的策略思考',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2025-03-16 22:07:56',
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="江湖笔者玩电脑" type="application/atom+xml">
+</head><body><div id="web_bg" style="background-image: url(/img/back.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/ico.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">江湖笔者玩电脑</span></a><a class="nav-page-title" href="/"><span class="site-name">AIGC降重和论文改进的策略思考</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AIGC降重和论文改进的策略思考</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-15T08:17:47.000Z" title="发表于 2025-03-15 16:17:47">2025-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-16T14:07:56.605Z" title="更新于 2025-03-16 22:07:56">2025-03-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span class="waline-pageview-count" data-path="/AIGC-thinkings/"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略"><a href="#降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略" class="headerlink" title="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略"></a><strong>降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略</strong></h1><p><strong>1. 学术论文中人工智能不断演变的情况：挑战与思考</strong></p>
+<p>近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。因此，传统上严重依赖书面论文的评估方法面临挑战。由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。</p>
+<p>人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。</p>
+<p>此外，区分人类撰写的文本和人工智能生成的文本变得越来越困难。由于人工智能模型模仿人类写作风格的能力不断提高，仅仅依靠手动检测变得越来越不可靠。</p>
+<p><strong>2. 人工智能检测的剖析：这些工具如何识别人工智能生成的文本</strong></p>
+<p>人工智能检测工具基于与人工智能写作工具使用的类似的语言模型运行，分析文本中人工智能生成内容特有的统计模式和语言特征。这些模型本质上会检查输入，并询问“这会是我写的那种文章吗？”如果答案是“是”，则得出结论，该文本很可能是由人工智能生成的。这种相似性导致人工智能写作的进步需要人工智能检测的进步，从而形成持续的“猫捉老鼠”游戏。</p>
+<p>人工智能检测工具采用的主要分析方法包括：</p>
+<ul>
+<li>**困惑度 (Perplexity)**：衡量文本的不可预测性或随机性。与人类撰写的文本（不可预测、有创造力，可能包含错误）相比，人工智能倾向于生成困惑度较低（更可预测、更流畅）的文本。然而，虽然低困惑度是一个指标，但无意义的人类文本也可能具有高困惑度，这可能导致人工智能文本未被标记为人类文本（假阴性），或者人类文本被标记为人工智能文本（假阳性）。</li>
+<li>**突发性 (Burstiness)**：衡量句子结构和句子长度的变化。与人类撰写的文本相比，人工智能倾向于生成突发性较低（变化较少）、更单调的文本。鼓励学生多样化句子结构和句子长度可以使他们的写作更容易被人工智能检测工具识别为人类写作。</li>
+<li><strong>词频分析</strong>：识别最常见的单词。过度重复和缺乏变化可能表明是人工智能生成。教导学生使用多样化的词汇并避免过度依赖常用词是减轻人工智能检测标记风险的一种策略。</li>
+<li><strong>N-gram 分析</strong>：检查单词序列以识别常见的语言模式。人类写作往往具有更多样化的 N-gram。鼓励学生使用更具创造性和非陈词滥调的措辞可以降低被标记为人工智能生成的可能性。</li>
+<li><strong>句法分析</strong>：检查句子的语法结构。人工智能可能使用统一的模式，而人类写作则表现出更大的复杂性。在学生的写作中强调复杂的句子结构和多样化的语法模式可以将其与典型的人工智能输出区分开来。</li>
+<li><strong>语义分析</strong>：分析单词和短语的含义，包括比喻和文化参考等细微差别。人工智能可能会错误地解释或忽略文本中的这些细微差别，而人类写作则表现出更深层次的、特定于语境的含义。需要对特定语境的含义进行细致理解和应用的作业将更难让人工智能在没有类似人类的错误的情况下成功完成。</li>
+<li>**嵌入 (Embedding)**：将单词表示为向量以显示语义关系，帮助人工智能理解语境。虽然人工智能使用嵌入，但人类自然地将语境和含义融入写作的方式仍然可以是一个区分因素。</li>
+<li>**分类器 (Classifier)**：一种在标记数据（人类 vs. 人工智能）上训练的机器学习模型，用于对新文本进行分类。分类器的准确性在很大程度上取决于训练数据和人工智能生成文本不断演变的模式，这可能会导致不准确。</li>
+<li>**水印 (Watermarking)**：作为未来确定性人工智能检测方法的概念也被提出。虽然这很有前景，但该技术仍在开发中，尚未得到广泛应用。</li>
+</ul>
+<p>人工智能检测工具和抄袭检查器具有不同的目标和方法。人工智能检测工具寻找类似人工智能的特征，而抄袭检查器则将文本与现有来源的数据库进行比较。学生需要理解这些差异，并认识到人工智能生成的内容可能会因与现有在线文本的相似性而被抄袭检查器标记。</p>
+<p>手动检测涉及注意单调的写作、可预测的语言、缺乏句子结构变化以及过度使用对冲语言。培训教育工作者和学生识别这些模式是一种有价值的补充方法，尤其是在与人工智能检测工具和其他评估策略结合使用时。</p>
+<p><strong>3. 尽量减少学术论文中人工智能生成利用的主动策略</strong></p>
+<p><strong>培养原创思维和想法：</strong></p>
+<ul>
+<li>在可能利用人工智能之前，强调让学生产生自己想法的写作前活动。自由写作、头脑风暴、聚类和维护个人日志等技术可以培养原创思维。这些活动可以帮助学生利用自己的知识和观点，减少他们最初依赖人工智能生成内容的倾向。首先关注想法的产生可以使学生更深入地参与自己的想法。</li>
+<li>鼓励学生积极分析作业和课程材料，并发展自己独特的解释和问题。提出关于作业的目的、受众和所需任务的关键问题可以激发自主思考。通过深入理解作业的细微差别，人工智能更难在没有学生大量指导的情况下创建真正相关且富有洞察力的回答。</li>
+<li>促进“畅谈”或协作讨论，作为集思广益和完善自己观点的一种方式。同伴互动可以产生新的见解，并帮助学生阐明自己的想法。协作环境鼓励积极参与教材，并发展人工智能可能难以复制的独特观点。</li>
+<li>整合需要将课程概念与自己的经验、观察和信念联系起来的活动。鼓励反思性写作或个人联系的作业可以培养原创性。由于人工智能没有个人经验或主观观点，因此利用这些领域的作业更能抵抗人工智能驱动的内容。</li>
+<li>鼓励使用图表、列表和其他视觉方法来组织思想并识别思想之间的联系。这些技术可以帮助学生全面理解主题及其独特的处理方式。想法的视觉组织可以揭示纯粹基于文本的人工智能生成可能会遗漏的非线性联系和见解。</li>
+<li>在课堂上模拟发展想法的过程，展示如何从一般主题过渡到具体和原创的讨论。明确的指导和示例可以指导学生自己的想法生成。向学生展示想法发展的“幕后花絮”可以使该过程更加清晰，并减少他们依赖人工智能作为捷径的倾向。</li>
+<li><strong>设计本质上引人入胜的作业：</strong><ul>
+<li>避免可以简单地通过事实回忆或一般总结来回答的作业。人工智能擅长生成这些内容。需要分析、综合、评估和创造性问题解决等高级思维技能的作业不太容易受到人工智能直接生成的影响。</li>
+<li>纳入需要学生分析特定的复杂数据集或案例研究并得出自己独特结论的任务。这些作业需要批判性思维和解释，这超出了人工智能目前的能力。人工智能可以处理数据，但以新颖的方式细致地解释和应用研究结果通常需要人类的智慧。</li>
+<li>设计专注于写作过程本身的作业，包括草稿、基于反馈的修改以及对写作体验的思考。这些面向过程的任务评估学生在整个写作过程中的参与度和理解力。人工智能可以生成最终成果，但它本质上无法复制人类写作过程中发生的学习和完善的迭代过程。</li>
+<li>实施需要学生口头展示研究和想法的作业，从而实现实时对话和提问。口头展示可以揭示学生对书面论文之外的理解深度。人工智能可以生成脚本，但在自发和互动环境中阐明和捍卫想法的能力是人类理解的关键区分因素。</li>
+<li>开发需要整合人工智能无法以有意义的方式轻松创建或合成的多媒体元素（视频、录音、交互式视觉效果等）的作业。这些类型的作业需要超越人工智能文本生成重点的多样化技能和创造性投入。</li>
+<li>考虑“无评分”或替代评估方法，重点关注学习和成长，而不是仅仅关注论文的最终成绩。这可以将重点从创建完美的 AI 生成论文转移到真正参与教材。重视学习而不是成绩可以减轻使用 AI 来获得高分的压力。</li>
+</ul>
+</li>
+<li><strong>将写作过程整合为学习活动的核心：</strong><ul>
+<li>明确教授写作过程的各个阶段（构思、起草、修改、编辑、发表），并强调每个阶段的重要性。通过将写作分解为易于管理的步骤，学生不太可能感到不知所措，并且减少了他们通过人工智能寻找捷径的诱惑。</li>
+<li>在整个课程中纳入低风险的写作作业和活动，以逐步建立学生的信心和技能。定期练习可以提高写作能力，并减少对主要作业中人工智能的依赖。</li>
+<li>在写作过程的多个阶段提供同伴评审和反馈的机会。来自同事的建设性批评可以帮助学生识别需要改进的领域并发展自己的声音。</li>
+<li>提供关于草稿的详细指导反馈，重点关注想法的发展、分析和讨论，而不仅仅是语法和机制。引导学生进行更深入的思考和原创见解的反馈可以抵消他们依赖人工智能进行表面内容创作的倾向。</li>
+<li>整合研究技能指导，强调通过适当的引用和释义来道德地使用来源。对学术诚信和来源使用的强烈理解可以减少学生不当使用人工智能的可能性。</li>
+<li>鼓励学生将写作视为学习和探索想法的工具，而不仅仅是需要完成的任务。将写作视为智力发现的手段可以提高学生的参与度和原创性。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 赋予学生权力，超越人工智能依赖，完善和提高草稿质量</strong></p>
+<p><strong>培养强大的分析和批判性思维能力：</strong></p>
+<ul>
+<li>教导学生如何评估信息来源的偏见、可靠性和相关性。批判性评估技能对于做出自己的判断和超越人工智能生成的摘要至关重要。能够批判性地评估信息来源的学生更有能力发展自己的论点，而不是依赖人工智能的解释。</li>
+<li>鼓励学生对研究主题提出深入的问题，挑战假设并探索不同的观点。探索式学习可以培养更深入的理解和原创见解。提出问题并探索多个观点可以带来比人工智能通常提供的更细致的分析。</li>
+<li>模拟分析复杂信息并将多个信息来源的研究结果整合到连贯论证中的过程。关于分析和整合技能的明确指导对于超越人工智能生成的内容至关重要。通过展示如何将不同的信息联系起来以形成自己的论证，学生可以获得力量。</li>
+<li>纳入需要学生识别和评估证据的不同解释的活动。理解多个观点是批判性思维的重要方面。认识和分析不同的观点可以带来更完善和更不像人工智能的写作。</li>
+<li>鼓励学生在分析信息时反思自己的思维过程和偏见。自我意识可以提高分析的深度和原创性。认识到个人偏见可以实现更客观和细致的分析。</li>
+<li><strong>掌握详细解释和展开的技巧：</strong><ul>
+<li>教导学生使用“5W1H”（谁、什么、哪里、何时、为什么、如何）来用具体的细节展开想法。详细的解释为学术写作增添了深度和清晰度。由于人工智能生成的内容可能含糊不清，因此强调详细的解释可以使学生超越表面写作。</li>
+<li>展示如何通过在后续句子中坚持该想法来使用放大来展开早期想法。展开对于彻底发展一个观点至关重要。通过鼓励学生用支持性细节和推理来展开想法，他们的写作将比典型的人工智能输出更实质。</li>
+<li>鼓励使用具体的例子、类比和生动的描述来解释和阐明抽象概念。这些技巧使写作更具吸引力和易于理解。人工智能可能会做出一般的解释，但使用例证性技巧可以增加人性和更深入的理解。</li>
+<li>教导学生如何限制主张、承认局限性并在写作中添加细微差别和智力诚实。承认复杂性表明对主题有更深入的理解。虽然人工智能经常将信息呈现为确定性的，但教导限制可以增加人类判断和批判性思维的层次。</li>
+<li>模拟如何在学术写作中适当地诉诸情感，以与读者建立联系并使论证更有效。战略性地使用情感诉求可以提高参与度。虽然学术写作是正式的，但微妙的人际联系可以使写作更具说服力，更不像是机器人。</li>
+</ul>
+</li>
+<li><strong>论证的逻辑和连贯组织：</strong><ul>
+<li>强调引导整个论文的清晰且重点突出的论文的重要性。强有力的论文为读者和作者都提供了路线图。明确定义的论文表明清晰的理解和论证，人工智能更难在没有特定指导的情况下生成真正连贯的论文。</li>
+<li>教导学生学术论文的各种结构（时间顺序、比较&#x2F;对比、原因&#x2F;结果、问题&#x2F;解决方案）以及如何选择对论证最有效的结构。逻辑结构可以提高清晰度和说服力。通过理解不同的结构，学生可以以比人工智能默认执行的更完善的方式组织思想。</li>
+<li>强调每个段落的主题句的重要性，明确陈述要点并将其与论文联系起来。清晰的主题句可以提高段落的连贯性。精心制作的主题句表明清晰的推理，这可能是纯粹的人工智能生成文本所缺乏的。</li>
+<li>展示段落和章节之间有效过渡的使用，以使想法的流动更加顺畅。过渡在论文的不同部分之间创建逻辑联系。人工智能生成的文本可能缺乏以人类思维发展为特征的微妙过渡。</li>
+<li>强调段落内逻辑内部结构的必要性，其中证据支持主张，而主张最终支持论文。结构良好的段落对于强有力的论证至关重要。通过教导学生在段落级别逻辑地构建论证，可以帮助他们发展更强大且不依赖人工智能的写作。</li>
+<li>指导学生如何撰写有效的引言和结论，以构建论证并总结要点。但是，不要仅仅重复。强有力的引言和结论给读者留下持久的印象。通过教导学生创建超越基本总结的引人入胜的引言和结论，可以将他们的作品与人工智能生成的文本区分开来。</li>
+</ul>
+</li>
+<li><strong>将人性化的声音、细微差别和洞察力注入写作：</strong><ul>
+<li>鼓励学生使用主动语态写作，以创建更清晰和更直接的句子。主动语态通常使写作更具吸引力。由于人工智能可能会根据语境默认使用被动语态，因此鼓励主动语态可以增加更人性化的感觉。</li>
+<li>指导学生避免过度正式或机械的语言，并发展自己独特的写作风格和语调。个人风格使写作更具特色。由于人工智能经常生成平庸或通用的语言，因此培养个人声音可以使学生的写作脱颖而出。</li>
+<li>鼓励使用各种句子结构和句子长度，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然和引人入胜的节奏。句子的多样性可以提高可读性和流畅性。由于人工智能可能会始终如一地生成类似的句子结构，因此教导多样性可以使写作更人性化。</li>
+<li>鼓励学生在整个写作过程中融入自己的观点、见解和批判性分析，而不仅仅是总结或报告信息。原创见解是强大学术研究的证明。强调将自己对教材的“看法”添加到其中的重要性对于区分人类写作和人工智能的输出至关重要。</li>
+<li>鼓励使用适当的情感语言和个人轶事（如果相关且允许），以与读者建立联系并增加真实性。人际联系可以使写作更具影响力。由于人工智能通常缺乏真正的情感，因此融入适当的情感表达可以使写作更人性化。</li>
+<li>指导学生修改自己的作品，以消除人工智能生成的文本中常见的陈词滥调、术语（除非对读者来说是合适的）和过度通用的短语。准确和原创的语言可以增强写作。通过教导学生注意单词的选择并避免常见的人工智能模式，可以完善写作。</li>
+</ul>
+</li>
+<li><strong>提高学术严谨性的词汇和句子结构：</strong><ul>
+<li>鼓励学生通过广泛的阅读以及使用词库（谨慎且根据语境使用）、词汇日志等资源来增加词汇量。多样化的词汇可以提高准确性和精致度。虽然人工智能拥有庞大的词汇量，但教导学生深思熟虑地使用广泛的单词可以提高写作水平。</li>
+<li>教导学生有效地使用动词，而不是依赖名词化（由动词形成的名词），以使写作更主动和简洁。强有力的动词可以提高句子的清晰度。通过鼓励使用动词而不是名词，可以使写作更具活力，更不像人工智能。</li>
+<li>指导学生使用从属连词和关系代词来构建复杂的句子，以表达想法之间的细微关系。复杂的句子可以表达复杂的思想。由于人工智能可能会生成更简单的句子结构，因此教导复杂性可以提高学生的写作水平。</li>
+<li>强调正确使用准确且特定于领域的术语的重要性。准确的术语对于学术写作至关重要。虽然人工智能可以使用专业术语，但确保学生理解并正确应用它们可以表明真正的学习。</li>
+<li>提醒学生注意过度使用同义词，因为在科学写作中，为了清晰起见，首选一致的术语。术语的一致性可以避免混淆。虽然避免重复很重要，但在某些领域，一致地使用相同的术语比仅仅使词汇多样化更重要。</li>
+<li>教导学生通过释义、代词的使用和句子改写来有效地避免单词和短语的重复的技巧。避免不必要的重复可以提高可读性。人工智能可能会变得重复，但教导学生避免重复的有效技巧可以提高写作质量，而与人工智能检测无关。</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. 导航人工智能检测：学生和教育工作者的最佳实践</strong></p>
+<p><strong>理解人工智能检测工具的局限性和潜在偏见：</strong></p>
+<ul>
+<li>告知学生和教育工作者人工智能检测的根本机制（如第 2 节所述），并促进对人工智能检测的能力和局限性的现实理解。通过透明地了解这些工具的工作方式，可以管理期望并防止过度依赖其结果。</li>
+<li>强调人类撰写的文本（包括历史文献）被错误地标记为人工智能生成的假阳性案例。强调人工智能检测的结果应被视为指标，而不是人工智能使用的确凿证据。</li>
+<li>讨论基于训练数据的人工智能检测工具的潜在偏见。不同的 AI 模型和检测工具的准确性可能不同，并且更容易在特定类型的写作中产生假阳性。</li>
+<li>强调人工智能检测技术在不断发展，并且准确性可能因使用的 AI 写作模型和检测算法的精细程度而异。教育工作者需要随时了解 AI 写作和检测的最新发展。</li>
+<li>提醒不要将 AI 检测工具用作学术不端行为的唯一决定因素。相反，提倡一种全面的方法，评估作品的质量，评估学生对内容的理解，并考虑其他环境因素。多方面的评估方法比依赖单一技术工具更可靠。</li>
+<li><strong>适当引用和释义的重要作用：</strong><ul>
+<li>重申学术诚信的基本原则，以及通过适当的引用来表彰信息来源的重要性。无论是否使用了 AI，适当的引用都至关重要，并且仍然是学术诚信的基础。</li>
+<li>提供关于有效释义技巧的明确指导，而不仅仅是更改几个单词。强调需要用自己的话重写原始文本，并准确地表达其含义。掌握有效释义的学生不太可能被标记为 AI，并且可以展示对信息来源的更深入理解。</li>
+<li>解释释义、引用和总结之间的区别，以及每种方法何时合适。清晰地理解这些区别对于学术写作至关重要。了解何时以及如何有效地使用每种技巧有助于强有力的学术写作，并避免抄袭（或无意的 AI 式写作）。</li>
+<li>强调以所需的引用样式进行准确和完整引用的重要性。适当的引用使读者能够找到原始信息来源并验证信息。不准确或缺失的引用可能会发出危险信号，无论是否使用了 AI。</li>
+<li>建议学生在研究过程中保持对信息来源的细致记录，以确保准确的引用，并避免无意的抄袭或对 AI 依赖的怀疑。有组织的笔记对于道德研究至关重要。良好的研究习惯有助于学术诚信，并帮助学生避免 AI 误用或错误分类的陷阱。</li>
+</ul>
+</li>
+<li><strong>加强写作中人性化特征以避免错误分类的策略：</strong><ul>
+<li>鼓励学生将个人见解、独特的观点和原创分析注入写作中，超越 AI 容易获得的信息。AI 很难产生真正新颖的想法或主观解释。</li>
+<li>建议学生发展反映自己个性的清晰写作声音和风格，而不是采用通用或过度正式的语调。AI 经常生成缺乏强烈个人声音的文本。</li>
+<li>建议采用各种句子结构，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然的节奏。AI 可能会生成更均匀的句子结构。</li>
+<li>鼓励学生使用具体和细致的语言，避免过度依赖 AI 生成的文本中常见的通用单词和短语。AI 可能会默认使用通用词汇。</li>
+<li>建议学生纳入例子、轶事和个人思考（如果合适），以使写作更具吸引力和共鸣。AI 没有个人经验，并且很难生成真实的轶事。</li>
+<li>建议学生仔细审查和编辑 AI 辅助的草稿，以确保自然的流程、想法之间的逻辑联系，并避免重复的措辞或语调的急剧变化。人工编辑可以消除 AI 生成的文本中可能存在的矛盾。</li>
+<li>鼓励学生通过添加（在语境中适当的范围内）轻微的不完美或文体上的变化来“人性化”写作，以使文本“完美”而不是更真实的人性化。过度精致且语法完美的文本可能是 AI 的迹象。</li>
+</ul>
+</li>
+</ul>
+<p><strong>6. 结论：在智能机器时代培养学术诚信文化</strong></p>
+<p>重申尽量减少 AI 使用、提高学生写作水平和导航 AI 检测的主要策略。强调发展批判性思维、写作技能和对学术诚信的理解的重要性，采取积极主动的教育方法。强调教育工作者、学生和教育机构之间持续对话和合作的必要性，以适应教育中 AI 不断演变的情况。以强调学术追求中真实的人类思维和表达的持久价值的信息结束。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd">江湖笔者</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog1.jianghu.cfd/AIGC-thinkings/">https://blog1.jianghu.cfd/AIGC-thinkings/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog1.jianghu.cfd" target="_blank">江湖笔者玩电脑</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">大模型</a><a class="post-meta__tags" href="/tags/%E8%B0%B7%E6%AD%8CGemini/">谷歌Gemini</a><a class="post-meta__tags" href="/tags/DeepSeek/">DeepSeek</a><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/%E8%AE%BA%E6%96%87/">论文</a></div><div class="post-share"><div class="social-share" data-image="/img/ico.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/OpenRouter/" title="OpenRouter注册指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">OpenRouter注册指南</div></div><div class="info-2"><div class="info-item-1"> 免费用AI：OpenRouter注册指南引言OpenRouter.ai是一个聚合多种AI模型的平台，提供免费的API调用服务，包括Gemini 2.0和DeepSeek模型。本文将指导你如何注册OpenRouter.ai，获取免费API调用权限，并推荐实用的免费模型。  一、注册OpenRouter.ai注册前准备：一个邮箱，ChatBox软件 访问官网打开OpenRouter.ai。  创建账户    点击“Sign Up”，使用邮箱或第三方账户（如Google、GitHub）注册。 完成邮箱验证并登录。   生成API Key    登录后，进入API Keys页面。 点击“Generate New Key”生成API密钥。     二、获取免费API调用 在查找免费模型一步，点击任意一个免费模型，找到下图  点击创建APIkey，保存好后开始第三步，点击链接查看免费模型，后续步骤已写好   三、查找免费模型 免费模型列表  访问OpenRouter免费模型列表查看所有免费模型。   选择模型  在列表中选择Gemini 2.0、DeepSeek等免费模型。 点击“Use...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/OpenRouter/" title="OpenRouter注册指南"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-02-28</div><div class="info-item-2">OpenRouter注册指南</div></div><div class="info-2"><div class="info-item-1"> 免费用AI：OpenRouter注册指南引言OpenRouter.ai是一个聚合多种AI模型的平台，提供免费的API调用服务，包括Gemini 2.0和DeepSeek模型。本文将指导你如何注册OpenRouter.ai，获取免费API调用权限，并推荐实用的免费模型。  一、注册OpenRouter.ai注册前准备：一个邮箱，ChatBox软件 访问官网打开OpenRouter.ai。  创建账户    点击“Sign Up”，使用邮箱或第三方账户（如Google、GitHub）注册。 完成邮箱验证并登录。   生成API Key    登录后，进入API Keys页面。 点击“Generate New Key”生成API密钥。     二、获取免费API调用 在查找免费模型一步，点击任意一个免费模型，找到下图  点击创建APIkey，保存好后开始第三步，点击链接查看免费模型，后续步骤已写好   三、查找免费模型 免费模型列表  访问OpenRouter免费模型列表查看所有免费模型。   选择模型  在列表中选择Gemini 2.0、DeepSeek等免费模型。 点击“Use...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/ico.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">江湖笔者</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%8D%E4%BD%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AE%BA%E6%96%87%E6%AF%94%E7%8E%87%E3%80%81%E6%94%B9%E8%BF%9B%E8%AE%BA%E6%96%87%E5%88%9D%E7%A8%BF%E4%BB%A5%E5%8F%8A%E9%80%9A%E8%BF%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%A3%80%E6%B5%8B%E7%A8%8B%E5%BA%8F%E8%A7%84%E9%81%BF%E8%AF%86%E5%88%AB%E7%9A%84%E7%AD%96%E7%95%A5"><span class="toc-number">1.</span> <span class="toc-text">降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/AIGC-thinkings/" title="AIGC降重和论文改进的策略思考">AIGC降重和论文改进的策略思考</a><time datetime="2025-03-15T08:17:47.000Z" title="发表于 2025-03-15 16:17:47">2025-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/OpenRouter/" title="OpenRouter注册指南">OpenRouter注册指南</a><time datetime="2025-02-28T08:17:47.000Z" title="发表于 2025-02-28 16:17:47">2025-02-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/via/" title="via如何下载，以及拦截广告？一篇文章教会你">via如何下载，以及拦截广告？一篇文章教会你</a><time datetime="2024-11-30T04:59:21.000Z" title="发表于 2024-11-30 12:59:21">2024-11-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/kimiai/" title="AI教你生成ppt，高效简约速度快，主要还能自定义！">AI教你生成ppt，高效简约速度快，主要还能自定义！</a><time datetime="2024-11-23T05:25:27.000Z" title="发表于 2024-11-23 13:25:27">2024-11-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/index/" title="本站说明:迅速熟悉本站的用法">本站说明:迅速熟悉本站的用法</a><time datetime="2024-11-21T12:15:47.000Z" title="发表于 2024-11-21 20:15:47">2024-11-21</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By 江湖笔者</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一个简单的频道</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://pinglun.yanyujiangnan.site/',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      comment: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"defer></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="一个,简单的,频道" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

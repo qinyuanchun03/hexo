@@ -1,195 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>十分钟速成个人节点：支持ChatGPT</title>
-    <url>//vpn1/</url>
-    <content><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<p><a href="https://halos.xtstudy.site/archives/uskg">注册视频教学</a></p>
-<p><strong><a href="https://register.us.kg/">uskg官网</a></strong></p>
-<p>注册教程参考<strong>以下文章</strong>：<a href="https://blog.ioacx.com/us-kg-free-doamin/">点击前往</a></p>
-<p>邮箱推荐：<strong>outlook，gmail</strong></p>
-<p>注册方法不过多缀述</p>
-<h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></p>
-<p>登录之后，来到dash页面，<strong>点击workers and pages</strong></p>
-<h3 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h3><p><strong>github项目地址</strong>：<a href="https://github.com/cmliu/edgetunnel">点击前往</a></p>
-<p><strong>项目已经为大家配置了教学，大家只需要观看文档说明即可！</strong></p>
-<blockquote>
-<p>这里列出需要用到的信息</p>
-<p><strong>ProxyIP合集</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">ProxyIP</th>
-<th align="center">落地区域</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">ProxylP.US.fxxk.dedyn.io</td>
-<td align="center">美国</td>
-</tr>
-<tr>
-<td align="center">ProxylPSG.fxxk.dedyn.io</td>
-<td align="center">新加坡</td>
-</tr>
-<tr>
-<td align="center">ProxylPJP.fxxk.dedyn.io</td>
-<td align="center">日本</td>
-</tr>
-<tr>
-<td align="center">ProxylP.HK.fxxk.dedyn.io</td>
-<td align="center">香港</td>
-</tr>
-<tr>
-<td align="center">ProxyIP.KR.fxxk.dedyn.io</td>
-<td align="center">韩国</td>
-</tr>
-<tr>
-<td align="center">ProxylP.DE.tp2024.fxxk.dedyn.io GPT</td>
-<td align="center">德国ChatGPT专用</td>
-</tr>
-<tr>
-<td align="center">ProxyIP.Aliyun.fxxk.dedyn.io</td>
-<td align="center">阿里云</td>
-</tr>
-<tr>
-<td align="center">ProxylPOracle.fxxk.dedyn.io</td>
-<td align="center">甲骨文</td>
-</tr>
-<tr>
-<td align="center">hk.ipdb.rr.nu</td>
-<td align="center">第三方维护</td>
-</tr>
-</tbody></table>
-</blockquote>
-<h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><h3 id="CFWorkers"><a href="#CFWorkers" class="headerlink" title="CFWorkers"></a>CFWorkers</h3><ol>
-<li>复制仓库里Workers.js的代码，粘贴到你创建好的workers里面，保存并部署</li>
-<li>UUID在线生成：<a href="https://1024tools.com/uuid">点击前往</a></li>
-<li>在设置里面添加变量：UUID，输入生成的UUID，保存</li>
-<li>添加自定义域，输入一个前缀.你的域名</li>
-<li>访问自定义域名：<strong>格式如下：你的自定义域名&#x2F;UUID</strong></li>
-<li>复制页面的订阅链接就可以导入你的订阅软件了</li>
-</ol>
-<h2 id="开始你的尝试吧！"><a href="#开始你的尝试吧！" class="headerlink" title="开始你的尝试吧！"></a>开始你的尝试吧！</h2><h1 id="进阶教学"><a href="#进阶教学" class="headerlink" title="进阶教学"></a>进阶教学</h1><h2 id="自定义节点订阅器："><a href="#自定义节点订阅器：" class="headerlink" title="自定义节点订阅器："></a>自定义节点订阅器：</h2><p>首先在你的订阅页面复制订阅链接，然后在https:&#x2F;&#x2F;你的域名&#x2F;uuid？sub后面加上&#x3D;订阅器地址</p>
-<blockquote>
-<p>这里列出几个订阅器地址</p>
-<p>周润发大佬线路：<strong>vless.durl.nyc.mn</strong></p>
-<p>3K大佬线路：<strong>3k.fxxk.dedyn.io</strong></p>
-<p>CM优选线路：<strong>VLESS.fxxk.dedyn.io</strong></p>
-</blockquote>
-<p>如你的域名是b.cd，uuid为123，那么格式如下</p>
-<p><strong><a href="https://b.cd/123?sub=vless.durl.nyc.mn">https://b.cd/123?sub=vless.durl.nyc.mn</a></strong></p>
-<p><strong>操作时把域名和你的uuid改为你在workers设置的即可导入订阅</strong></p>
-<p>导入订阅以后，更新一次订阅即可刷新节点</p>
-<h2 id="指定ip落地的地区"><a href="#指定ip落地的地区" class="headerlink" title="指定ip落地的地区"></a>指定ip落地的地区</h2><p>在workers里面添加变量，命名为 <strong>ProxyIP</strong>，输入上方 ProxyIP的列表之一，你的订阅在使用的时候，就会落到 ProxyIP指定的区域，如使用:<strong>hk.ipdb.rr.nu</strong>，在你测试ip的时候就会落到香港，根据你的需要更改ProxyIP的地址即可随时随地进行自定义操作</p>
-<p>该操作不能和线路优选混用</p>
-<h2 id="一些第三方ProxyIP"><a href="#一些第三方ProxyIP" class="headerlink" title="一些第三方ProxyIP"></a>一些第三方ProxyIP</h2><p>由第三方维护的ProxyIP</p>
-<blockquote>
-<p>第二万维护 Proxyimy-telegram-is-herocore.onecf.eu.org</p>
-<p>Mingyu维护</p>
-<p>sg.ipdb.rr.nu</p>
-<p>nl.ipdb.rr.nu</p>
-<p>hk.ipdb.rr.nu</p>
-<p>jp.ipdb.rr.nu</p>
-<p>us.ipdb.rr.nu</p>
-<p>小一维护</p>
-<p>hk.cf.zhetengsha.eu.org</p>
-<p>sg.cf.zhetengsha.eu.org</p>
-<p>us.cf.zhetengsha.eu.org</p>
-<p>jp.ct.zhetengsha.eu.org</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
-    <url>//email-to-chatgpt/</url>
-    <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
-<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
-<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
-<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
-<thead>
-<tr>
-<th align="center">站点</th>
-<th align="center">链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">CloudFllare注册</td>
-<td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">ChatGPT注册</td>
-<td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">outlook邮箱申请</td>
-<td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-<h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p>
-<h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p>
-<h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p>
-<h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p>
-<h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p>
-<p><strong>点击“电子邮件”开始设置</strong></p>
-<h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p>
-<h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还在用盗版免费加速器？快来这里看看吧！</title>
-    <url>//free-personal-node/</url>
-    <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
-<p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
-<ol>
-<li>连通性，是否适合三大运营商</li>
-<li>节点的流媒体解锁：是否支持GPT</li>
-<li>价格不高，且达到1，2两点</li>
-<li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li>
-</ol>
-<h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p>
-<h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p>
-<h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p>
-<p>推荐列表放在最后</p>
-<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table>
-<thead>
-<tr>
-<th align="center">节点推荐</th>
-<th align="center">价格</th>
-<th align="center">类型</th>
-<th align="center">是否支持GPT</th>
-<th align="center">购买链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">一分机场</td>
-<td align="center">2&#x2F;月</td>
-<td align="center">直连</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td>
-</tr>
-<tr>
-<td align="center">69云</td>
-<td align="center">6.9&#x2F;月</td>
-<td align="center">中转</td>
-<td align="center">支持</td>
-<td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>ChatGPT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本站说明:迅速熟悉本站的用法</title>
     <url>//index/</url>
     <content><![CDATA[<h1 id="认识主页面"><a href="#认识主页面" class="headerlink" title="认识主页面"></a>认识主页面</h1><h2 id="打开本站后，你会看到这样的页面"><a href="#打开本站后，你会看到这样的页面" class="headerlink" title="打开本站后，你会看到这样的页面"></a>打开本站后，你会看到这样的页面</h2><p>只需要记住这两个必要的按钮的作用即可！</p>
@@ -209,72 +20,136 @@
       </tags>
   </entry>
   <entry>
-    <title>大学生的好帮手：OCS</title>
-    <url>//ocs/</url>
-    <content><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p>
-<p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p>
-<h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p>
-<p><a href="https://docs.ocsjs.com/docs/about">官方文档</a></p>
-<p>点击 <strong>官方文档 ，</strong> 开始你的批量化刷课之路吧！</p>
-<h2 id="OCS官网"><a href="#OCS官网" class="headerlink" title="OCS官网"></a>OCS官网</h2><p>首先，你了解一款工具或软件，要知道他的官网或者官方渠道，这里给大家提供了OCS的官网界面，供大家识别正版！！</p>
-<p><img src="/imgs/ocs/ocs%E5%AE%98%E7%BD%91.png"></p>
-<h2 id="开始阅读文档"><a href="#开始阅读文档" class="headerlink" title="开始阅读文档"></a>开始阅读文档</h2><p>点击<strong>点击查看使用教程</strong>，开始阅读他的文档<br>随后来到这个页面</p>
-<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B.png"></p>
-<p><strong>这里已经写好了左右资料的链接，供你点击</strong><br>我们需要下载他的软件，那么需要点击<strong>左侧的软件教程</strong><br><strong>如图所示，软件教程界面提供了快速链接：如下载，教程等</strong></p>
-<p>根据目录选择你需要的操作，如下载安装程序</p>
-<p>这里是下载列表<strong>根据你自己的系统选择</strong></p>
-<p><img src="/imgs/ocs/xiazai.png"></p>
-<p>这里列出win系统的链接<strong>点击即可下载</strong><br><strong>点击这里→<a href="https://cdn.ocsjs.com/app/download/ocs-2.6.7-setup-win-x64.exe">下载</a></strong></p>
-<h2 id="补充运行库"><a href="#补充运行库" class="headerlink" title="补充运行库"></a>补充运行库</h2><p><strong>这一步为了防止安装过程出现报错</strong>，需要下载<strong>微软运行库合集</strong><br>如果不知道去哪里下载，可以通过本文推荐的系统之家下载安装包<br><strong>系统之家下载地址：<a href="https://www.xitongzhijia.net/soft/289196.html">点击前往</a></strong><br><strong>安装程序界面如下</strong></p>
-<p><img src="/imgs/ocs/%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85.png"></p>
-<p>一路下一步安装即可</p>
-<h2 id="下载OCS助手"><a href="#下载OCS助手" class="headerlink" title="下载OCS助手"></a>下载OCS助手</h2><p>上面已经给出了下载链接，和运行库链接，做好准备步骤，即可开始安装ocs助手<br>下载好安装程序，双击运行即可</p>
-<p><img src="/imgs/ocs/ocs%E5%AE%89%E8%A3%85.png"></p>
-<p><strong>注意：路径可以修改，如我把默认的C盘路径改成了D盘</strong><br>随后安装即可<br>安装完直接运行即可</p>
-<h2 id="初次运行OCS"><a href="#初次运行OCS" class="headerlink" title="初次运行OCS"></a>初次运行OCS</h2><p><strong>第一次使用软件，需要进行初始化配置，按照图中默认的设置即可</strong></p>
-<p><strong>点击一键初始化</strong></p>
-<p><img src="/imgs/ocs/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE.png"></p>
-<p><strong>注意，初始化完成后，需要重启软件！！！（会有提示，点击立即重启即可)</strong></p>
-<h2 id="配置题库"><a href="#配置题库" class="headerlink" title="配置题库"></a>配置题库</h2><p><strong>OCS内置了作者的enncy题库，地址：<a href="https://tk.enncy.cn/">enncy题库</a></strong><br>这里给大家列出价格，<strong>（题库需要付费购买）</strong></p>
-<table>
-<thead>
-<tr>
-<th>价格</th>
-<th>次数</th>
-<th>购买建议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1米</td>
-<td>100</td>
-<td>尝鲜，测试OCS</td>
-</tr>
-<tr>
-<td>5米</td>
-<td>2000</td>
-<td>有较多课程：如选修课，需要一直答题</td>
-</tr>
-<tr>
-<td>20米</td>
-<td>10000</td>
-<td>课程很多，或组团购买，批量刷课</td>
-</tr>
-</tbody></table>
-<p><strong>根据你个人的需要，合理选择购买方案</strong></p>
-<h3 id="注册题库需要准备的：一个可用的邮箱"><a href="#注册题库需要准备的：一个可用的邮箱" class="headerlink" title="注册题库需要准备的：一个可用的邮箱"></a>注册题库需要准备的：一个可用的邮箱</h3><p>没有账号可以用邮箱注册一个，然后去购买</p>
-<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在如图所示的界面，复制你的题库配置<br>上方胡显示<strong>你的做题次数，，已使用次数，成功次数，成功率</strong>等信息，下方的内容中需要选择你的题库配置<strong>复制第二个</strong><br><img src="/imgs/ocs/tiku.png"></p>
-<h3 id="回到软件"><a href="#回到软件" class="headerlink" title="回到软件"></a>回到软件</h3><p>回到软件，点击<strong>软件设置→OCS配置，点击通用，即可找到配置页面</strong><br>配置页面下，找到题库配置（旁边的开关是把这些设置应用到所有的任务）</p>
-<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE.png"></p>
-<p>点一下<strong>点击配置</strong><br>把你在题库网页复制的<strong>题库配置</strong>，粘贴进去，保存配置即可<br><strong>保存后，出现这个界面即配置成功！！</strong></p>
-<p><img src="/imgs/ocs/%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png"></p>
-<h2 id="关于脚本不能正常显示的问题"><a href="#关于脚本不能正常显示的问题" class="headerlink" title="关于脚本不能正常显示的问题"></a>关于脚本不能正常显示的问题</h2><p>根据作者的说法：是因为浏览器的api更新导致的冲突导致脚本不运行，<strong>解决办法是：把篡改猴换成脚本猫</strong></p>
-<h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p><strong>视频引用自ocs官网</strong></p>
-<iframe height="350" width="450" src="https://cdn.ocsjs.com/app/resources/video/app-use-guide.mp4" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-bottom: 20px; color: rgb(85, 85, 85); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
-
-<p>如果本期内容对你有所帮助，可以在评论区留下你的痕迹！！<br><strong>作者邮箱：<a href="mailto:crazy2403@outlook.com">crazy2403@outlook.com</a></strong><br><strong>vx公众号：烟雨江南的小窝</strong></p>
+    <title>AIGC降重和论文改进的策略思考</title>
+    <url>//AIGC-thinkings/</url>
+    <content><![CDATA[<h1 id="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略"><a href="#降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略" class="headerlink" title="降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略"></a><strong>降低人工智能论文比率、改进论文初稿以及通过人工智能检测程序规避识别的策略</strong></h1><p><strong>1. 学术论文中人工智能不断演变的情况：挑战与思考</strong></p>
+<p>近年来，包括 ChatGPT 在内的高级人工智能写作工具的迅速普及以及学生对这些工具的使用增加，对学术界产生了重大影响。这些工具的易用性和强大功能让学生在处理学术任务时很容易依赖它们。因此，传统上严重依赖书面论文的评估方法面临挑战。由于人工智能现在可以生成表面上原创的内容，教育工作者需要重新思考传统的评估方法，将其作为衡量学生理解和努力程度的标准。</p>
+<p>人工智能的使用是一把双刃剑，它既有潜力辅助学习，也存在学术不端行为的风险。人工智能可以成为辅助头脑风暴、创建大纲和改进现有文本等任务的工具，但也可能被滥用以生成整个作业。因此，我们需要明确的指导方针和教学方法，以便在利用人工智能有益的方面的同时，减轻学术不端行为的风险。</p>
+<p>此外，区分人类撰写的文本和人工智能生成的文本变得越来越困难。由于人工智能模型模仿人类写作风格的能力不断提高，仅仅依靠手动检测变得越来越不可靠。</p>
+<p><strong>2. 人工智能检测的剖析：这些工具如何识别人工智能生成的文本</strong></p>
+<p>人工智能检测工具基于与人工智能写作工具使用的类似的语言模型运行，分析文本中人工智能生成内容特有的统计模式和语言特征。这些模型本质上会检查输入，并询问“这会是我写的那种文章吗？”如果答案是“是”，则得出结论，该文本很可能是由人工智能生成的。这种相似性导致人工智能写作的进步需要人工智能检测的进步，从而形成持续的“猫捉老鼠”游戏。</p>
+<p>人工智能检测工具采用的主要分析方法包括：</p>
+<ul>
+<li>**困惑度 (Perplexity)**：衡量文本的不可预测性或随机性。与人类撰写的文本（不可预测、有创造力，可能包含错误）相比，人工智能倾向于生成困惑度较低（更可预测、更流畅）的文本。然而，虽然低困惑度是一个指标，但无意义的人类文本也可能具有高困惑度，这可能导致人工智能文本未被标记为人类文本（假阴性），或者人类文本被标记为人工智能文本（假阳性）。</li>
+<li>**突发性 (Burstiness)**：衡量句子结构和句子长度的变化。与人类撰写的文本相比，人工智能倾向于生成突发性较低（变化较少）、更单调的文本。鼓励学生多样化句子结构和句子长度可以使他们的写作更容易被人工智能检测工具识别为人类写作。</li>
+<li><strong>词频分析</strong>：识别最常见的单词。过度重复和缺乏变化可能表明是人工智能生成。教导学生使用多样化的词汇并避免过度依赖常用词是减轻人工智能检测标记风险的一种策略。</li>
+<li><strong>N-gram 分析</strong>：检查单词序列以识别常见的语言模式。人类写作往往具有更多样化的 N-gram。鼓励学生使用更具创造性和非陈词滥调的措辞可以降低被标记为人工智能生成的可能性。</li>
+<li><strong>句法分析</strong>：检查句子的语法结构。人工智能可能使用统一的模式，而人类写作则表现出更大的复杂性。在学生的写作中强调复杂的句子结构和多样化的语法模式可以将其与典型的人工智能输出区分开来。</li>
+<li><strong>语义分析</strong>：分析单词和短语的含义，包括比喻和文化参考等细微差别。人工智能可能会错误地解释或忽略文本中的这些细微差别，而人类写作则表现出更深层次的、特定于语境的含义。需要对特定语境的含义进行细致理解和应用的作业将更难让人工智能在没有类似人类的错误的情况下成功完成。</li>
+<li>**嵌入 (Embedding)**：将单词表示为向量以显示语义关系，帮助人工智能理解语境。虽然人工智能使用嵌入，但人类自然地将语境和含义融入写作的方式仍然可以是一个区分因素。</li>
+<li>**分类器 (Classifier)**：一种在标记数据（人类 vs. 人工智能）上训练的机器学习模型，用于对新文本进行分类。分类器的准确性在很大程度上取决于训练数据和人工智能生成文本不断演变的模式，这可能会导致不准确。</li>
+<li>**水印 (Watermarking)**：作为未来确定性人工智能检测方法的概念也被提出。虽然这很有前景，但该技术仍在开发中，尚未得到广泛应用。</li>
+</ul>
+<p>人工智能检测工具和抄袭检查器具有不同的目标和方法。人工智能检测工具寻找类似人工智能的特征，而抄袭检查器则将文本与现有来源的数据库进行比较。学生需要理解这些差异，并认识到人工智能生成的内容可能会因与现有在线文本的相似性而被抄袭检查器标记。</p>
+<p>手动检测涉及注意单调的写作、可预测的语言、缺乏句子结构变化以及过度使用对冲语言。培训教育工作者和学生识别这些模式是一种有价值的补充方法，尤其是在与人工智能检测工具和其他评估策略结合使用时。</p>
+<p><strong>3. 尽量减少学术论文中人工智能生成利用的主动策略</strong></p>
+<p><strong>培养原创思维和想法：</strong></p>
+<ul>
+<li>在可能利用人工智能之前，强调让学生产生自己想法的写作前活动。自由写作、头脑风暴、聚类和维护个人日志等技术可以培养原创思维。这些活动可以帮助学生利用自己的知识和观点，减少他们最初依赖人工智能生成内容的倾向。首先关注想法的产生可以使学生更深入地参与自己的想法。</li>
+<li>鼓励学生积极分析作业和课程材料，并发展自己独特的解释和问题。提出关于作业的目的、受众和所需任务的关键问题可以激发自主思考。通过深入理解作业的细微差别，人工智能更难在没有学生大量指导的情况下创建真正相关且富有洞察力的回答。</li>
+<li>促进“畅谈”或协作讨论，作为集思广益和完善自己观点的一种方式。同伴互动可以产生新的见解，并帮助学生阐明自己的想法。协作环境鼓励积极参与教材，并发展人工智能可能难以复制的独特观点。</li>
+<li>整合需要将课程概念与自己的经验、观察和信念联系起来的活动。鼓励反思性写作或个人联系的作业可以培养原创性。由于人工智能没有个人经验或主观观点，因此利用这些领域的作业更能抵抗人工智能驱动的内容。</li>
+<li>鼓励使用图表、列表和其他视觉方法来组织思想并识别思想之间的联系。这些技术可以帮助学生全面理解主题及其独特的处理方式。想法的视觉组织可以揭示纯粹基于文本的人工智能生成可能会遗漏的非线性联系和见解。</li>
+<li>在课堂上模拟发展想法的过程，展示如何从一般主题过渡到具体和原创的讨论。明确的指导和示例可以指导学生自己的想法生成。向学生展示想法发展的“幕后花絮”可以使该过程更加清晰，并减少他们依赖人工智能作为捷径的倾向。</li>
+<li><strong>设计本质上引人入胜的作业：</strong><ul>
+<li>避免可以简单地通过事实回忆或一般总结来回答的作业。人工智能擅长生成这些内容。需要分析、综合、评估和创造性问题解决等高级思维技能的作业不太容易受到人工智能直接生成的影响。</li>
+<li>纳入需要学生分析特定的复杂数据集或案例研究并得出自己独特结论的任务。这些作业需要批判性思维和解释，这超出了人工智能目前的能力。人工智能可以处理数据，但以新颖的方式细致地解释和应用研究结果通常需要人类的智慧。</li>
+<li>设计专注于写作过程本身的作业，包括草稿、基于反馈的修改以及对写作体验的思考。这些面向过程的任务评估学生在整个写作过程中的参与度和理解力。人工智能可以生成最终成果，但它本质上无法复制人类写作过程中发生的学习和完善的迭代过程。</li>
+<li>实施需要学生口头展示研究和想法的作业，从而实现实时对话和提问。口头展示可以揭示学生对书面论文之外的理解深度。人工智能可以生成脚本，但在自发和互动环境中阐明和捍卫想法的能力是人类理解的关键区分因素。</li>
+<li>开发需要整合人工智能无法以有意义的方式轻松创建或合成的多媒体元素（视频、录音、交互式视觉效果等）的作业。这些类型的作业需要超越人工智能文本生成重点的多样化技能和创造性投入。</li>
+<li>考虑“无评分”或替代评估方法，重点关注学习和成长，而不是仅仅关注论文的最终成绩。这可以将重点从创建完美的 AI 生成论文转移到真正参与教材。重视学习而不是成绩可以减轻使用 AI 来获得高分的压力。</li>
+</ul>
+</li>
+<li><strong>将写作过程整合为学习活动的核心：</strong><ul>
+<li>明确教授写作过程的各个阶段（构思、起草、修改、编辑、发表），并强调每个阶段的重要性。通过将写作分解为易于管理的步骤，学生不太可能感到不知所措，并且减少了他们通过人工智能寻找捷径的诱惑。</li>
+<li>在整个课程中纳入低风险的写作作业和活动，以逐步建立学生的信心和技能。定期练习可以提高写作能力，并减少对主要作业中人工智能的依赖。</li>
+<li>在写作过程的多个阶段提供同伴评审和反馈的机会。来自同事的建设性批评可以帮助学生识别需要改进的领域并发展自己的声音。</li>
+<li>提供关于草稿的详细指导反馈，重点关注想法的发展、分析和讨论，而不仅仅是语法和机制。引导学生进行更深入的思考和原创见解的反馈可以抵消他们依赖人工智能进行表面内容创作的倾向。</li>
+<li>整合研究技能指导，强调通过适当的引用和释义来道德地使用来源。对学术诚信和来源使用的强烈理解可以减少学生不当使用人工智能的可能性。</li>
+<li>鼓励学生将写作视为学习和探索想法的工具，而不仅仅是需要完成的任务。将写作视为智力发现的手段可以提高学生的参与度和原创性。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 赋予学生权力，超越人工智能依赖，完善和提高草稿质量</strong></p>
+<p><strong>培养强大的分析和批判性思维能力：</strong></p>
+<ul>
+<li>教导学生如何评估信息来源的偏见、可靠性和相关性。批判性评估技能对于做出自己的判断和超越人工智能生成的摘要至关重要。能够批判性地评估信息来源的学生更有能力发展自己的论点，而不是依赖人工智能的解释。</li>
+<li>鼓励学生对研究主题提出深入的问题，挑战假设并探索不同的观点。探索式学习可以培养更深入的理解和原创见解。提出问题并探索多个观点可以带来比人工智能通常提供的更细致的分析。</li>
+<li>模拟分析复杂信息并将多个信息来源的研究结果整合到连贯论证中的过程。关于分析和整合技能的明确指导对于超越人工智能生成的内容至关重要。通过展示如何将不同的信息联系起来以形成自己的论证，学生可以获得力量。</li>
+<li>纳入需要学生识别和评估证据的不同解释的活动。理解多个观点是批判性思维的重要方面。认识和分析不同的观点可以带来更完善和更不像人工智能的写作。</li>
+<li>鼓励学生在分析信息时反思自己的思维过程和偏见。自我意识可以提高分析的深度和原创性。认识到个人偏见可以实现更客观和细致的分析。</li>
+<li><strong>掌握详细解释和展开的技巧：</strong><ul>
+<li>教导学生使用“5W1H”（谁、什么、哪里、何时、为什么、如何）来用具体的细节展开想法。详细的解释为学术写作增添了深度和清晰度。由于人工智能生成的内容可能含糊不清，因此强调详细的解释可以使学生超越表面写作。</li>
+<li>展示如何通过在后续句子中坚持该想法来使用放大来展开早期想法。展开对于彻底发展一个观点至关重要。通过鼓励学生用支持性细节和推理来展开想法，他们的写作将比典型的人工智能输出更实质。</li>
+<li>鼓励使用具体的例子、类比和生动的描述来解释和阐明抽象概念。这些技巧使写作更具吸引力和易于理解。人工智能可能会做出一般的解释，但使用例证性技巧可以增加人性和更深入的理解。</li>
+<li>教导学生如何限制主张、承认局限性并在写作中添加细微差别和智力诚实。承认复杂性表明对主题有更深入的理解。虽然人工智能经常将信息呈现为确定性的，但教导限制可以增加人类判断和批判性思维的层次。</li>
+<li>模拟如何在学术写作中适当地诉诸情感，以与读者建立联系并使论证更有效。战略性地使用情感诉求可以提高参与度。虽然学术写作是正式的，但微妙的人际联系可以使写作更具说服力，更不像是机器人。</li>
+</ul>
+</li>
+<li><strong>论证的逻辑和连贯组织：</strong><ul>
+<li>强调引导整个论文的清晰且重点突出的论文的重要性。强有力的论文为读者和作者都提供了路线图。明确定义的论文表明清晰的理解和论证，人工智能更难在没有特定指导的情况下生成真正连贯的论文。</li>
+<li>教导学生学术论文的各种结构（时间顺序、比较&#x2F;对比、原因&#x2F;结果、问题&#x2F;解决方案）以及如何选择对论证最有效的结构。逻辑结构可以提高清晰度和说服力。通过理解不同的结构，学生可以以比人工智能默认执行的更完善的方式组织思想。</li>
+<li>强调每个段落的主题句的重要性，明确陈述要点并将其与论文联系起来。清晰的主题句可以提高段落的连贯性。精心制作的主题句表明清晰的推理，这可能是纯粹的人工智能生成文本所缺乏的。</li>
+<li>展示段落和章节之间有效过渡的使用，以使想法的流动更加顺畅。过渡在论文的不同部分之间创建逻辑联系。人工智能生成的文本可能缺乏以人类思维发展为特征的微妙过渡。</li>
+<li>强调段落内逻辑内部结构的必要性，其中证据支持主张，而主张最终支持论文。结构良好的段落对于强有力的论证至关重要。通过教导学生在段落级别逻辑地构建论证，可以帮助他们发展更强大且不依赖人工智能的写作。</li>
+<li>指导学生如何撰写有效的引言和结论，以构建论证并总结要点。但是，不要仅仅重复。强有力的引言和结论给读者留下持久的印象。通过教导学生创建超越基本总结的引人入胜的引言和结论，可以将他们的作品与人工智能生成的文本区分开来。</li>
+</ul>
+</li>
+<li><strong>将人性化的声音、细微差别和洞察力注入写作：</strong><ul>
+<li>鼓励学生使用主动语态写作，以创建更清晰和更直接的句子。主动语态通常使写作更具吸引力。由于人工智能可能会根据语境默认使用被动语态，因此鼓励主动语态可以增加更人性化的感觉。</li>
+<li>指导学生避免过度正式或机械的语言，并发展自己独特的写作风格和语调。个人风格使写作更具特色。由于人工智能经常生成平庸或通用的语言，因此培养个人声音可以使学生的写作脱颖而出。</li>
+<li>鼓励使用各种句子结构和句子长度，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然和引人入胜的节奏。句子的多样性可以提高可读性和流畅性。由于人工智能可能会始终如一地生成类似的句子结构，因此教导多样性可以使写作更人性化。</li>
+<li>鼓励学生在整个写作过程中融入自己的观点、见解和批判性分析，而不仅仅是总结或报告信息。原创见解是强大学术研究的证明。强调将自己对教材的“看法”添加到其中的重要性对于区分人类写作和人工智能的输出至关重要。</li>
+<li>鼓励使用适当的情感语言和个人轶事（如果相关且允许），以与读者建立联系并增加真实性。人际联系可以使写作更具影响力。由于人工智能通常缺乏真正的情感，因此融入适当的情感表达可以使写作更人性化。</li>
+<li>指导学生修改自己的作品，以消除人工智能生成的文本中常见的陈词滥调、术语（除非对读者来说是合适的）和过度通用的短语。准确和原创的语言可以增强写作。通过教导学生注意单词的选择并避免常见的人工智能模式，可以完善写作。</li>
+</ul>
+</li>
+<li><strong>提高学术严谨性的词汇和句子结构：</strong><ul>
+<li>鼓励学生通过广泛的阅读以及使用词库（谨慎且根据语境使用）、词汇日志等资源来增加词汇量。多样化的词汇可以提高准确性和精致度。虽然人工智能拥有庞大的词汇量，但教导学生深思熟虑地使用广泛的单词可以提高写作水平。</li>
+<li>教导学生有效地使用动词，而不是依赖名词化（由动词形成的名词），以使写作更主动和简洁。强有力的动词可以提高句子的清晰度。通过鼓励使用动词而不是名词，可以使写作更具活力，更不像人工智能。</li>
+<li>指导学生使用从属连词和关系代词来构建复杂的句子，以表达想法之间的细微关系。复杂的句子可以表达复杂的思想。由于人工智能可能会生成更简单的句子结构，因此教导复杂性可以提高学生的写作水平。</li>
+<li>强调正确使用准确且特定于领域的术语的重要性。准确的术语对于学术写作至关重要。虽然人工智能可以使用专业术语，但确保学生理解并正确应用它们可以表明真正的学习。</li>
+<li>提醒学生注意过度使用同义词，因为在科学写作中，为了清晰起见，首选一致的术语。术语的一致性可以避免混淆。虽然避免重复很重要，但在某些领域，一致地使用相同的术语比仅仅使词汇多样化更重要。</li>
+<li>教导学生通过释义、代词的使用和句子改写来有效地避免单词和短语的重复的技巧。避免不必要的重复可以提高可读性。人工智能可能会变得重复，但教导学生避免重复的有效技巧可以提高写作质量，而与人工智能检测无关。</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. 导航人工智能检测：学生和教育工作者的最佳实践</strong></p>
+<p><strong>理解人工智能检测工具的局限性和潜在偏见：</strong></p>
+<ul>
+<li>告知学生和教育工作者人工智能检测的根本机制（如第 2 节所述），并促进对人工智能检测的能力和局限性的现实理解。通过透明地了解这些工具的工作方式，可以管理期望并防止过度依赖其结果。</li>
+<li>强调人类撰写的文本（包括历史文献）被错误地标记为人工智能生成的假阳性案例。强调人工智能检测的结果应被视为指标，而不是人工智能使用的确凿证据。</li>
+<li>讨论基于训练数据的人工智能检测工具的潜在偏见。不同的 AI 模型和检测工具的准确性可能不同，并且更容易在特定类型的写作中产生假阳性。</li>
+<li>强调人工智能检测技术在不断发展，并且准确性可能因使用的 AI 写作模型和检测算法的精细程度而异。教育工作者需要随时了解 AI 写作和检测的最新发展。</li>
+<li>提醒不要将 AI 检测工具用作学术不端行为的唯一决定因素。相反，提倡一种全面的方法，评估作品的质量，评估学生对内容的理解，并考虑其他环境因素。多方面的评估方法比依赖单一技术工具更可靠。</li>
+<li><strong>适当引用和释义的重要作用：</strong><ul>
+<li>重申学术诚信的基本原则，以及通过适当的引用来表彰信息来源的重要性。无论是否使用了 AI，适当的引用都至关重要，并且仍然是学术诚信的基础。</li>
+<li>提供关于有效释义技巧的明确指导，而不仅仅是更改几个单词。强调需要用自己的话重写原始文本，并准确地表达其含义。掌握有效释义的学生不太可能被标记为 AI，并且可以展示对信息来源的更深入理解。</li>
+<li>解释释义、引用和总结之间的区别，以及每种方法何时合适。清晰地理解这些区别对于学术写作至关重要。了解何时以及如何有效地使用每种技巧有助于强有力的学术写作，并避免抄袭（或无意的 AI 式写作）。</li>
+<li>强调以所需的引用样式进行准确和完整引用的重要性。适当的引用使读者能够找到原始信息来源并验证信息。不准确或缺失的引用可能会发出危险信号，无论是否使用了 AI。</li>
+<li>建议学生在研究过程中保持对信息来源的细致记录，以确保准确的引用，并避免无意的抄袭或对 AI 依赖的怀疑。有组织的笔记对于道德研究至关重要。良好的研究习惯有助于学术诚信，并帮助学生避免 AI 误用或错误分类的陷阱。</li>
+</ul>
+</li>
+<li><strong>加强写作中人性化特征以避免错误分类的策略：</strong><ul>
+<li>鼓励学生将个人见解、独特的观点和原创分析注入写作中，超越 AI 容易获得的信息。AI 很难产生真正新颖的想法或主观解释。</li>
+<li>建议学生发展反映自己个性的清晰写作声音和风格，而不是采用通用或过度正式的语调。AI 经常生成缺乏强烈个人声音的文本。</li>
+<li>建议采用各种句子结构，包括复杂句和复合句，以及偶尔简短而有影响力的句子，以产生更自然的节奏。AI 可能会生成更均匀的句子结构。</li>
+<li>鼓励学生使用具体和细致的语言，避免过度依赖 AI 生成的文本中常见的通用单词和短语。AI 可能会默认使用通用词汇。</li>
+<li>建议学生纳入例子、轶事和个人思考（如果合适），以使写作更具吸引力和共鸣。AI 没有个人经验，并且很难生成真实的轶事。</li>
+<li>建议学生仔细审查和编辑 AI 辅助的草稿，以确保自然的流程、想法之间的逻辑联系，并避免重复的措辞或语调的急剧变化。人工编辑可以消除 AI 生成的文本中可能存在的矛盾。</li>
+<li>鼓励学生通过添加（在语境中适当的范围内）轻微的不完美或文体上的变化来“人性化”写作，以使文本“完美”而不是更真实的人性化。过度精致且语法完美的文本可能是 AI 的迹象。</li>
+</ul>
+</li>
+</ul>
+<p><strong>6. 结论：在智能机器时代培养学术诚信文化</strong></p>
+<p>重申尽量减少 AI 使用、提高学生写作水平和导航 AI 检测的主要策略。强调发展批判性思维、写作技能和对学术诚信的理解的重要性，采取积极主动的教育方法。强调教育工作者、学生和教育机构之间持续对话和合作的必要性，以适应教育中 AI 不断演变的情况。以强调学术追求中真实的人类思维和表达的持久价值的信息结束。</p>
 ]]></content>
       <tags>
-        <tag>工具</tag>
+        <tag>大模型</tag>
+        <tag>谷歌Gemini</tag>
+        <tag>DeepSeek</tag>
+        <tag>AI</tag>
+        <tag>论文</tag>
       </tags>
   </entry>
   <entry>
@@ -396,6 +271,70 @@
       </tags>
   </entry>
   <entry>
+    <title>via如何下载，以及拦截广告？一篇文章教会你</title>
+    <url>//via/</url>
+    <content><![CDATA[<ul>
+<li><h1 id="Via浏览器，小而美"><a href="#Via浏览器，小而美" class="headerlink" title="Via浏览器，小而美"></a>Via浏览器，小而美</h1></li>
+</ul>
+<h2 id="首先，下载via浏览器！"><a href="#首先，下载via浏览器！" class="headerlink" title="首先，下载via浏览器！"></a>首先，下载via浏览器！</h2><p><strong>点击这里就可以下载了→：<a href="https://res.viayoo.com/v1/via-release-cn.apk">下载地址</a></strong></p>
+<p><strong>Via官网：<a href="https://viayoo.com/zh-cn/">这里！！</a></strong></p>
+<h2 id="其次，保存这些规则"><a href="#其次，保存这些规则" class="headerlink" title="其次，保存这些规则"></a>其次，保存这些规则</h2><p><strong>左侧为名称，右侧为链接</strong></p>
+<p>复制链接到浏览器的广告屏蔽部分即可导入，然后点击更新即可</p>
+<table>
+<thead>
+<tr>
+<th align="center">AdRules AdBlock List 精简版</th>
+<th align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AdRules AdBlock List</td>
+<td align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt</a></td>
+</tr>
+<tr>
+<td align="center">乘风 广告规则</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt</a></td>
+</tr>
+<tr>
+<td align="center">乘风 视频规则</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt</a></td>
+</tr>
+<tr>
+<td align="center">ABP Merge Rules</td>
+<td align="center"><a href="https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt">https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt</a></td>
+</tr>
+<tr>
+<td align="center">去除 APP 下载提示</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt">https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt</a></td>
+</tr>
+<tr>
+<td align="center">Ad-J</td>
+<td align="center"><a href="https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt">https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt</a></td>
+</tr>
+</tbody></table>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="打开博客"><a href="#打开博客" class="headerlink" title="打开博客"></a>打开博客</h3><p><img src="https://img.picgo.net/2024/11/30/95b95b765259d5355.jpeg" alt="9"></p>
+<h3 id="复制链接"><a href="#复制链接" class="headerlink" title="复制链接"></a>复制链接</h3><p><img src="https://img.picgo.net/2024/11/30/911c9a7bd6fad9c4db.jpeg" alt="91"></p>
+<h3 id="点击右下角三条杠"><a href="#点击右下角三条杠" class="headerlink" title="点击右下角三条杠"></a><strong>点击右下角三条杠</strong></h3><p><img src="https://img.picgo.net/2024/11/30/1aa723d2368424d38.jpeg" alt="1"></p>
+<p><strong>找到设置</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/27b7bbcb3bd5bdb26.jpeg" alt="2"></p>
+<p><strong>接下来点击通用</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/3ec7ac818d1792f1f.jpeg" alt="3"></p>
+<p><strong>点击广告拦截</strong><img src="https://img.picgo.net/2024/11/30/4ff704c230b0f8f4f.jpeg" alt="4"></p>
+<p><strong>随后点击规则订阅</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/573f59f67373446c9.jpeg" alt="5"></p>
+<p><strong>点击加号，在上面的表格复制广告拦截规则的链接</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/641f621f579914905.jpeg" alt="6"></p>
+<p><strong>在这里粘贴，保存，然后点击右上角的更新，即可应用这些规则</strong></p>
+<p><img src="https://img.picgo.net/2024/11/30/8152d5cc5ae2dd697.jpeg" alt="8"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，你的Via已经具备了一定的广告拦截能力，开始享受纯净的冲浪时光吧！</p>
+]]></content>
+      <tags>
+        <tag>via浏览器</tag>
+        <tag>小而美</tag>
+        <tag>广告屏蔽</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AI教你生成ppt，高效简约速度快，主要还能自定义！</title>
     <url>//kimiai/</url>
     <content><![CDATA[<ul>
@@ -469,67 +408,261 @@
       </tags>
   </entry>
   <entry>
-    <title>via如何下载，以及拦截广告？一篇文章教会你</title>
-    <url>//via/</url>
-    <content><![CDATA[<ul>
-<li><h1 id="Via浏览器，小而美"><a href="#Via浏览器，小而美" class="headerlink" title="Via浏览器，小而美"></a>Via浏览器，小而美</h1></li>
-</ul>
-<h2 id="首先，下载via浏览器！"><a href="#首先，下载via浏览器！" class="headerlink" title="首先，下载via浏览器！"></a>首先，下载via浏览器！</h2><p><strong>点击这里就可以下载了→：<a href="https://res.viayoo.com/v1/via-release-cn.apk">下载地址</a></strong></p>
-<p><strong>Via官网：<a href="https://viayoo.com/zh-cn/">这里！！</a></strong></p>
-<h2 id="其次，保存这些规则"><a href="#其次，保存这些规则" class="headerlink" title="其次，保存这些规则"></a>其次，保存这些规则</h2><p><strong>左侧为名称，右侧为链接</strong></p>
-<p>复制链接到浏览器的广告屏蔽部分即可导入，然后点击更新即可</p>
-<table>
+    <title>用域名变成无数个邮箱，得到无数个GPT帐号</title>
+    <url>//email-to-chatgpt/</url>
+    <content><![CDATA[<h1 id="本期内容："><a href="#本期内容：" class="headerlink" title="本期内容："></a>本期内容：</h1><p>主要用视频讲解，思路为：借助CloudFlare的域名邮箱，绑定自己的邮箱，来实现无限创造不存在的邮箱注册Chat GPT的目的</p>
+<p><strong>解决免费域名申请：<a href="https://blog1.moshangyanyu.us.kg/2024/11/17/">往期内容点击这里</a></strong></p>
+<p><strong>解决没有节点的困惑，请移步：<a href="https://blog1.moshangyanyu.us.kg/2024/11/19/">还在用盗版免费加速器，来看看有什么好用的节点推荐！</a></strong></p>
+<h2 id="直接上视频-b站"><a href="#直接上视频-b站" class="headerlink" title="直接上视频(b站)"></a>直接上视频(b站)</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113515666872198&bvid=BV1LhSuY7EPD&cid=26861505646&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<h3 id="油管视频大陆可能无法观看（已删除）"><a href="#油管视频大陆可能无法观看（已删除）" class="headerlink" title="油管视频大陆可能无法观看（已删除）"></a>油管视频大陆可能无法观看（已删除）</h3><h2 id="要用到的网站"><a href="#要用到的网站" class="headerlink" title="要用到的网站"></a>要用到的网站</h2><table>
 <thead>
 <tr>
-<th align="center">AdRules AdBlock List 精简版</th>
-<th align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock_lite.txt</a></th>
+<th align="center">站点</th>
+<th align="center">链接</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">AdRules AdBlock List</td>
-<td align="center"><a href="https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt">https://bitbucket.org/hacamer/adrules/raw/main/adblock.txt</a></td>
+<td align="center">CloudFllare注册</td>
+<td align="center"><a href="https://dash.cloudflare.com/sign-up">点击即可跳转</a></td>
 </tr>
 <tr>
-<td align="center">乘风 广告规则</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt</a></td>
+<td align="center">ChatGPT注册</td>
+<td align="center"><a href="https://chat.openai.com/">点击即可跳转</a></td>
 </tr>
 <tr>
-<td align="center">乘风 视频规则</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt">https://gcore.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt</a></td>
-</tr>
-<tr>
-<td align="center">ABP Merge Rules</td>
-<td align="center"><a href="https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt">https://gitea.com/lemon399/AdRules/raw/branch/main/abpmerge.txt</a></td>
-</tr>
-<tr>
-<td align="center">去除 APP 下载提示</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt">https://gcore.jsdelivr.net/gh/Noyllopa/NoAppDownload@master/NoAppDownload.txt</a></td>
-</tr>
-<tr>
-<td align="center">Ad-J</td>
-<td align="center"><a href="https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt">https://gcore.jsdelivr.net/gh/jk278/Ad-J/Ad-J.txt</a></td>
+<td align="center">outlook邮箱申请</td>
+<td align="center"><a href="https://go.microsoft.com/fwlink/p/?linkid=2125440&clcid=0x804&culture=zh-cn&country=cn">点击即可跳转</a></td>
 </tr>
 </tbody></table>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="打开博客"><a href="#打开博客" class="headerlink" title="打开博客"></a>打开博客</h3><p><img src="https://img.picgo.net/2024/11/30/95b95b765259d5355.jpeg" alt="9"></p>
-<h3 id="复制链接"><a href="#复制链接" class="headerlink" title="复制链接"></a>复制链接</h3><p><img src="https://img.picgo.net/2024/11/30/911c9a7bd6fad9c4db.jpeg" alt="91"></p>
-<h3 id="点击右下角三条杠"><a href="#点击右下角三条杠" class="headerlink" title="点击右下角三条杠"></a><strong>点击右下角三条杠</strong></h3><p><img src="https://img.picgo.net/2024/11/30/1aa723d2368424d38.jpeg" alt="1"></p>
-<p><strong>找到设置</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/27b7bbcb3bd5bdb26.jpeg" alt="2"></p>
-<p><strong>接下来点击通用</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/3ec7ac818d1792f1f.jpeg" alt="3"></p>
-<p><strong>点击广告拦截</strong><img src="https://img.picgo.net/2024/11/30/4ff704c230b0f8f4f.jpeg" alt="4"></p>
-<p><strong>随后点击规则订阅</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/573f59f67373446c9.jpeg" alt="5"></p>
-<p><strong>点击加号，在上面的表格复制广告拦截规则的链接</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/641f621f579914905.jpeg" alt="6"></p>
-<p><strong>在这里粘贴，保存，然后点击右上角的更新，即可应用这些规则</strong></p>
-<p><img src="https://img.picgo.net/2024/11/30/8152d5cc5ae2dd697.jpeg" alt="8"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，你的Via已经具备了一定的广告拦截能力，开始享受纯净的冲浪时光吧！</p>
+<h2 id="小白建议先从第三步开始"><a href="#小白建议先从第三步开始" class="headerlink" title="小白建议先从第三步开始"></a>小白建议先从第三步开始</h2><h3 id="第一步：注册一个outlook邮箱"><a href="#第一步：注册一个outlook邮箱" class="headerlink" title="第一步：注册一个outlook邮箱"></a>第一步：注册一个outlook邮箱</h3><p>点击表格提供的链接，一步步完成注册即可</p>
+<h3 id="第二步：注册一个CloudFlare后续简称CF"><a href="#第二步：注册一个CloudFlare后续简称CF" class="headerlink" title="第二步：注册一个CloudFlare后续简称CF"></a>第二步：<strong>注册一个CloudFlare</strong>后续简称CF</h3><p>点击表格第一行的链接，<strong>用刚刚的outlook邮箱注册即可</strong></p>
+<h3 id="第三步：按上一期内容申请一个免费的uskg域名"><a href="#第三步：按上一期内容申请一个免费的uskg域名" class="headerlink" title="第三步：按上一期内容申请一个免费的uskg域名"></a>第三步：按上一期内容申请一个免费的uskg域名</h3><p>具体见往期内容，本期直接使用申请完成的成品号</p>
+<h2 id="我有邮箱该怎么办？"><a href="#我有邮箱该怎么办？" class="headerlink" title="我有邮箱该怎么办？"></a>我有邮箱该怎么办？</h2><p>直接从第二步，第三步开始</p>
+<h3 id="第四步：在CF找到你的域名"><a href="#第四步：在CF找到你的域名" class="headerlink" title="第四步：在CF找到你的域名"></a>第四步：在CF找到你的域名</h3><p>点击域名即可，如果完成了第三步的申请域名，只需要等待托管完成即可开始</p>
+<p><strong>点击“电子邮件”开始设置</strong></p>
+<h3 id="第五步：给你的域名邮箱加入DNS的解析"><a href="#第五步：给你的域名邮箱加入DNS的解析" class="headerlink" title="第五步：给你的域名邮箱加入DNS的解析"></a>第五步：给你的域名邮箱加入DNS的解析</h3><p>按照CF的说明点击下一步即可，目标邮箱需要自己添加，验证一次即可使用！</p>
+<h3 id="第六步：自定义你的域名邮箱"><a href="#第六步：自定义你的域名邮箱" class="headerlink" title="第六步：自定义你的域名邮箱"></a>第六步：自定义你的域名邮箱</h3><p>在路由规则添加自定义地址，指向你验证的邮箱即可作为一个邮件使用了</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>还在用盗版免费加速器？快来这里看看吧！</title>
+    <url>//free-personal-node/</url>
+    <content><![CDATA[<h1 id="好用节点推荐：支持GPT，低价好用"><a href="#好用节点推荐：支持GPT，低价好用" class="headerlink" title="好用节点推荐：支持GPT，低价好用"></a>好用节点推荐：支持GPT，低价好用</h1><h2 id="自述"><a href="#自述" class="headerlink" title="自述"></a>自述</h2><p>本贴适合初学者，尚不具备自己的域名和需要使用节点进行操作的人群！</p>
+<p>节点推荐在此列出表格，供大家参考，主要参考以下内容</p>
+<ol>
+<li>连通性，是否适合三大运营商</li>
+<li>节点的流媒体解锁：是否支持GPT</li>
+<li>价格不高，且达到1，2两点</li>
+<li>购买需先查看说明 <strong>不同类型的区分</strong>，根据实际情况选择合适的套餐购买</li>
+</ol>
+<h2 id="不同类型的区分"><a href="#不同类型的区分" class="headerlink" title="不同类型的区分"></a>不同类型的区分</h2><h3 id="专线机场："><a href="#专线机场：" class="headerlink" title="专线机场："></a>专线机场：</h3><p>流量特点：你的流量通过专线绕过防火墙，完全隐藏。<br>风险：这是三种机场中最安全的一种，防火墙无法监测到流量。<br>优点：速度快，安全性高。<br>缺点：价格最高。</p>
+<h3 id="中转机场："><a href="#中转机场：" class="headerlink" title="中转机场："></a>中转机场：</h3><p>流量特点：在防火墙看来，你的流量并没有直接出国，而是先经过中转节点。<br>风险：风险适中，主要风险集中在中转节点。如果节点被查，机场主会先受影响。<br>优点：性价比适中。</p>
+<h3 id="直连机场："><a href="#直连机场：" class="headerlink" title="直连机场："></a>直连机场：</h3><p>流量特点：你的网络流量直接出国，在防火墙看来你的流量直接穿透到国外。<br>风险：在三种机场中风险最高，因为流量路径完全暴露。<br>优点：价格相对便宜，流量充足。<br>注意事项：使用时需自行承担风险。</p>
+<p>推荐列表放在最后</p>
+<h2 id="推荐列表"><a href="#推荐列表" class="headerlink" title="推荐列表"></a>推荐列表</h2><table>
+<thead>
+<tr>
+<th align="center">节点推荐</th>
+<th align="center">价格</th>
+<th align="center">类型</th>
+<th align="center">是否支持GPT</th>
+<th align="center">购买链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">一分机场</td>
+<td align="center">2&#x2F;月</td>
+<td align="center">直连</td>
+<td align="center">支持</td>
+<td align="center"><a href="https://yfjc.xyz/#/register?code=ZCA61k3t">点击即可跳转</a></td>
+</tr>
+<tr>
+<td align="center">69云</td>
+<td align="center">6.9&#x2F;月</td>
+<td align="center">中转</td>
+<td align="center">支持</td>
+<td align="center"><a href="https://69yun69.com/auth/register?code=KvFzpz">点击即可跳转</a></td>
+</tr>
+</tbody></table>
 ]]></content>
       <tags>
-        <tag>via浏览器</tag>
-        <tag>小而美</tag>
-        <tag>广告屏蔽</tag>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十分钟速成个人节点：支持ChatGPT</title>
+    <url>//vpn1/</url>
+    <content><![CDATA[<h1 id="速成！十分钟用免费域名开启你的VPN"><a href="#速成！十分钟用免费域名开启你的VPN" class="headerlink" title="速成！十分钟用免费域名开启你的VPN"></a>速成！十分钟用免费域名开启你的VPN</h1><h2 id="免费域名申请"><a href="#免费域名申请" class="headerlink" title="免费域名申请"></a>免费域名申请</h2><h2 id="教学视频（域名申请）"><a href="#教学视频（域名申请）" class="headerlink" title="教学视频（域名申请）"></a>教学视频（域名申请）</h2><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113390005524507&bvid=BV14zStY9Ezb&cid=26518096724&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<p><a href="https://halos.xtstudy.site/archives/uskg">注册视频教学</a></p>
+<p><strong><a href="https://register.us.kg/">uskg官网</a></strong></p>
+<p>注册教程参考<strong>以下文章</strong>：<a href="https://blog.ioacx.com/us-kg-free-doamin/">点击前往</a></p>
+<p>邮箱推荐：<strong>outlook，gmail</strong></p>
+<p>注册方法不过多缀述</p>
+<h2 id="创建一个workers"><a href="#创建一个workers" class="headerlink" title="创建一个workers"></a>创建一个workers</h2><p>首先你要注册一个免费的uskg域名，随后在这里注册cloudflare帐号：<a href="https://dash.cloudflare.com/sign-up">点击前往</a></p>
+<p>登录之后，来到dash页面，<strong>点击workers and pages</strong></p>
+<h3 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h3><p><strong>github项目地址</strong>：<a href="https://github.com/cmliu/edgetunnel">点击前往</a></p>
+<p><strong>项目已经为大家配置了教学，大家只需要观看文档说明即可！</strong></p>
+<blockquote>
+<p>这里列出需要用到的信息</p>
+<p><strong>ProxyIP合集</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">ProxyIP</th>
+<th align="center">落地区域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ProxylP.US.fxxk.dedyn.io</td>
+<td align="center">美国</td>
+</tr>
+<tr>
+<td align="center">ProxylPSG.fxxk.dedyn.io</td>
+<td align="center">新加坡</td>
+</tr>
+<tr>
+<td align="center">ProxylPJP.fxxk.dedyn.io</td>
+<td align="center">日本</td>
+</tr>
+<tr>
+<td align="center">ProxylP.HK.fxxk.dedyn.io</td>
+<td align="center">香港</td>
+</tr>
+<tr>
+<td align="center">ProxyIP.KR.fxxk.dedyn.io</td>
+<td align="center">韩国</td>
+</tr>
+<tr>
+<td align="center">ProxylP.DE.tp2024.fxxk.dedyn.io GPT</td>
+<td align="center">德国ChatGPT专用</td>
+</tr>
+<tr>
+<td align="center">ProxyIP.Aliyun.fxxk.dedyn.io</td>
+<td align="center">阿里云</td>
+</tr>
+<tr>
+<td align="center">ProxylPOracle.fxxk.dedyn.io</td>
+<td align="center">甲骨文</td>
+</tr>
+<tr>
+<td align="center">hk.ipdb.rr.nu</td>
+<td align="center">第三方维护</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h2><h3 id="CFWorkers"><a href="#CFWorkers" class="headerlink" title="CFWorkers"></a>CFWorkers</h3><ol>
+<li>复制仓库里Workers.js的代码，粘贴到你创建好的workers里面，保存并部署</li>
+<li>UUID在线生成：<a href="https://1024tools.com/uuid">点击前往</a></li>
+<li>在设置里面添加变量：UUID，输入生成的UUID，保存</li>
+<li>添加自定义域，输入一个前缀.你的域名</li>
+<li>访问自定义域名：<strong>格式如下：你的自定义域名&#x2F;UUID</strong></li>
+<li>复制页面的订阅链接就可以导入你的订阅软件了</li>
+</ol>
+<h2 id="开始你的尝试吧！"><a href="#开始你的尝试吧！" class="headerlink" title="开始你的尝试吧！"></a>开始你的尝试吧！</h2><h1 id="进阶教学"><a href="#进阶教学" class="headerlink" title="进阶教学"></a>进阶教学</h1><h2 id="自定义节点订阅器："><a href="#自定义节点订阅器：" class="headerlink" title="自定义节点订阅器："></a>自定义节点订阅器：</h2><p>首先在你的订阅页面复制订阅链接，然后在https:&#x2F;&#x2F;你的域名&#x2F;uuid？sub后面加上&#x3D;订阅器地址</p>
+<blockquote>
+<p>这里列出几个订阅器地址</p>
+<p>周润发大佬线路：<strong>vless.durl.nyc.mn</strong></p>
+<p>3K大佬线路：<strong>3k.fxxk.dedyn.io</strong></p>
+<p>CM优选线路：<strong>VLESS.fxxk.dedyn.io</strong></p>
+</blockquote>
+<p>如你的域名是b.cd，uuid为123，那么格式如下</p>
+<p><strong><a href="https://b.cd/123?sub=vless.durl.nyc.mn">https://b.cd/123?sub=vless.durl.nyc.mn</a></strong></p>
+<p><strong>操作时把域名和你的uuid改为你在workers设置的即可导入订阅</strong></p>
+<p>导入订阅以后，更新一次订阅即可刷新节点</p>
+<h2 id="指定ip落地的地区"><a href="#指定ip落地的地区" class="headerlink" title="指定ip落地的地区"></a>指定ip落地的地区</h2><p>在workers里面添加变量，命名为 <strong>ProxyIP</strong>，输入上方 ProxyIP的列表之一，你的订阅在使用的时候，就会落到 ProxyIP指定的区域，如使用:<strong>hk.ipdb.rr.nu</strong>，在你测试ip的时候就会落到香港，根据你的需要更改ProxyIP的地址即可随时随地进行自定义操作</p>
+<p>该操作不能和线路优选混用</p>
+<h2 id="一些第三方ProxyIP"><a href="#一些第三方ProxyIP" class="headerlink" title="一些第三方ProxyIP"></a>一些第三方ProxyIP</h2><p>由第三方维护的ProxyIP</p>
+<blockquote>
+<p>第二万维护 Proxyimy-telegram-is-herocore.onecf.eu.org</p>
+<p>Mingyu维护</p>
+<p>sg.ipdb.rr.nu</p>
+<p>nl.ipdb.rr.nu</p>
+<p>hk.ipdb.rr.nu</p>
+<p>jp.ipdb.rr.nu</p>
+<p>us.ipdb.rr.nu</p>
+<p>小一维护</p>
+<p>hk.cf.zhetengsha.eu.org</p>
+<p>sg.cf.zhetengsha.eu.org</p>
+<p>us.cf.zhetengsha.eu.org</p>
+<p>jp.ct.zhetengsha.eu.org</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>ChatGPT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学生的好帮手：OCS</title>
+    <url>//ocs/</url>
+    <content><![CDATA[<h1 id="OCS网课助手，大学生的必会工具之一"><a href="#OCS网课助手，大学生的必会工具之一" class="headerlink" title="OCS网课助手，大学生的必会工具之一"></a>OCS网课助手，大学生的必会工具之一</h1><p>相信大家都会遇到各类平台的网课，如<strong>学习通，智慧树，职教云等，</strong> 让人非常烦躁这些本就时间紧张还要浪费宝贵流量去刷课，在今天就介绍大家一款好用的工具：OCS网课助手</p>
+<p><strong>该助手集成了自动化观看视频，自动化答题，设置视频倍速等功能，十分适合拥有电脑，或Windows服务器的朋友们进行批量的刷课</strong></p>
+<h2 id="OCS是干什么的？"><a href="#OCS是干什么的？" class="headerlink" title="OCS是干什么的？"></a>OCS是干什么的？</h2><p><strong>ocs是一款自动化，可批量，便利的刷课工具，便利你的刷课生活</strong></p>
+<p><a href="https://docs.ocsjs.com/docs/about">官方文档</a></p>
+<p>点击 <strong>官方文档 ，</strong> 开始你的批量化刷课之路吧！</p>
+<h2 id="OCS官网"><a href="#OCS官网" class="headerlink" title="OCS官网"></a>OCS官网</h2><p>首先，你了解一款工具或软件，要知道他的官网或者官方渠道，这里给大家提供了OCS的官网界面，供大家识别正版！！</p>
+<p><img src="/imgs/ocs/ocs%E5%AE%98%E7%BD%91.png"></p>
+<h2 id="开始阅读文档"><a href="#开始阅读文档" class="headerlink" title="开始阅读文档"></a>开始阅读文档</h2><p>点击<strong>点击查看使用教程</strong>，开始阅读他的文档<br>随后来到这个页面</p>
+<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B.png"></p>
+<p><strong>这里已经写好了左右资料的链接，供你点击</strong><br>我们需要下载他的软件，那么需要点击<strong>左侧的软件教程</strong><br><strong>如图所示，软件教程界面提供了快速链接：如下载，教程等</strong></p>
+<p>根据目录选择你需要的操作，如下载安装程序</p>
+<p>这里是下载列表<strong>根据你自己的系统选择</strong></p>
+<p><img src="/imgs/ocs/xiazai.png"></p>
+<p>这里列出win系统的链接<strong>点击即可下载</strong><br><strong>点击这里→<a href="https://cdn.ocsjs.com/app/download/ocs-2.6.7-setup-win-x64.exe">下载</a></strong></p>
+<h2 id="补充运行库"><a href="#补充运行库" class="headerlink" title="补充运行库"></a>补充运行库</h2><p><strong>这一步为了防止安装过程出现报错</strong>，需要下载<strong>微软运行库合集</strong><br>如果不知道去哪里下载，可以通过本文推荐的系统之家下载安装包<br><strong>系统之家下载地址：<a href="https://www.xitongzhijia.net/soft/289196.html">点击前往</a></strong><br><strong>安装程序界面如下</strong></p>
+<p><img src="/imgs/ocs/%E8%BF%90%E8%A1%8C%E5%BA%93%E5%AE%89%E8%A3%85.png"></p>
+<p>一路下一步安装即可</p>
+<h2 id="下载OCS助手"><a href="#下载OCS助手" class="headerlink" title="下载OCS助手"></a>下载OCS助手</h2><p>上面已经给出了下载链接，和运行库链接，做好准备步骤，即可开始安装ocs助手<br>下载好安装程序，双击运行即可</p>
+<p><img src="/imgs/ocs/ocs%E5%AE%89%E8%A3%85.png"></p>
+<p><strong>注意：路径可以修改，如我把默认的C盘路径改成了D盘</strong><br>随后安装即可<br>安装完直接运行即可</p>
+<h2 id="初次运行OCS"><a href="#初次运行OCS" class="headerlink" title="初次运行OCS"></a>初次运行OCS</h2><p><strong>第一次使用软件，需要进行初始化配置，按照图中默认的设置即可</strong></p>
+<p><strong>点击一键初始化</strong></p>
+<p><img src="/imgs/ocs/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE.png"></p>
+<p><strong>注意，初始化完成后，需要重启软件！！！（会有提示，点击立即重启即可)</strong></p>
+<h2 id="配置题库"><a href="#配置题库" class="headerlink" title="配置题库"></a>配置题库</h2><p><strong>OCS内置了作者的enncy题库，地址：<a href="https://tk.enncy.cn/">enncy题库</a></strong><br>这里给大家列出价格，<strong>（题库需要付费购买）</strong></p>
+<table>
+<thead>
+<tr>
+<th>价格</th>
+<th>次数</th>
+<th>购买建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1米</td>
+<td>100</td>
+<td>尝鲜，测试OCS</td>
+</tr>
+<tr>
+<td>5米</td>
+<td>2000</td>
+<td>有较多课程：如选修课，需要一直答题</td>
+</tr>
+<tr>
+<td>20米</td>
+<td>10000</td>
+<td>课程很多，或组团购买，批量刷课</td>
+</tr>
+</tbody></table>
+<p><strong>根据你个人的需要，合理选择购买方案</strong></p>
+<h3 id="注册题库需要准备的：一个可用的邮箱"><a href="#注册题库需要准备的：一个可用的邮箱" class="headerlink" title="注册题库需要准备的：一个可用的邮箱"></a>注册题库需要准备的：一个可用的邮箱</h3><p>没有账号可以用邮箱注册一个，然后去购买</p>
+<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>在如图所示的界面，复制你的题库配置<br>上方胡显示<strong>你的做题次数，，已使用次数，成功次数，成功率</strong>等信息，下方的内容中需要选择你的题库配置<strong>复制第二个</strong><br><img src="/imgs/ocs/tiku.png"></p>
+<h3 id="回到软件"><a href="#回到软件" class="headerlink" title="回到软件"></a>回到软件</h3><p>回到软件，点击<strong>软件设置→OCS配置，点击通用，即可找到配置页面</strong><br>配置页面下，找到题库配置（旁边的开关是把这些设置应用到所有的任务）</p>
+<p><img src="/imgs/ocs/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE.png"></p>
+<p>点一下<strong>点击配置</strong><br>把你在题库网页复制的<strong>题库配置</strong>，粘贴进去，保存配置即可<br><strong>保存后，出现这个界面即配置成功！！</strong></p>
+<p><img src="/imgs/ocs/%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F.png"></p>
+<h2 id="关于脚本不能正常显示的问题"><a href="#关于脚本不能正常显示的问题" class="headerlink" title="关于脚本不能正常显示的问题"></a>关于脚本不能正常显示的问题</h2><p>根据作者的说法：是因为浏览器的api更新导致的冲突导致脚本不运行，<strong>解决办法是：把篡改猴换成脚本猫</strong></p>
+<h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p><strong>视频引用自ocs官网</strong></p>
+<iframe height="350" width="450" src="https://cdn.ocsjs.com/app/resources/video/app-use-guide.mp4" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%; margin-bottom: 20px; color: rgb(85, 85, 85); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+<p>如果本期内容对你有所帮助，可以在评论区留下你的痕迹！！<br><strong>作者邮箱：<a href="mailto:crazy2403@outlook.com">crazy2403@outlook.com</a></strong><br><strong>vx公众号：烟雨江南的小窝</strong></p>
+]]></content>
+      <tags>
+        <tag>工具</tag>
       </tags>
   </entry>
 </search>
