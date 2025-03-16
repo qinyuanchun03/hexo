@@ -129,13 +129,6 @@
   </url>
   
   <url>
-    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog1.jianghu.cfd/tags/via%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -151,6 +144,13 @@
   
   <url>
     <loc>https://blog1.jianghu.cfd/tags/%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog1.jianghu.cfd/tags/ppt-AI/</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
